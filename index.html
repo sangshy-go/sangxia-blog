@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>桑夏博客 - 拥抱 AI，拥抱未来</title>
+    <style>
+        :root {
+            --bg-color: #f5f7fa;
+            --card-bg: #fff;
+            --text-color: #333;
+            --text-muted: #666;
+            --text-light: #999;
+            --border-color: #e8e8e8;
+            --primary: #7c5cec;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #f0f2ff 100%);
+            padding: 0.75rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(124, 92, 236, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(124, 92, 236, 0.2);
+        }
+        .navbar .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #7c5cec, #00d9ff, #7c5cec);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+            display: inline-flex;
+            align-items: center;
+        }
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+        .navbar .logo .subtitle {
+            font-size: 0.9rem;
+            font-weight: 400;
+            background: linear-gradient(90deg, #00d9ff, #7c5cec);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-left: 0.6rem;
+            animation: subtle-glow 3s ease-in-out infinite;
+        }
+        @keyframes subtle-glow {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .navbar .menu a {
+            color: #555;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .navbar .menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(124, 92, 236, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        .navbar .menu a:hover::before {
+            left: 100%;
+        }
+        .navbar .menu a:hover {
+            color: #7c5cec;
+            background: rgba(124, 92, 236, 0.1);
+        }
+        .navbar .menu .btn-icon {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .navbar .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(124, 92, 236, 0.08);
+            border: 1px solid rgba(124, 92, 236, 0.2);
+            border-radius: 20px;
+            padding: 0.4rem 0.75rem;
+            margin-left: 0.5rem;
+            transition: all 0.3s;
+        }
+        .navbar .search-box:focus-within {
+            border-color: #7c5cec;
+            box-shadow: 0 0 15px rgba(124, 92, 236, 0.2);
+            background: rgba(124, 92, 236, 0.12);
+        }
+        .navbar .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 0.85rem;
+            width: 150px;
+            color: #333;
+        }
+        .navbar .search-box input::placeholder {
+            color: rgba(85, 85, 85, 0.6);
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 1400px;
+            margin: 1.5rem auto;
+            padding: 0 2%;
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 1.5rem;
+        }
+
+        /* 左侧边栏容器 */
+        .sidebar-container {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+            max-height: calc(100vh - 100px);
+            z-index: 100;
+            background: var(--bg-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+        
+        /* 左侧边栏 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-bottom: 1rem;
+        }
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebar::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 3px;
+        }
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem 1.75rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            color: var(--text-color);
+        }
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c5cec, #9b7fec);
+            margin: 0 auto 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.75rem;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(124, 92, 236, 0.3);
+        }
+        .profile-card h2 {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .profile-card .title {
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .profile-card .desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: var(--bg-color);
+            border-radius: 8px;
+        }
+        .profile-card .desc p {
+            margin: 0.35rem 0;
+        }
+        .profile-card .desc strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .profile-card .desc hr {
+            border: none;
+            border-top: 1px dashed var(--border-color);
+            margin: 0.75rem 0;
+        }
+        .profile-card .motto {
+            background: linear-gradient(135deg, #fef9e7, #fff3cd);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            color: #555;
+            margin-bottom: 1rem;
+            border-left: 4px solid #7c5cec;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .skill-tag {
+            background: var(--bg-color);
+            color: var(--text-muted);
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.85rem;
+            border-radius: 20px;
+            background: #f5f5f5;
+            transition: all 0.25s ease;
+            font-size: 0.8rem;
+            font-weight: 500;
+            min-width: 70px;
+        }
+        .social-icons svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            display: block;
+        }
+        .social-icons a span {
+            white-space: nowrap;
+        }
+        .social-icons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .social-icons a.wechat:hover {
+            background: #07C160;
+            color: #fff;
+        }
+        .social-icons a.wechat:hover svg {
+            fill: #fff;
+        }
+        .social-icons a.csdn:hover {
+            background: #F93A3A;
+            color: #fff;
+        }
+        .social-icons a.csdn:hover svg {
+            fill: #fff;
+        }
+        .social-icons a.github:hover {
+            background: #333;
+            color: #fff;
+        }
+        .social-icons a.github:hover svg {
+            fill: #fff;
+        }
+        .social-icons svg {
+            transition: transform 0.25s ease;
+        }
+        .social-icons a:hover svg {
+            transform: scale(1.1);
+        }
+
+        /* 分类卡片 */
+        .categories-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            color: var(--text-color);
+        }
+        .categories-card h3 {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .categories-card ul {
+            list-style: none;
+            max-height: 260px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 5px;
+            padding-bottom: 0.5rem;
+        }
+        .categories-card ul::-webkit-scrollbar {
+            width: 5px;
+        }
+        .categories-card ul::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+        .categories-card ul::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 3px;
+        }
+        .categories-card ul::-webkit-scrollbar-thumb:hover {
+            background: #ccc;
+        }
+        .categories-card li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0.4rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            cursor: pointer;
+            border-radius: 6px;
+            margin: 0 -0.4rem;
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+            transition: all 0.2s;
+        }
+        .categories-card li:hover {
+            color: #7c5cec;
+            background: rgba(124, 92, 236, 0.08);
+        }
+        .categories-card li:last-child {
+            border-bottom: none;
+        }
+        .categories-card .count {
+            background: linear-gradient(135deg, #7c5cec, #9b7fec);
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(124, 92, 236, 0.3);
+        }
+        /* 标签云样式 */
+        .categories-card .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        .categories-card .tag-cloud .tag {
+            background: var(--bg-color);
+            color: var(--text-muted);
+            padding: 0.35rem 0.7rem;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+            white-space: nowrap;
+        }
+        .categories-card .tag-cloud .tag:hover {
+            background: rgba(124, 92, 236, 0.1);
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+        .categories-card .tag-cloud .tag.active {
+            background: linear-gradient(135deg, #7c5cec, #9b7fec);
+            color: #fff;
+            border-color: #7c5cec;
+            box-shadow: 0 2px 6px rgba(124, 92, 236, 0.3);
+        }
+        .categories-card .tag-cloud .tag .count {
+            background: transparent;
+            box-shadow: none;
+            padding: 0 0 0 0.3rem;
+            color: inherit;
+            opacity: 0.7;
+        }
+        .categories-card .tag-cloud .tag.active .count {
+            opacity: 1;
+            color: inherit;
+        }
+
+        /* 统计卡片样式 */
+        .stats-card {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .stats-card h3 {
+            display: none;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+        }
+        .stat-item {
+            background: var(--bg-color);
+            padding: 0.5rem 0.3rem;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .stat-item:hover {
+            background: rgba(124, 92, 236, 0.1);
+            transform: translateY(-2px);
+        }
+        .stat-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.1rem;
+        }
+        .stat-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        /* 右侧主内容 */
+        .main-content {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            min-height: calc(100vh - 150px);
+            height: fit-content;
+            position: relative;
+            z-index: 1;
+            display: block !important;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .main-header h2 {
+            font-size: 1.25rem;
+            color: var(--text-color);
+        }
+        .filter-btns {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            max-height: 120px;
+            overflow-y: auto;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: -0.5rem;
+        }
+        .filter-btns::-webkit-scrollbar {
+            width: 5px;
+        }
+        .filter-btns::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+        .filter-btns::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 3px;
+        }
+        .filter-btn {
+            padding: 0.45rem 1rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.25s;
+            white-space: nowrap;
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, #7c5cec, #9b7fec);
+            color: #fff;
+            border-color: #7c5cec;
+            box-shadow: 0 3px 10px rgba(124, 92, 236, 0.3);
+        }
+        .filter-btn:not(.active) {
+            background: rgba(124, 92, 236, 0.08);
+            color: var(--text-muted);
+            border-color: transparent;
+        }
+        .filter-btn:hover:not(.active) {
+            background: rgba(124, 92, 236, 0.15);
+            border-color: transparent;
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* 文章卡片 */
+        .article-card {
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-top-width: 3px;
+            transition: all 0.2s ease;
+            background: var(--card-bg);
+        }
+        .article-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transform: translateY(-1px);
+        }
+        .article-card.blue {
+            border-top-color: #7c5cec;
+        }
+        .article-card.green {
+            border-top-color: #2ecc71;
+        }
+        .article-card.orange {
+            border-top-color: #f39c12;
+        }
+        .article-card.purple {
+            border-top-color: #9b59b6;
+        }
+        .article-card h3 {
+            font-size: 1rem;
+            color: var(--text-color) !important;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: block !important;
+            visibility: visible !important;
+        }
+        .article-card h3:hover {
+            color: var(--primary);
+        }
+        .article-card h3 a {
+            color: var(--text-color) !important;
+            text-decoration: none !important;
+        }
+        .article-meta {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        .article-tag {
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        .article-tag.frontend {
+            background: #e8f4fd;
+            color: #1890ff;
+        }
+        .article-tag.backend {
+            background: #e6fffb;
+            color: #2ecc71;
+        }
+        .article-tag.tool {
+            background: #fff7e6;
+            color: #f39c12;
+        }
+        .article-card p {
+            color: var(--text-muted) !important;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        .read-more {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        .article-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 15px;
+            background: var(--bg-color);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .share-btn:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        .read-more:hover {
+            gap: 0.5rem;
+        }
+
+        /* 文章列表容器 */
+        .articles-wrapper {
+            display: block !important;
+            width: 100%;
+        }
+
+        /* 分页样式 */
+        .pagination-wrapper {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            display: block !important;
+            width: 100%;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .pagination button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-muted);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .pagination button:hover:not(:disabled) {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        /* 分页跳转输入框样式 */
+        .pagination input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        .pagination input[type="number"]::-webkit-outer-spin-button,
+        .pagination input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .pagination input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .pagination button.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* 归档页面 */
+        .archive-page {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .archive-timeline {
+            margin-top: 1.5rem;
+        }
+        .archive-year {
+            margin-bottom: 2rem;
+        }
+        .archive-year-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .archive-month {
+            margin-bottom: 1.5rem;
+        }
+        .archive-month-title {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .archive-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .archive-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .archive-item:hover {
+            background: rgba(124, 92, 236, 0.1);
+            transform: translateX(4px);
+        }
+        .archive-date {
+            min-width: 60px;
+            text-align: center;
+            padding: 0.5rem;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 6px;
+        }
+        .archive-date .day {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .archive-date .month {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+        .archive-content {
+            flex: 1;
+        }
+        .archive-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .archive-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* 搜索页面 */
+        .search-hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(124, 92, 236, 0.1), rgba(124, 92, 236, 0.05));
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .search-hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        .search-hero-input {
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-hero-input:focus {
+            border-color: var(--primary);
+        }
+        .search-tags {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .search-tag {
+            padding: 0.4rem 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .search-tag:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* 文章详情内容样式 */
+        .article-content h2 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            color: var(--text-color);
+        }
+        .article-content p {
+            margin-bottom: 1rem;
+        }
+        /* 图片样式 - 限制最大宽度，防止页面过长 - 强力约束所有图片 */
+        .article-content img,
+        .article-content p img,
+        .article-content div img,
+        .article-content figure img,
+        article img,
+        .article-content img[src*="images/"] {
+            max-width: 100% !important;
+            width: auto !important;
+            height: auto !important;
+            display: block !important;
+            margin: 1rem auto !important;
+            max-height: 30vh !important;
+            object-fit: contain !important;
+            box-sizing: border-box !important;
+        }
+        /* 图片容器 - 防止图片撑开页面 */
+        .article-content p:has(img) {
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .article-content ul,
+        .article-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        /* 文章卡片最大宽度约束 */
+        .article-card {
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        .article-content pre {
+            background: var(--bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            max-width: 100%;
+        }
+        .article-content code {
+            font-family: "SFMono-Regular", Consolas, monospace;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                order: 2;
+            }
+            .main-content {
+                order: 1;
+            }
+            .sidebar-container {
+                position: static;
+                max-height: none;
+            }
+            .sidebar {
+                max-height: none;
+            }
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 5%;
+            }
+            .navbar .logo {
+                font-size: 1.3rem;
+            }
+            .navbar .logo .subtitle {
+                display: block;
+                font-size: 0.8rem;
+                margin-top: 0.25rem;
+            }
+            .navbar .menu {
+                gap: 0.75rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .navbar .menu a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+            .navbar .search-box {
+                width: 100%;
+                margin-left: 0;
+            }
+            .navbar .search-box input {
+                width: 100%;
+            }
+            .main-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .filter-btns {
+                width: 100%;
+            }
+            .filter-btn {
+                flex: 1;
+                text-align: center;
+            }
+            .pagination {
+                flex-wrap: wrap;
+            }
+            .archive-item {
+                flex-direction: column;
+            }
+            .archive-date {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                min-width: auto;
+                flex-direction: row;
+                width: 100%;
+                padding: 0.75rem 1rem;
+            }
+            .archive-date .day {
+                font-size: 1.5rem;
+            }
+            .archive-date .month {
+                font-size: 0.85rem;
+            }
+            .article-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <!-- 引入 marked.js 解析 Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // 配置 marked.js 渲染器
+        if (typeof marked !== 'undefined') {
+            const renderer = new marked.Renderer();
+            // 图片不做特殊处理，让 CSS 控制样式
+            // marked.js 新版本传递的是对象参数
+            renderer.image = function(image) {
+                const href = image.href;
+                const title = image.title || '';
+                const text = image.text || '';
+                return `<img src="${href}" alt="${text}" title="${title}">`;
+            };
+            marked.setOptions({
+                renderer: renderer,
+                breaks: true,
+                gfm: true
+            });
+        }
+
+        // 提供带自定义配置的解析函数
+        function parseMarkdown(content) {
+            if (typeof marked === 'undefined') return content;
+            return marked.parse(content);
+        }
+    </script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <a href="#" class="logo">桑夏<span class="subtitle">· 拥抱 AI，拥抱未来</span></a>
+        <div class="menu">
+            <a href="#" onclick="goHome(); return false;">🏠 首页</a>
+            <a href="#" onclick="goArchive(); return false;">📚 归档</a>
+            <a href="#" onclick="goSearch(); return false;">🔍 搜索</a>
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" placeholder="搜索文章..." onkeypress="if(event.key === 'Enter') handleSearch()">
+            </div>
+            <a href="#" class="btn-icon" title="分享页面" onclick="sharePage()">📤</a>
+            <a href="#" class="btn-icon" title="切换主题" onclick="toggleTheme()">🌙</a>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 左侧边栏 -->
+        <div class="sidebar-container">
+            <aside class="sidebar">
+            <!-- 个人资料卡片 -->
+            <div class="profile-card">
+                <div class="avatar">👨‍💻</div>
+                <h2>桑夏</h2>
+                <p class="title">全栈开发者 · 技术写作者</p>
+                <div class="desc">
+                    <p><strong>📌 8 年全栈开发经验</strong></p>
+                    <p>× AI 技术探索者</p>
+                    <hr style="border: none; border-top: 1px dashed var(--border-color); margin: 0.75rem 0;">
+                    <p>▸ 先后在美团、蚂蚁大厂工作</p>
+                    <p>▸ 熟悉电商、信贷、能源业务</p>
+                    <p>▸ 研究大模型评测、Agent 应用落地</p>
+                    <p>▸ 探索 Claude Code & OpenClaw 等效率工具</p>
+                </div>
+                <div class="motto">
+                    "拥抱 AI，拥抱未来" 🚀
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon wechat" onclick="copyLink('wechat'); return false;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#07C160">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+                            <circle cx="8.5" cy="10.5" r="1.5"/>
+                            <circle cx="15.5" cy="10.5" r="1.5"/>
+                        </svg>
+                        <span>微信</span>
+                    </a>
+                    <a href="https://blog.csdn.net/noaman_wgs" target="_blank" class="social-icon csdn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#F93A3A">
+                            <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/>
+                        </svg>
+                        <span>CSDN</span>
+                    </a>
+                    <a href="https://github.com/sangshy-go" target="_blank" class="social-icon github">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#333">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 文章统计卡片 -->
+            <div class="profile-card stats-card">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="totalArticles">0</div>
+                        <div class="stat-label">文章总数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="totalViews">0</div>
+                        <div class="stat-label">总阅读量</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="totalLikes">0</div>
+                        <div class="stat-label">总点赞数</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分类标签卡片 -->
+            <div class="categories-card">
+                <h3>🏷️ 分类标签</h3>
+                <div class="tag-cloud" id="tagCloud">
+                    <!-- 标签云由 JS 动态生成 -->
+                </div>
+            </div>
+        </aside>
+        </div>
+
+        <!-- 右侧主内容 -->
+        <main class="main-content" id="mainContent">
+            <!-- 内容由 JS 动态渲染 -->
+        </main>
+    </div>
+
+    <script>
+        // 文章数据（从外部加载）
+        let articles = [];
+        // 服务器统计数据缓存
+        let serverStats = {};
+
+        // 从服务器获取所有文章统计数据
+        async function fetchArticleStats() {
+            try {
+                const response = await fetch('/api/articles/stats');
+                if (!response.ok) throw new Error('获取统计数据失败');
+                serverStats = await response.json();
+                return serverStats;
+            } catch (error) {
+                console.error('获取统计数据失败:', error);
+                return {};
+            }
+        }
+
+        // 初始化文章统计数据（批量）
+        async function initArticleStats(articlesData) {
+            try {
+                const response = await fetch('/api/articles/init', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ articles: articlesData || articles })
+                });
+                if (!response.ok) throw new Error('初始化统计数据失败');
+                const result = await response.json();
+                return result;
+            } catch (error) {
+                console.error('初始化统计数据失败:', error);
+                return null;
+            }
+        }
+
+        // 更新文章阅读量（调用服务器 API）
+        async function incrementArticleViews(id, title, category) {
+            try {
+                const response = await fetch(`/api/articles/${id}/view`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ title, category })
+                });
+                if (!response.ok) throw new Error('更新阅读量失败');
+                const result = await response.json();
+                // 更新本地缓存
+                serverStats[id] = result;
+                return result.views;
+            } catch (error) {
+                console.error('更新阅读量失败:', error);
+                // 失败时返回本地缓存值
+                return serverStats[id]?.views || 0;
+            }
+        }
+
+        // 更新文章点赞数（调用服务器 API）
+        async function incrementArticleLikes(id, title, category) {
+            try {
+                const response = await fetch(`/api/articles/${id}/like`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ title, category })
+                });
+                if (!response.ok) throw new Error('更新点赞数失败');
+                const result = await response.json();
+                // 更新本地缓存
+                serverStats[id] = result;
+                return result.likes;
+            } catch (error) {
+                console.error('更新点赞数失败:', error);
+                // 失败时返回本地缓存值
+                return serverStats[id]?.likes || 0;
+            }
+        }
+
+        // 获取文章实际阅读量
+        function getArticleViews(id, article) {
+            return serverStats[id]?.views || article.views || 0;
+        }
+
+        // 获取文章实际点赞数
+        function getArticleLikes(id, article) {
+            return serverStats[id]?.likes || article.likes || 0;
+        }
+
+        // 加载文章数据
+        async function loadArticles() {
+            try {
+                // 从外部加载文章元数据
+                const response = await fetch('data/articles.json');
+                if (!response.ok) throw new Error('加载文章失败');
+                const data = await response.json();
+
+                // 先获取服务器统计数据
+                await fetchArticleStats();
+
+                // 批量初始化缺失的统计数据（在渲染前先初始化）
+                await initArticleStats(data);
+
+                // 再次获取最新的统计数据（包含刚初始化的）
+                await fetchArticleStats();
+
+                // 使用服务器统计数据映射文章
+                articles = data.map((article) => {
+                    // 从服务器统计数据中获取
+                    // 如果 serverStats 中没有该文章的数据，使用默认值 0（不应该发生）
+                    const stats = serverStats[article.id] || { views: 0, likes: 0 };
+                    return {
+                        ...article,
+                        views: stats.views,
+                        likes: stats.likes
+                    };
+                });
+
+                // 按日期倒序排序（新的在前）
+                articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+                // 加载完成后渲染
+                document.querySelector('.categories-card .tag-cloud').innerHTML = renderTags();
+                updateStats();
+                render();
+            } catch (error) {
+                console.error('加载文章失败:', error);
+                document.getElementById('mainContent').innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; color: var(--text-light);">
+                        <div style="font-size: 64px; margin-bottom: 16px;">⚠️</div>
+                        <h3 style="font-size: 18px; margin-bottom: 8px;">加载文章失败</h3>
+                        <p>请检查 data/articles.json 文件是否存在</p>
+                        <p style="font-size: 0.85rem; margin-top: 1rem; color: #999;">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 根据文章标题和质量设置初始阅读数和点赞数
+        function getInitialStats(title, category) {
+            // 基础值
+            let baseViews = 1000;
+            let baseLikes = 50;
+
+            // 热门文章主题（阅读数 8000-20000）
+            const hotTopics = ['Redis', 'MySQL', '分布式', '微服务', 'Docker', 'Kubernetes', 'Kafka', 'Spring', 'AI', '大模型', 'Claude', 'GPT', '算法', '数据结构'];
+            // 中等热度主题（阅读数 4000-10000）
+            const mediumTopics = ['限流', '消息队列', 'Netty', '设计模式', 'Vue', 'React', 'JavaScript', 'Node.js', 'Git', 'Linux'];
+            // 一般主题（阅读数 1000-5000）
+            const normalTopics = ['随笔', '工具', '技巧', '教程', '入门', '简介', '安装', '配置'];
+
+            // 根据标题关键词判断
+            const titleLower = title.toLowerCase();
+            let viewMultiplier = 1;
+            let likeMultiplier = 1;
+
+            // 检查是否是热门主题
+            if (hotTopics.some(keyword => titleLower.includes(keyword.toLowerCase()))) {
+                viewMultiplier = 8 + Math.random() * 12; // 8-20 倍
+                likeMultiplier = 8 + Math.random() * 12;
+            } else if (mediumTopics.some(keyword => titleLower.includes(keyword.toLowerCase()))) {
+                viewMultiplier = 4 + Math.random() * 6; // 4-10 倍
+                likeMultiplier = 4 + Math.random() * 6;
+            } else if (normalTopics.some(keyword => titleLower.includes(keyword.toLowerCase()))) {
+                viewMultiplier = 1 + Math.random() * 4; // 1-5 倍
+                likeMultiplier = 1 + Math.random() * 4;
+            } else {
+                // 其他文章随机
+                viewMultiplier = 1 + Math.random() * 5;
+                likeMultiplier = 1 + Math.random() * 5;
+            }
+
+            // 根据分类调整
+            if (category === '后端开发' || category === 'AI 应用') {
+                viewMultiplier *= 1.2;
+                likeMultiplier *= 1.2;
+            }
+
+            // 计算最终值（阅读数 1000-20000，点赞数 1-1000）
+            baseViews = Math.min(20000, Math.max(1000, Math.floor(baseViews * viewMultiplier)));
+            baseLikes = Math.min(1000, Math.max(1, Math.floor(baseLikes * likeMultiplier)));
+
+            // 特殊文章加成（根据标题长度、是否有编号等）
+            if (title.includes('01') || title.includes('（一）') || title.includes('-')) {
+                // 系列文章第一篇，加成
+                baseViews = Math.floor(baseViews * 1.3);
+                baseLikes = Math.floor(baseLikes * 1.3);
+            }
+
+            // 实战/图解类文章更受欢迎
+            if (title.includes('实战') || title.includes('图解') || title.includes('详解') || title.includes('深入')) {
+                baseViews = Math.floor(baseViews * 1.5);
+                baseLikes = Math.floor(baseLikes * 1.5);
+            }
+
+            return { baseViews, baseLikes };
+        }
+
+        // 应用状态
+        let state = {
+            page: 'home',  // home, article, archive, search
+            currentArticle: null,
+            currentCategory: '全部',
+            searchQuery: '',
+            pageNum: 1,
+            pageSize: 15
+        };
+
+        // 更新统计数据
+        function updateStats() {
+            const totalArticles = articles.length;
+            const totalViews = articles.reduce((sum, a) => sum + (a.views || 0), 0);
+            const totalLikes = articles.reduce((sum, a) => sum + (a.likes || 0), 0);
+
+            document.getElementById('totalArticles').textContent = totalArticles;
+            document.getElementById('totalViews').textContent = totalViews.toLocaleString();
+            document.getElementById('totalLikes').textContent = totalLikes.toLocaleString();
+        }
+
+        // 获取分类统计
+        function getCategoryStats() {
+            const stats = {};
+            articles.forEach(article => {
+                stats[article.category] = (stats[article.category] || 0) + 1;
+            });
+            return stats;
+        }
+
+        // 获取标签统计 - 对标签进行归类
+        function getTagStats() {
+            const stats = {};
+            // 标签归类映射：将细粒度标签映射到粗粒度分类
+            const tagCategoryMap = {
+                // Java 相关
+                'java': 'Java',
+                'jvm': 'Java',
+                'javacore': 'Java',
+                'java 基础': 'Java',
+                '集合': 'Java',
+                '多线程': 'Java',
+                '并发': 'Java',
+                '反射': 'Java',
+                // Spring 相关
+                'spring': 'Spring',
+                'springboot': 'Spring',
+                'spring boot': 'Spring',
+                'springcloud': 'Spring',
+                'spring cloud': 'Spring',
+                'spring mvc': 'Spring',
+                'springmvc': 'Spring',
+                // Redis 相关
+                'redis': 'Redis',
+                'redis 数据结构': 'Redis',
+                'redis 线程模型': 'Redis',
+                'redis 对象类型': 'Redis',
+                'redis 集群': 'Redis',
+                // MySQL 相关
+                'mysql': 'MySQL',
+                '数据库': 'MySQL',
+                '索引': 'MySQL',
+                'sql': 'MySQL',
+                '事务': 'MySQL',
+                '锁': 'MySQL',
+                // 分布式相关
+                '分布式': '分布式',
+                '分布式锁': '分布式',
+                '微服务': '分布式',
+                'rpc': '分布式',
+                'dubbo': '分布式',
+                'zookeeper': '分布式',
+                // 消息队列
+                'kafka': '消息队列',
+                'rabbitmq': '消息队列',
+                'rocketmq': '消息队列',
+                'mq': '消息队列',
+                '消息中间件': '消息队列',
+                // 算法与数据结构
+                '算法': '算法',
+                '数据结构': '算法',
+                '链表': '算法',
+                '树': '算法',
+                '排序': '算法',
+                '动态规划': '算法',
+                // 设计模式
+                '设计模式': '设计模式',
+                '模式': '设计模式',
+                '单例': '设计模式',
+                '工厂': '设计模式',
+                // Docker 容器
+                'docker': 'Docker',
+                '容器': 'Docker',
+                'kubernetes': 'Docker',
+                'k8s': 'Docker',
+                // Netty
+                'netty': 'Netty',
+                'nio': 'Netty',
+                // 限流
+                '限流': '限流',
+                '限流算法': '限流',
+                '令牌桶': '限流',
+                '漏桶': '限流',
+                // AI 相关
+                'ai': 'AI',
+                '人工智能': 'AI',
+                '大模型': 'AI',
+                'llm': 'AI',
+                'claude': 'AI',
+                'gpt': 'AI',
+                // 前端
+                '前端': '前端',
+                'vue': '前端',
+                'react': '前端',
+                'javascript': '前端',
+                'js': '前端',
+                'html': '前端',
+                'css': '前端',
+                // 其他
+                'git': '工具',
+                'maven': '工具',
+                'linux': '工具',
+                '工具': '工具',
+            };
+
+            articles.forEach(article => {
+                if (article.tags) {
+                    let tagsList = article.tags;
+                    if (typeof tagsList === 'string') {
+                        tagsList = tagsList.replace(/[\[\]\"\']/g, '').split(',');
+                    } else if (Array.isArray(tagsList)) {
+                        const newTagsList = [];
+                        tagsList.forEach(item => {
+                            const cleaned = item.replace(/[\[\]\"\']/g, '');
+                            if (cleaned) {
+                                cleaned.split(',').forEach(t => {
+                                    if (t.trim()) newTagsList.push(t.trim());
+                                });
+                            }
+                        });
+                        tagsList = newTagsList;
+                    }
+                    tagsList.forEach(tag => {
+                        const t = tag.trim();
+                        if (t && t !== '[]') {
+                            // 查找归类，如果没有映射则使用原标签（转小写）
+                            const category = tagCategoryMap[t.toLowerCase()] || t;
+                            stats[category] = (stats[category] || 0) + 1;
+                        }
+                    });
+                }
+            });
+            return stats;
+        }
+
+        // 渲染标签云
+        function renderTags() {
+            const stats = getTagStats();
+            const sortedTags = Object.entries(stats)
+                .sort((a, b) => b[1] - a[1]) // 按数量排序
+                .filter(([tag, count]) => count >= 3); // 只显示文章数量 >= 3 的标签
+
+            if (sortedTags.length === 0) {
+                return '<span style="color: var(--text-light); font-size: 0.85rem;">暂无标签</span>';
+            }
+
+            const tags = sortedTags.map(([tag, count]) => `
+                <span class="tag ${state.currentCategory === tag ? 'active' : ''}"
+                      onclick="selectCategory('${tag}')">
+                    ${tag} <span class="count">${count}</span>
+                </span>
+            `).join('');
+            return tags;
+        }
+
+        // 过滤文章
+        function filterArticles() {
+            // 标签归类映射（与 getTagStats 保持一致）
+            const tagCategoryMap = {
+                'java': 'Java', 'jvm': 'Java', 'javacore': 'Java', 'java 基础': 'Java',
+                '集合': 'Java', '多线程': 'Java', '并发': 'Java', '反射': 'Java',
+                'spring': 'Spring', 'springboot': 'Spring', 'spring boot': 'Spring',
+                'springcloud': 'Spring', 'spring cloud': 'Spring', 'spring mvc': 'Spring', 'springmvc': 'Spring',
+                'redis': 'Redis', 'redis 数据结构': 'Redis', 'redis 线程模型': 'Redis',
+                'redis 对象类型': 'Redis', 'redis 集群': 'Redis',
+                'mysql': 'MySQL', '数据库': 'MySQL', '索引': 'MySQL', 'sql': 'MySQL',
+                '事务': 'MySQL', '锁': 'MySQL',
+                '分布式': '分布式', '分布式锁': '分布式', '微服务': '分布式', 'rpc': '分布式',
+                'dubbo': '分布式', 'zookeeper': '分布式',
+                'kafka': '消息队列', 'rabbitmq': '消息队列', 'rocketmq': '消息队列',
+                'mq': '消息队列', '消息中间件': '消息队列',
+                '算法': '算法', '数据结构': '算法', '链表': '算法', '树': '算法',
+                '排序': '算法', '动态规划': '算法',
+                '设计模式': '设计模式', '模式': '设计模式', '单例': '设计模式', '工厂': '设计模式',
+                'docker': 'Docker', '容器': 'Docker', 'kubernetes': 'Docker', 'k8s': 'Docker',
+                'netty': 'Netty', 'nio': 'Netty',
+                '限流': '限流', '限流算法': '限流', '令牌桶': '限流', '漏桶': '限流',
+                'ai': 'AI', '人工智能': 'AI', '大模型': 'AI', 'llm': 'AI',
+                'claude': 'AI', 'gpt': 'AI',
+                '前端': '前端', 'vue': '前端', 'react': '前端', 'javascript': '前端',
+                'js': '前端', 'html': '前端', 'css': '前端',
+                'git': '工具', 'maven': '工具', 'linux': '工具', '工具': '工具',
+            };
+
+            return articles.filter(article => {
+                const matchesCategory = state.currentCategory === '全部' || article.category === state.currentCategory;
+                // 检查是否匹配标签（使用归类后的标签）
+                let matchesTag = false;
+                if (state.currentCategory !== '全部' && article.tags) {
+                    let tagsList = article.tags;
+                    if (typeof tagsList === 'string') {
+                        tagsList = tagsList.replace(/[\[\]\"\']/g, '').split(',');
+                    } else if (Array.isArray(tagsList)) {
+                        const newTagsList = [];
+                        tagsList.forEach(item => {
+                            const cleaned = item.replace(/[\[\]\"\']/g, '');
+                            if (cleaned) {
+                                cleaned.split(',').forEach(t => {
+                                    if (t.trim()) newTagsList.push(t.trim());
+                                });
+                            }
+                        });
+                        tagsList = newTagsList;
+                    }
+                    // 将原始标签映射到归类后的标签，然后检查是否匹配
+                    const categorizedTags = tagsList.map(t => tagCategoryMap[t.toLowerCase()] || t);
+                    matchesTag = categorizedTags.includes(state.currentCategory);
+                }
+                const matchesSearch = !state.searchQuery ||
+                    article.title.toLowerCase().includes(state.searchQuery.toLowerCase()) ||
+                    article.excerpt.toLowerCase().includes(state.searchQuery.toLowerCase()) ||
+                    article.category.includes(state.searchQuery);
+                return (matchesCategory || matchesTag) && matchesSearch;
+            });
+        }
+
+        // 分页
+        function paginate(articles) {
+            const start = (state.pageNum - 1) * state.pageSize;
+            const end = start + state.pageSize;
+            return articles.slice(start, end);
+        }
+
+        // 总页数
+        function totalPages() {
+            const filtered = filterArticles();
+            return Math.ceil(filtered.length / state.pageSize);
+        }
+
+        // 渲染分页
+        function renderPagination() {
+            const filtered = filterArticles();
+            const total = totalPages();
+
+            // 调试日志
+            console.log('[renderPagination] 当前分类:', state.currentCategory);
+            console.log('[renderPagination] 过滤后文章数:', filtered.length);
+            console.log('[renderPagination] 总页数:', total);
+            console.log('[renderPagination] 当前页码:', state.pageNum);
+
+            // 如果只有 1 页或 0 页，不显示分页
+            if (total <= 1) {
+                return '';
+            }
+
+            // 确保当前页码不超过总页数
+            if (state.pageNum > total) {
+                state.pageNum = total;
+            } else if (state.pageNum < 1) {
+                state.pageNum = 1;
+            }
+
+            let html = '<div class="pagination">';
+
+            // 上一页
+            const prevDisabled = state.pageNum === 1 ? 'disabled' : '';
+            html += `<button onclick="goToPage(${state.pageNum - 1})" ${prevDisabled}>← 上一页</button>`;
+
+            // 页码按钮
+            let lastShown = 0;
+
+            for (let i = 1; i <= total; i++) {
+                const shouldShow = i === 1 || i === total || (i >= state.pageNum - 1 && i <= state.pageNum + 1);
+
+                if (shouldShow) {
+                    if (i - lastShown > 1) {
+                        html += `<span style="color: var(--text-light);">...</span>`;
+                    }
+                    html += `<button onclick="goToPage(${i})" class="${i === state.pageNum ? 'active' : ''}">${i}</button>`;
+                    lastShown = i;
+                }
+            }
+
+            // 下一页
+            const nextDisabled = state.pageNum === total ? 'disabled' : '';
+            html += `<button onclick="goToPage(${state.pageNum + 1})" ${nextDisabled}>下一页 →</button>`;
+
+            // 跳转页码输入框
+            html += `<div style="display: flex; align-items: center; gap: 0.3rem; margin-left: 0.5rem;">
+                <span style="font-size: 0.75rem; color: var(--text-light);">跳至</span>
+                <input type="number" id="pageJumpInput" min="1" max="${total}" value="${state.pageNum}"
+                    style="width: 50px; padding: 0.3rem; text-align: center; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.85rem;"
+                    onkeypress="if(event.keyCode===13) jumpToPage(${total})">
+                <span style="font-size: 0.75rem; color: var(--text-light);">页</span>
+                <button onclick="jumpToPage(${total})" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; background: var(--primary); color: #fff; border: none; border-radius: 4px; cursor: pointer;">跳转</button>
+            </div>`;
+
+            html += `</div>`;
+            return html;
+        }
+
+        // 跳转页面
+        function goToPage(page) {
+            const total = totalPages();
+            const filtered = filterArticles();
+            
+            // 调试日志
+            console.log('[goToPage] 当前分类:', state.currentCategory);
+            console.log('[goToPage] 过滤后文章数:', filtered.length);
+            console.log('[goToPage] 总页数:', total);
+            console.log('[goToPage] 目标页码:', page);
+            console.log('[goToPage] 当前页码:', state.pageNum);
+
+            // 如果总页数为 0 或 1，不需要跳转
+            if (total <= 1) return;
+
+            // 如果页码超出范围，自动调整到有效范围
+            if (page < 1) {
+                page = 1;
+            } else if (page > total) {
+                page = total;
+            }
+
+            state.pageNum = page;
+            state.page = 'home';
+            render();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 跳转到指定页
+        function jumpToPage(total) {
+            const input = document.getElementById('pageJumpInput');
+            const page = parseInt(input.value);
+            if (isNaN(page) || page < 1) {
+                alert('请输入有效的页码（1-' + total + '）');
+                return;
+            }
+            if (page > total) {
+                alert('页码不能超过总页数（' + total + '）');
+                return;
+            }
+            goToPage(page);
+        }
+
+        // 渲染文章列表
+        function renderArticleList() {
+            const filtered = filterArticles();
+            const paginated = paginate(filtered);
+
+            if (filtered.length === 0) {
+                return `
+                    <div style="text-align: center; padding: 100px 20px; color: var(--text-light); min-height: 400px; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <div style="font-size: 64px; margin-bottom: 16px;">📭</div>
+                        <h3 style="font-size: 18px; margin-bottom: 8px;">没有找到相关文章</h3>
+                        <p>尝试调整筛选条件或搜索关键词</p>
+                    </div>
+                    <div class="pagination-wrapper"></div>
+                `;
+            }
+
+            let html = `<div class="articles-wrapper">`;
+
+            paginated.forEach((article, index) => {
+                const views = getArticleViews(article.id, article);
+                const likes = getArticleLikes(article.id, article);
+                html += `
+                    <article class="article-card ${article.colorClass}">
+                        <h3><a href="#" onclick="viewArticle(${article.id}); return false;">${article.title}</a></h3>
+                        <div class="article-meta">
+                            <span>📅 ${article.date}</span>
+                            <span class="article-tag ${article.tagClass}">${article.category}</span>
+                        </div>
+                        <p>${article.excerpt}</p>
+                        <a href="#" class="read-more" onclick="viewArticle(${article.id}); return false;">阅读全文 →</a>
+                        <div class="article-actions">
+                            <span style="font-size: 0.75rem; color: var(--text-light);">👍 ${likes} &nbsp; 👁️ ${views}</span>
+                            <button class="share-btn" onclick="shareArticle(${article.id})">📤 分享</button>
+                        </div>
+                    </article>
+                `;
+            });
+
+            html += `<div class="pagination-wrapper">`;
+            html += renderPagination();
+            html += `</div></div>`;
+            return html;
+        }
+
+        // 渲染归档页面
+        function renderArchive() {
+            // 按年份和月份分组
+            const grouped = {};
+            articles.forEach(article => {
+                const date = new Date(article.date);
+                const year = date.getFullYear();
+                const month = date.getMonth();
+                const key = `${year}-${month}`;
+                
+                if (!grouped[key]) {
+                    grouped[key] = {
+                        year: year,
+                        month: month,
+                        articles: []
+                    };
+                }
+                grouped[key].articles.push(article);
+            });
+
+            // 排序
+            const sortedKeys = Object.keys(grouped).sort((a, b) => {
+                const [yearA, monthA] = a.split('-').map(Number);
+                const [yearB, monthB] = b.split('-').map(Number);
+                return yearB - yearA || monthB - monthA;
+            });
+
+            const monthNames = ['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月'];
+            
+            let html = '<div class="archive-timeline">';
+            
+            sortedKeys.forEach(key => {
+                const { year, month, articles: monthArticles } = grouped[key];
+                
+                html += `
+                    <div class="archive-year">
+                        <h3 class="archive-year-title">${year}年</h3>
+                        <div class="archive-month">
+                            <div class="archive-month-title">
+                                <span>📅</span>
+                                <span>${monthNames[month]}</span>
+                                <span style="color: var(--text-light);">(${monthArticles.length}篇)</span>
+                            </div>
+                            <div class="archive-list">
+                                ${monthArticles.map(article => `
+                                    <div class="archive-item" onclick="viewArticle(${article.id})">
+                                        <div class="archive-date">
+                                            <div class="day">${new Date(article.date).getDate()}</div>
+                                            <div class="month">${monthNames[month]}</div>
+                                        </div>
+                                        <div class="archive-content">
+                                            <h4 class="archive-title">${article.title}</h4>
+                                            <div class="archive-meta">
+                                                <span>🏷️ ${article.category}</span>
+                                                <span>👁️ ${article.views}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div></div>';
+            return html;
+        }
+
+        // 渲染搜索页面
+        function renderSearch() {
+            const filtered = filterArticles();
+            
+            let html = `
+                <div class="search-hero">
+                    <h2>🔍 搜索文章</h2>
+                    <input type="text" class="search-hero-input" id="searchHeroInput" 
+                           value="${state.searchQuery}" 
+                           placeholder="输入关键词搜索文章..."
+                           onkeypress="if(event.key === 'Enter') handleSearchHero()">
+                    <div class="search-tags">
+                        <span style="color: var(--text-light); font-size: 0.85rem;">热门搜索：</span>
+                        <span class="search-tag" onclick="quickSearch('AI')">AI</span>
+                        <span class="search-tag" onclick="quickSearch('Vue')">Vue</span>
+                        <span class="search-tag" onclick="quickSearch('Node.js')">Node.js</span>
+                        <span class="search-tag" onclick="quickSearch('TypeScript')">TypeScript</span>
+                        <span class="search-tag" onclick="quickSearch('LLM')">LLM</span>
+                    </div>
+                </div>
+            `;
+            
+            if (state.searchQuery) {
+                html += `
+                    <div style="margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                        找到 <strong style="color: var(--primary);">${filtered.length}</strong> 篇相关文章
+                    </div>
+                `;
+            }
+            
+            if (filtered.length === 0) {
+                html += `
+                    <div style="text-align: center; padding: 60px 20px; color: var(--text-light);">
+                        <div style="font-size: 64px; margin-bottom: 16px;">🔍</div>
+                        <h3 style="font-size: 18px; margin-bottom: 8px;">${state.searchQuery ? '没有找到相关文章' : '输入关键词开始搜索'}</h3>
+                        <p>尝试其他关键词或浏览所有文章</p>
+                        <button class="filter-btn" onclick="goHome()" style="margin-top: 1rem;">返回首页</button>
+                    </div>
+                `;
+            } else {
+                html += filtered.map(article => `
+                    <article class="article-card ${article.colorClass}">
+                        <h3><a href="#" onclick="viewArticle(${article.id}); return false;">${article.title}</a></h3>
+                        <div class="article-meta">
+                            <span>📅 ${article.date}</span>
+                            <span class="article-tag ${article.tagClass}">${article.category}</span>
+                        </div>
+                        <p>${article.excerpt}</p>
+                        <a href="#" class="read-more" onclick="viewArticle(${article.id}); return false;">阅读全文 →</a>
+                    </article>
+                `).join('');
+            }
+            
+            return html;
+        }
+
+        // 渲染文章详情
+        function renderArticleDetail(article) {
+            // 使用 marked.js 解析 Markdown（如果 content 是 Markdown 格式）
+            const contentHtml = typeof marked !== 'undefined'
+                ? parseMarkdown(article.content)
+                : article.content;
+
+            const views = getArticleViews(article.id, article);
+            const likes = getArticleLikes(article.id, article);
+
+            return `
+                <div style="margin-bottom: 20px;">
+                    <a href="#" class="read-more" onclick="goHome(); return false;">← 返回列表</a>
+                </div>
+
+                <article class="article-card ${article.colorClass}" style="padding: 2rem;">
+                    <div class="article-meta" style="margin-bottom: 1rem;">
+                        <span class="article-tag ${article.tagClass}">${article.category}</span>
+                        <span>📅 ${article.date}</span>
+                    </div>
+
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; line-height: 1.4;">${article.title}</h2>
+
+                    <div class="article-meta" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                        <span>👍 ${likes}</span>
+                        <span>👁️ ${views} 次阅读</span>
+                    </div>
+
+                    <div class="article-content" style="font-size: 0.95rem; line-height: 1.8; color: var(--text-color);">
+                        ${contentHtml}
+                    </div>
+
+                    <div class="article-actions" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                        <button class="share-btn" onclick="likeArticle(${article.id})">👍 点赞 (${likes})</button>
+                        <button class="share-btn" onclick="shareArticle(${article.id})">📤 分享</button>
+                    </div>
+                </article>
+            `;
+        }
+
+        // 渲染分类列表
+        function renderCategories() {
+            const stats = getCategoryStats();
+            const categories = [
+                { name: '前端开发', icon: '💻' },
+                { name: '后端开发', icon: '🔧' },
+                { name: 'AI 应用', icon: '🤖' },
+                { name: '工具技巧', icon: '🛠️' },
+                { name: '随笔杂谈', icon: '📝' }
+            ];
+
+            return categories.map(cat => `
+                <li onclick="selectCategory('${cat.name}')">
+                    <span>${cat.icon} ${cat.name}</span>
+                    <span class="count">${stats[cat.name] || 0}</span>
+                </li>
+            `).join('');
+        }
+
+        // 渲染页面
+        function render() {
+            const mainContent = document.getElementById('mainContent');
+
+            if (state.page === 'home') {
+                const articleListHtml = renderArticleList();
+                mainContent.innerHTML = `
+                    <div class="main-header">
+                        <h2>📝 文章列表</h2>
+                        <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem;">
+                            当前分类：<strong style="color: var(--primary);">${state.currentCategory}</strong> | 
+                            文章数：<strong id="debug-count">${filterArticles().length}</strong> | 
+                            总页数：<strong id="debug-pages">${totalPages()}</strong> | 
+                            当前页：<strong id="debug-page">${state.pageNum}</strong>
+                        </div>
+                        <div class="filter-btns">
+                            <button class="filter-btn ${state.currentCategory === '全部' ? 'active' : ''}" onclick="selectCategory('全部')">全部</button>
+                            <button class="filter-btn ${state.currentCategory === '后端开发' ? 'active' : ''}" onclick="selectCategory('后端开发')">后端开发</button>
+                            <button class="filter-btn ${state.currentCategory === '随笔杂谈' ? 'active' : ''}" onclick="selectCategory('随笔杂谈')">随笔杂谈</button>
+                            <button class="filter-btn ${state.currentCategory === 'AI 应用' ? 'active' : ''}" onclick="selectCategory('AI 应用')">AI 应用</button>
+                            <button class="filter-btn ${state.currentCategory === '架构设计' ? 'active' : ''}" onclick="selectCategory('架构设计')">架构设计</button>
+                        </div>
+                    </div>
+                    ${articleListHtml}
+                `;
+            } else if (state.page === 'article' && state.currentArticle) {
+                mainContent.innerHTML = renderArticleDetail(state.currentArticle);
+            } else if (state.page === 'archive') {
+                mainContent.innerHTML = `
+                    <div class="main-header">
+                        <h2>📚 文章归档</h2>
+                        <button class="filter-btn" onclick="goHome()">← 返回首页</button>
+                    </div>
+                    <div class="archive-page">
+                        ${renderArchive()}
+                    </div>
+                `;
+            } else if (state.page === 'search') {
+                mainContent.innerHTML = renderSearch();
+            }
+        }
+
+        // 查看文章
+        async function viewArticle(id) {
+            const article = articles.find(a => a.id === id);
+            if (article) {
+                // 更新阅读量
+                await incrementArticleViews(id, article.title, article.category);
+                updateStats();
+                state.currentArticle = article;
+                state.page = 'article';
+                render();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        // 返回首页
+        function goHome() {
+            state.page = 'home';
+            state.currentArticle = null;
+            state.pageNum = 1;
+            render();
+        }
+
+        // 前往归档
+        function goArchive() {
+            state.page = 'archive';
+            render();
+            window.scrollTo(0, 0);
+        }
+
+        // 前往搜索
+        function goSearch() {
+            state.page = 'search';
+            state.searchQuery = '';
+            render();
+        }
+
+        // 选择分类
+        function selectCategory(category) {
+            state.currentCategory = category;
+            state.page = 'home';
+            state.pageNum = 1;
+            render();
+            // 更新标签云高亮状态
+            updateTagCloudHighlight(category);
+            // 更新顶部按钮高亮状态
+            updateFilterBtnHighlight(category);
+        }
+
+        // 更新顶部按钮高亮
+        function updateFilterBtnHighlight(category) {
+            document.querySelectorAll('.filter-btns .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.includes(category) || (category === '全部' && btn.textContent === '全部')) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // 更新标签云高亮
+        function updateTagCloudHighlight(category) {
+            document.querySelectorAll('.tag-cloud .tag').forEach(tag => {
+                tag.classList.remove('active');
+                if (tag.textContent.trim().startsWith(category)) {
+                    tag.classList.add('active');
+                }
+            });
+        }
+
+        // 搜索（导航栏）
+        function handleSearch() {
+            const searchInput = document.querySelector('.search-box input');
+            state.searchQuery = searchInput.value.trim();
+            state.page = 'search';
+            state.pageNum = 1;
+            render();
+        }
+
+        // 搜索（搜索页面）
+        function handleSearchHero() {
+            const searchInput = document.getElementById('searchHeroInput');
+            state.searchQuery = searchInput.value.trim();
+            render();
+        }
+
+        // 快速搜索
+        function quickSearch(term) {
+            document.getElementById('searchHeroInput').value = term;
+            state.searchQuery = term;
+            render();
+        }
+
+        // 点赞
+        async function likeArticle(id) {
+            const article = articles.find(a => a.id === id);
+            if (article) {
+                // 更新点赞数
+                await incrementArticleLikes(id, article.title, article.category);
+                updateStats();
+                state.currentArticle = article;
+                render();
+            }
+        }
+
+        // 分享文章
+        function shareArticle(id) {
+            const article = articles.find(a => a.id === id);
+            const url = window.location.href + '#article=' + id;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('文章链接已复制！📋\n"' + article.title + '"');
+            }).catch(() => {
+                alert('复制失败，请手动复制');
+            });
+        }
+
+        // 切换主题
+        let isDarkTheme = false;
+        function toggleTheme() {
+            isDarkTheme = !isDarkTheme;
+            const root = document.documentElement;
+            if (isDarkTheme) {
+                root.style.setProperty('--bg-color', '#1a1a2e');
+                root.style.setProperty('--card-bg', '#16213e');
+                root.style.setProperty('--text-color', '#eee');
+                root.style.setProperty('--text-muted', '#aaa');
+                root.style.setProperty('--text-light', '#666');
+                root.style.setProperty('--border-color', '#333');
+            } else {
+                root.style.setProperty('--bg-color', '#f5f7fa');
+                root.style.setProperty('--card-bg', '#fff');
+                root.style.setProperty('--text-color', '#333');
+                root.style.setProperty('--text-muted', '#666');
+                root.style.setProperty('--text-light', '#999');
+                root.style.setProperty('--border-color', '#e8e8e8');
+            }
+        }
+
+        // 分享页面
+        function sharePage() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('页面链接已复制！📋');
+            }).catch(() => {
+                alert('复制失败，请手动复制');
+            });
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 从外部加载文章数据
+            loadArticles();
+        });
+    </script>
+</body>
+</html>

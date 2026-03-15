@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "你好，博客",
+        "excerpt": "这是我的第一篇技术博客文章。...",
+        "content": "<h2>你好，博客</h2><br><br>这是我的第一篇技术博客文章。<br><br><h3>关于我</h3><br><br>我是一名技术爱好者，喜欢探索新的技术和工具。<br><br><h3>博客目标</h3><br><br><li>分享技术学习心得</li><br><li>记录项目实践经验</li><br><li>探索 AI 技术应用</li><br><br>敬请期待更多内容！<br>",
+        "date": "2026-03-06",
+        "category": "技术文章",
+        "tagClass": "frontend",
+        "colorClass": "blue",
+        "likes": 0,
+        "views": 0
+    },
+    {
+        "id": 2,
+        "title": "JavaScript 异步编程指南",
+        "excerpt": "最早的异步编程方式，容易产生回调地狱。...",
+        "content": "<h2>JavaScript 异步编程指南</h2><br><br><h3>回调函数</h3><br><br>最早的异步编程方式，容易产生回调地狱。<br><br><pre><code class=\"language-javascript\">getData(function(data) {<br>    processData(data, function(result) {<br>        console.log(result);<br>    });<br>});<br></code></pre><br><br><h3>Promise</h3><br><br>ES6 引入的 Promise 让异步代码更清晰。<br><br><pre><code class=\"language-javascript\">getData()<br>    .then(data => processData(data))<br>    .then(result => console.log(result))<br>    .catch(err => console.error(err));<br></code></pre><br><br><h3>async/await</h3><br><br>最优雅的异步编程方式。<br><br><pre><code class=\"language-javascript\">async function fetchData() {<br>    try {<br>        const data = await getData();<br>        const result = await processData(data);<br>        console.log(result);<br>    } catch (err) {<br>        console.error(err);<br>    }<br>}<br></code></pre><br>",
+        "date": "2026-03-06",
+        "category": "技术文章",
+        "tagClass": "frontend",
+        "colorClass": "blue",
+        "likes": 0,
+        "views": 0
+    },
+    {
+        "id": 3,
+        "title": "CSS Grid 布局入门",
+        "excerpt": "CSS Grid 是强大的二维布局系统。...",
+        "content": "<h2>CSS Grid 布局入门</h2><br><br><h3>什么是 Grid 布局？</h3><br><br>CSS Grid 是强大的二维布局系统。<br><br><h3>基本用法</h3><br><br><pre><code class=\"language-css\">.container {<br>    display: grid;<br>    grid-template-columns: repeat(3, 1fr);<br>    gap: 20px;<br>}<br></code></pre><br><br><h3>常用属性</h3><br><br><li><code>grid-template-columns</code>: 定义列</li><br><li><code>grid-template-rows</code>: 定义行</li><br><li><code>gap</code>: 设置间距</li><br><li><code>grid-column</code>: 跨列</li><br><li><code>grid-row</code>: 跨行</li><br><br>Grid 布局让复杂页面变得简单！<br>",
+        "date": "2026-03-06",
+        "category": "技术文章",
+        "tagClass": "frontend",
+        "colorClass": "blue",
+        "likes": 0,
+        "views": 0
+    }
+]
