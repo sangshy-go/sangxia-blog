@@ -1715,14 +1715,18 @@
         function jumpToPage(total) {
             const input = document.getElementById('pageJumpInput');
             const page = parseInt(input.value);
+            
             if (isNaN(page) || page < 1) {
-                alert('请输入有效的页码（1-' + total + '）');
+                showToast('❌ 请输入有效的页码（1-' + total + '）', 3000);
                 return;
             }
+            
             if (page > total) {
-                alert('页码不能超过总页数（' + total + '）');
+                showToast('❌ 最大页码为 ' + total + '，已自动跳转到最后一页', 3000);
+                goToPage(total);
                 return;
             }
+            
             goToPage(page);
         }
 
