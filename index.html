@@ -1019,6 +1019,8 @@
     </style>
     <!-- 引入 marked.js 解析 Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入 DOMPurify 进行 XSS 防护 -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
     <script>
         // 配置 marked.js 渲染器
         if (typeof marked !== 'undefined') {
@@ -1038,10 +1040,15 @@
             });
         }
 
-        // 提供带自定义配置的解析函数
+        // 提供带 XSS 防护的解析函数
         function parseMarkdown(content) {
             if (typeof marked === 'undefined') return content;
-            return marked.parse(content);
+            const rawHtml = marked.parse(content);
+            // 使用 DOMPurify 清理 HTML，防止 XSS
+            if (typeof DOMPurify !== 'undefined') {
+                return DOMPurify.sanitize(rawHtml);
+            }
+            return rawHtml;
         }
     </script>
 </head>
@@ -1504,12 +1511,15 @@
                 return '<span style="color: var(--text-light); font-size: 0.85rem;">暂无标签</span>';
             }
 
-            const tags = sortedTags.map(([tag, count]) => `
-                <span class="tag ${state.currentCategory === tag ? 'active' : ''}"
-                      onclick="selectCategory('${tag}')">
-                    ${tag} <span class="count">${count}</span>
-                </span>
-            `).join('');
+            const tags = sortedTags.map(([tag, count]) => {
+                const safeTag = escapeHtml(tag);  // 转义标签，防止 XSS
+                return `
+                    <span class="tag ${state.currentCategory === tag ? 'active' : ''}"
+                          onclick="selectCategory('${safeTag}')">
+                        ${safeTag} <span class="count">${count}</span>
+                    </span>
+                `;
+            }).join('');
             return tags;
         }
 
@@ -1868,7 +1878,7 @@
                 <div class="search-hero">
                     <h2>🔍 搜索文章</h2>
                     <input type="text" class="search-hero-input" id="searchHeroInput" 
-                           value="${state.searchQuery}" 
+                           value="${escapeHtml(state.searchQuery)}" 
                            placeholder="输入关键词搜索文章..."
                            onkeypress="if(event.key === 'Enter') handleSearchHero()">
                     <div class="search-tags">
