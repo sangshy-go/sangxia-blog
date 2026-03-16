@@ -1662,15 +1662,7 @@
         // 跳转页面
         function goToPage(page) {
             const total = totalPages();
-            const filtered = filterArticles();
             
-            // 调试日志
-            console.log('[goToPage] 当前分类:', state.currentCategory);
-            console.log('[goToPage] 过滤后文章数:', filtered.length);
-            console.log('[goToPage] 总页数:', total);
-            console.log('[goToPage] 目标页码:', page);
-            console.log('[goToPage] 当前页码:', state.pageNum);
-
             // 如果总页数为 0 或 1，不需要跳转
             if (total <= 1) return;
 
@@ -1709,26 +1701,17 @@
             div.textContent = text;
             return div.innerHTML;
         }
-        
-        // 渲染文章列表（全新方案 - 2026-03-16）
+
+        // 渲染文章列表
         function renderArticleList() {
             const filtered = filterArticles();
             const total = Math.ceil(filtered.length / state.pageSize);
             const currentPage = state.pageNum;
             
-            console.log('====== [renderArticleList] 开始 ======');
-            console.log('[renderArticleList] 过滤后文章数:', filtered.length);
-            console.log('[renderArticleList] 总页数:', total);
-            console.log('[renderArticleList] 当前页码:', currentPage);
-            console.log('[renderArticleList] 是否显示分页:', total > 1);
-            
             // 计算当前页的文章
             const startIdx = (currentPage - 1) * state.pageSize;
             const endIdx = Math.min(startIdx + state.pageSize, filtered.length);
             const currentPageArticles = filtered.slice(startIdx, endIdx);
-            
-            console.log('[renderArticleList] 当前页文章范围:', startIdx + 1 + '-' + endIdx);
-            console.log('[renderArticleList] 当前页文章数:', currentPageArticles.length);
             
             // 1. 如果没有文章
             if (filtered.length === 0) {
@@ -1772,9 +1755,7 @@
             
             html += '</div>';  // 闭合 articles-wrapper
             
-            // 3. 生成分页控件（原生方案）
-            console.log('[renderArticleList] 分页调试：total=', total, 'currentPage=', currentPage, 'filtered.length=', filtered.length);
-            
+            // 3. 生成分页控件
             if (total > 1) {
                 html += '<div class="pagination-wrapper">';
                 html += '<div class="pagination">';
@@ -1796,24 +1777,11 @@
                 
                 // 下一页
                 const nextDisabled = currentPage >= total;
-                console.log('[renderArticleList] 下一页调试：currentPage=', currentPage, 'total=', total, 'nextDisabled=', nextDisabled);
                 html += `<button onclick="goToPage(${currentPage + 1})" ${nextDisabled ? 'disabled' : ''}>下一页 →</button>`;
                 
                 html += '</div>';
                 html += `<div style="text-align:center;margin-top:1rem;font-size:0.85rem;color:#7c5cec;font-weight:bold;">第 ${currentPage} 页 / 共 ${total} 页 | 文章数：${filtered.length}</div>`;
-                html += `<div style="text-align:center;margin-top:0.5rem;font-size:0.75rem;color:#ff5722;">🔥 分页已修复 v20260316-1135</div>`;
                 html += '</div>';
-            }
-            
-            console.log('[renderArticleList] ✅ HTML 生成完成 v20260316-1140, 长度:', html.length);
-            console.log('[renderArticleList] 🔥 强制刷新标记：如果你看到这个日志，说明代码已更新！');
-            
-            // 验证：检查生成的 HTML 是否包含分页
-            if (total > 1 && !html.includes('pagination-wrapper')) {
-                console.error('❌ [renderArticleList] BUG: 应该生成分页但没有！');
-                console.error('HTML 最后 1000 字符:', html.slice(-1000));
-            } else if (total > 1) {
-                console.log('✅ [renderArticleList] 分页已生成，请滚动到页面底部查看！');
             }
             
             return html;
@@ -2005,45 +1973,20 @@
 
         // 渲染页面
         function render() {
-            // 验证代码是否已更新
-            if (!window.renderCodeVerified) {
-                console.log('✅ 代码已更新 v20260316-1145 - 分页修复版');
-                window.renderCodeVerified = true;
-            }
-            
             const mainContent = document.getElementById('mainContent');
 
             if (state.page === 'home') {
                 const articleListHtml = renderArticleList();
                 const filtered = filterArticles();
                 const total = Math.ceil(filtered.length / state.pageSize);
-                const currentPage = state.pageNum;
                 
-                console.log('[render] 开始渲染，当前页:', currentPage, '总页数:', total);
-                
-                // 诊断浮窗
-                const debugFloat = `
-                    <div style="position: fixed; top: 10px; right: 10px; background: #ffeb3b; color: #000; padding: 12px; border-radius: 8px; font-size: 11px; z-index: 9999; max-width: 280px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); line-height: 1.4;">
-                        <strong style="font-size: 13px;">🔍 分页诊断</strong><br>
-                        ────────────<br>
-                        分类：<strong>${state.currentCategory}</strong><br>
-                        文章数：<strong>${filtered.length}</strong><br>
-                        总页数：<strong>${total}</strong><br>
-                        当前页：<strong style="color: #d32f2f; font-size: 14px;">${state.pageNum}</strong><br>
-                        分页显示：<strong>${total > 1 ? '✅' : '❌'}</strong><br>
-                        ────────────<br>
-                        <span style="color: #666;">(刷新页面时更新)</span>
-                    </div>
-                `;
-                
-                const finalHtml = debugFloat + `
+                mainContent.innerHTML = `
                     <div class="main-header">
                         <h2>📝 文章列表</h2>
                         <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem;">
                             当前分类：<strong style="color: var(--primary);">${state.currentCategory}</strong> | 
-                            文章数：<strong id="debug-count">${filtered.length}</strong> | 
-                            总页数：<strong id="debug-pages">${total}</strong> | 
-                            当前页：<strong id="debug-page">${state.pageNum}</strong>
+                            文章数：<strong>${filtered.length}</strong> | 
+                            总页数：<strong>${total}</strong>
                         </div>
                         <div class="filter-btns">
                             <button class="filter-btn ${state.currentCategory === '全部' ? 'active' : ''}" onclick="selectCategory('全部')">全部</button>
@@ -2055,21 +1998,6 @@
                     </div>
                     ${articleListHtml}
                 `;
-                
-                console.log('[render] 设置 innerHTML 前，articleListHtml 长度:', articleListHtml.length);
-                console.log('[render] 设置 innerHTML 前，是否包含 pagination:', articleListHtml.includes('pagination-wrapper'));
-                
-                mainContent.innerHTML = finalHtml;
-                
-                console.log('[render] 设置 innerHTML 后，立即检查 DOM');
-                const immediatePagination = mainContent.querySelector('.pagination-wrapper');
-                console.log('[render] 立即检查 pagination-wrapper:', !!immediatePagination);
-                
-                if (total > 1 && !immediatePagination) {
-                    console.error('❌ [render] BUG: innerHTML 设置后分页仍不存在！');
-                    console.error('[render] finalHtml 长度:', finalHtml.length);
-                    console.error('[render] finalHtml 是否包含 pagination:', finalHtml.includes('pagination-wrapper'));
-                }
             } else if (state.page === 'article' && state.currentArticle) {
                 mainContent.innerHTML = renderArticleDetail(state.currentArticle);
             } else if (state.page === 'archive') {
