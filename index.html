@@ -1831,21 +1831,25 @@
                                 <span style="color: var(--text-light);">(${monthArticles.length}篇)</span>
                             </div>
                             <div class="archive-list">
-                                ${monthArticles.map(article => `
+                                ${monthArticles.map(article => {
+                                    const safeTitle = escapeHtml(article.title);
+                                    const safeCategory = escapeHtml(article.category);
+                                    return `
                                     <div class="archive-item" onclick="viewArticle(${article.id})">
                                         <div class="archive-date">
                                             <div class="day">${new Date(article.date).getDate()}</div>
                                             <div class="month">${monthNames[month]}</div>
                                         </div>
                                         <div class="archive-content">
-                                            <h4 class="archive-title">${article.title}</h4>
+                                            <h4 class="archive-title">${safeTitle}</h4>
                                             <div class="archive-meta">
-                                                <span>🏷️ ${article.category}</span>
+                                                <span>🏷️ ${safeCategory}</span>
                                                 <span>👁️ ${article.views}</span>
                                             </div>
                                         </div>
                                     </div>
-                                `).join('')}
+                                    `;
+                                }).join('')}
                             </div>
                         </div>
                     </div>
@@ -1896,17 +1900,23 @@
                     </div>
                 `;
             } else {
-                html += filtered.map(article => `
+                html += filtered.map(article => {
+                    const safeTitle = escapeHtml(article.title);
+                    const safeExcerpt = escapeHtml(article.excerpt);
+                    const safeCategory = escapeHtml(article.category);
+                    const safeDate = escapeHtml(article.date);
+                    return `
                     <article class="article-card ${article.colorClass}">
-                        <h3><a href="#" onclick="viewArticle(${article.id}); return false;">${article.title}</a></h3>
+                        <h3><a href="#" onclick="viewArticle(${article.id}); return false;">${safeTitle}</a></h3>
                         <div class="article-meta">
-                            <span>📅 ${article.date}</span>
-                            <span class="article-tag ${article.tagClass}">${article.category}</span>
+                            <span>📅 ${safeDate}</span>
+                            <span class="article-tag ${article.tagClass}">${safeCategory}</span>
                         </div>
-                        <p>${article.excerpt}</p>
+                        <p>${safeExcerpt}</p>
                         <a href="#" class="read-more" onclick="viewArticle(${article.id}); return false;">阅读全文 →</a>
                     </article>
-                `).join('');
+                    `;
+                }).join('');
             }
             
             return html;
@@ -1921,6 +1931,11 @@
 
             const views = getArticleViews(article.id, article);
             const likes = getArticleLikes(article.id, article);
+            
+            // 转义用户数据
+            const safeTitle = escapeHtml(article.title);
+            const safeCategory = escapeHtml(article.category);
+            const safeDate = escapeHtml(article.date);
 
             return `
                 <div style="margin-bottom: 20px;">
@@ -1929,11 +1944,11 @@
 
                 <article class="article-card ${article.colorClass}" style="padding: 2rem;">
                     <div class="article-meta" style="margin-bottom: 1rem;">
-                        <span class="article-tag ${article.tagClass}">${article.category}</span>
-                        <span>📅 ${article.date}</span>
+                        <span class="article-tag ${article.tagClass}">${safeCategory}</span>
+                        <span>📅 ${safeDate}</span>
                     </div>
 
-                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; line-height: 1.4;">${article.title}</h2>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; line-height: 1.4;">${safeTitle}</h2>
 
                     <div class="article-meta" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
                         <span>👍 ${likes}</span>
