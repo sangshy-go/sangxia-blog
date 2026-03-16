@@ -2036,7 +2036,7 @@
                     </div>
                 `;
                 
-                mainContent.innerHTML = debugFloat + `
+                const finalHtml = debugFloat + `
                     <div class="main-header">
                         <h2>📝 文章列表</h2>
                         <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem;">
@@ -2056,19 +2056,20 @@
                     ${articleListHtml}
                 `;
                 
-                // 验证：render 完成后检查分页是否存在
-                setTimeout(() => {
-                    const paginationWrapper = document.querySelector('.pagination-wrapper');
-                    const articlesWrapper = document.querySelector('.articles-wrapper');
-                    console.log('[render] 验证：articles-wrapper 存在:', !!articlesWrapper);
-                    console.log('[render] 验证：pagination-wrapper 存在:', !!paginationWrapper);
-                    
-                    if (total > 1 && !paginationWrapper) {
-                        console.error('❌ [render] BUG: 应该显示分页但 DOM 中没有！');
-                        console.error('[render] mainContent.innerHTML 长度:', mainContent.innerHTML.length);
-                        console.error('[render] 检查是否包含 pagination:', mainContent.innerHTML.includes('pagination'));
-                    }
-                }, 50);
+                console.log('[render] 设置 innerHTML 前，articleListHtml 长度:', articleListHtml.length);
+                console.log('[render] 设置 innerHTML 前，是否包含 pagination:', articleListHtml.includes('pagination-wrapper'));
+                
+                mainContent.innerHTML = finalHtml;
+                
+                console.log('[render] 设置 innerHTML 后，立即检查 DOM');
+                const immediatePagination = mainContent.querySelector('.pagination-wrapper');
+                console.log('[render] 立即检查 pagination-wrapper:', !!immediatePagination);
+                
+                if (total > 1 && !immediatePagination) {
+                    console.error('❌ [render] BUG: innerHTML 设置后分页仍不存在！');
+                    console.error('[render] finalHtml 长度:', finalHtml.length);
+                    console.error('[render] finalHtml 是否包含 pagination:', finalHtml.includes('pagination-wrapper'));
+                }
             } else if (state.page === 'article' && state.currentArticle) {
                 mainContent.innerHTML = renderArticleDetail(state.currentArticle);
             } else if (state.page === 'archive') {
