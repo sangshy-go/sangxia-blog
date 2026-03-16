@@ -1724,8 +1724,10 @@
         // HTML 转义函数 - 防止特殊字符破坏 HTML 结构
         function escapeHtml(text) {
             if (!text) return '';
+            // 先解码 HTML 实体，避免重复转义
+            const decoded = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
             const div = document.createElement('div');
-            div.textContent = text;
+            div.textContent = decoded;
             return div.innerHTML;
         }
 
