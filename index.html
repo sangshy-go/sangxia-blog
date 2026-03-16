@@ -1791,6 +1791,10 @@
             }
             
             console.log('[renderArticleList] ✅ HTML 生成完成，长度:', html.length);
+            
+            // 测试：在控制台输出 HTML 最后 500 字符，确认分页存在
+            console.log('[renderArticleList] HTML 最后 500 字符:', html.slice(-500));
+            
             return html;
         }
 
