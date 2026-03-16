@@ -1263,9 +1263,6 @@
                 // 再次获取最新的统计数据（包含刚初始化的）
                 await fetchArticleStats();
 
-                // 读取 localStorage 中的置顶状态
-                const pinnedArticles = JSON.parse(localStorage.getItem('pinnedArticles') || '{}');
-                
                 // 使用服务器统计数据映射文章
                 articles = data.map((article) => {
                     // 从服务器统计数据中获取
@@ -1274,7 +1271,7 @@
                             ...article,
                             views: serverStats[article.id].views,
                             likes: serverStats[article.id].likes,
-                            pinned: pinnedArticles[article.id] || article.pinned || false
+                            pinned: article.pinned || false
                         };
                     } else {
                         // 如果没有统计数据，生成初始值
@@ -1283,7 +1280,7 @@
                             ...article,
                             views: initial.baseViews,
                             likes: initial.baseLikes,
-                            pinned: pinnedArticles[article.id] || article.pinned || false
+                            pinned: article.pinned || false
                         };
                     }
                 });
@@ -2005,9 +2002,6 @@
                     <div class="article-actions" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
                         <button class="share-btn" onclick="likeArticle(${article.id})">👍 点赞 (${likes})</button>
                         <button class="share-btn" onclick="shareArticle(${article.id}, event)">📤 分享</button>
-                        <button class="share-btn" onclick="togglePin(${article.id}, event)" style="background: ${article.pinned ? '#ff6b6b' : 'var(--bg-color)'}; color: ${article.pinned ? '#fff' : 'var(--text-muted)'};">
-                            ${article.pinned ? '📌 已置顶' : '📌 置顶'}
-                        </button>
                     </div>
                 </article>
             `;
@@ -2294,38 +2288,6 @@
             }).catch(() => {
                 showToast('❌ 复制失败', 2000, targetElement);
             });
-        }
-
-        // 切换文章置顶状态
-        function togglePin(id, event) {
-            const article = articles.find(a => a.id === id);
-            if (!article) return;
-            
-            // 切换置顶状态
-            article.pinned = !article.pinned;
-            
-            // 保存到 localStorage
-            const pinnedArticles = JSON.parse(localStorage.getItem('pinnedArticles') || '{}');
-            pinnedArticles[id] = article.pinned;
-            localStorage.setItem('pinnedArticles', JSON.stringify(pinnedArticles));
-            
-            // 重新排序文章
-            articles.sort((a, b) => {
-                if (a.pinned && !b.pinned) return -1;
-                if (!a.pinned && b.pinned) return 1;
-                return new Date(b.date) - new Date(a.date);
-            });
-            
-            // 重新渲染
-            render();
-            
-            // 显示提示
-            const targetElement = event ? event.currentTarget : null;
-            if (article.pinned) {
-                showToast('📌 已置顶', 2000, targetElement);
-            } else {
-                showToast('📌 已取消置顶', 2000, targetElement);
-            }
         }
 
         // 初始化
