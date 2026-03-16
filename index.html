@@ -1345,6 +1345,9 @@
             pageNum: 1,
             pageSize: 15
         };
+        
+        // 暴露到全局，供补丁脚本使用
+        window.state = state;
 
         // 更新统计数据
         function updateStats() {
