@@ -1275,6 +1275,7 @@
                     } else {
                         // 如果没有统计数据，生成初始值
                         const initial = getInitialStats(article.title, article.category);
+                        console.log(`[文章 ${article.id}] ${article.title[:20]}... views=${initial.views}, likes=${initial.likes}`);
                         return {
                             ...article,
                             views: initial.views,
@@ -1282,6 +1283,8 @@
                         };
                     }
                 });
+                
+                console.log(`[调试] 加载了 ${articles.length} 篇文章，第一篇 views=${articles[0].views}, likes=${articles[0].likes}`);
 
                 // 按日期倒序排序（新的在前）
                 articles.sort((a, b) => new Date(b.date) - new Date(a.date));
