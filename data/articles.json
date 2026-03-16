@@ -366,7 +366,7 @@
     "excerpt": "Git是最牛逼的开源分布式版本控制系统，日常开发中常用来管理代码提交、恢复、追踪，是团队开发最常用的一个代码管理工具。 在我们修改了代码并且提交之前，常会使用`git commit -m 'change'`命令来描述我们代码改动的内容，但是很多都不规范，随处可见的 `git commit -m 'u...",
     "content": "Git是最牛逼的开源分布式版本控制系统，日常开发中常用来管理代码提交、恢复、追踪，是团队开发最常用的一个代码管理工具。\n\n在我们修改了代码并且提交之前，常会使用`git commit -m 'change'`命令来描述我们代码改动的内容，但是很多都不规范，随处可见的 `git commit -m 'update'`，以致于不能清晰地知道每次提交代码的变更内容，所以需要一种规范来管理代码提交的内容。\n\n#### 一、Git Commit message规范\n\n常用的Git Commit message规范采用的是[Angular 规范](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)。\n\n本文参考阮老师的文章介绍：\n\nhttp://www.ruanyifeng.com/blog/2016/01/commit\\_message\\_change\\_log.html.\n\nAngular规范中定义的格式有3个内容：\n\n- Header\n- Body\n- Footer\n\n```\n<type>(<scope>): <subject>\n// 空一行\n<body>\n// 空一行\n<footer>\n```\n\n##### 1、 Header\n\nHeader部分有3个字段： **type(必需), scope(可选), subject(必需)**\n\n> type(必需) ： Type of change：commit的类别；\n>\n> scope(可选)：Scope of this change：此次commit的影响模块；\n>\n> subject(必需)：Short description：简短的描述此次代码变更的主要内容\n\n（1）type\n\ntype用于说明commit的类别，常用的标识如下：\n\n- **feat：新功能（feature）**\n- **fix：修补bug**\n- docs：文档（documentation）\n- style： 格式（不影响代码运行的变动,空格,格式化,等等）\n- refactor：重构（即不是新增功能，也不是修改bug的代码变动\n- perf: 性能 (提高代码性能的改变)\n- test：增加测试或者修改测试\n- build: 影响构建系统或外部依赖项的更改(maven,gradle,npm 等等)\n- ci: 对CI配置文件和脚本的更改\n- chore：对非 src 和 test 目录的修改\n- revert: Revert a commit\n\n最常用的就是feat合fix两种type；\n\n（2）scope\n\n`scope`用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。\n\n（3）subject\n\n`subject`是 commit 目的的简短描述，不超过50个字符，主要介绍此次代码变更的主要内容。\n\n举个例子：  \n eg: feat(订单模块)：订单详情接口增加订单号字段\n\n其中， feat对应type字段；订单模块对应scope(若果scope有内容，括号就存在)；“订单详情接口增加订单号字段”对应subject，简要说明此次代码变更的主要内容。\n\n##### 2、Body\n\nBody 部分是对本次 commit 的详细描述，可以分成多行。\n\n如：\n\n（1）增加订单号字段；\n\n（2）增加了订单退款接口；\n\n日常项目开发中，如果Header中**subject**已经描述清楚此次代码变更的内容后，Body部分就可以为空。\n\n##### 3、Footer\n\n（1）不兼容变动\n\n（2）关闭 Issue\n\n日常项目中开发，Footer不常用，可为空。\n\n##### 4、Revert\n\n若需要撤销上一次的commit，header部分为：`revert: 上一次commit的header内容`；\n\nbody部分为：`This reverts commit xxx`，xxx是上一次commit对应的SHA 标识符。\n\n##### 二、IDEA插件Git Commit Template使用\n\n在iTerm中使用命令行的方式提交代码，我们可以使用Commitizen来撰写合格的 Commit message，具体使用见：http://www.ruanyifeng.com/blog/2016/01/commit\\_message\\_change\\_log.html。\n\n本文主要介绍如何使用IDEA中的插件Git Commit Template来撰写Commit message。\n\n首先安装和下载插件Git Commit Template：[下载地址](https://plugins.jetbrains.com/plugin/9861-git-commit-template)\n\n安装后重启IDEA，更改代码，点击IDEA中的VCS版本控制按钮：\n\n![](./images/987229886427e3f9.png)\n\n点击Commit按钮：\n\n![](./images/0e1c9fe82d887d4e.png)\n\n选择Type，填写相应内容，最后点击提交即可：\n\n![](./images/5e2bfbd7dc773f6f.png)\n\n---\n\n参考内容\n\nhttp://www.ruanyifeng.com/blog/2016/01/commit\\_message\\_change\\_log.html",
     "date": "2019-12-06",
-    "category": "架构设计",
+    "category": "后端开发",
     "tags": [
       "git commit message",
       "git"
@@ -1782,7 +1782,7 @@
     "excerpt": "我是在Github上项目下直接创建的新分支，此处以后再补充； ![](https://img-blog.csdn.net/20170104164803059?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L...",
     "content": "### Git创建分支并上传代码到新分支上\n\n#### 一  创建分支：\n\n我是在Github上项目下直接创建的新分支，此处以后再补充；\n\n#### 二  上传代码到新分支\n\n##### 1**$git status**:查看所在分支和修改的文件：\n\n![](https://img-blog.csdn.net/20170104164803059?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n![]()\n\n如上图，我所在的分支为wnaggenshen\\_20170104,即为将要上传代码到该分支的地方；\n\n（若所在分支不在要上传代码的分支，则使用 $git checkout  分支名，切换到该分支再进行操作）。\n\n4个红色处表明已经被修改的文件，也为将要上传的文件。\n\n#### 2 $ git add -A:添加所有要上传的文件(代码)\n\n##### \n\n再$git status,此时4个文件变绿，表明将要上传到本地库；\n\n##### 3 $ git commit -m  '这里随便写什么'\n\n此时上传到本地repository；\n\n![](https://img-blog.csdn.net/20170104164113206?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n![]()\n\n##### 4 $ git push\n\n此时提交到远程分支。\n\n![](https://img-blog.csdn.net/20170104165023374?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n刷新Github，即可看到新上传的代码。\n\n------------------------------------------------------------------------------------------------------------------------------------------\n\n分支合并的时候，出现\"[Please enter a commit message to explain why this merge is necessary,especi”的解决办法](http://blog.csdn.net/ailo555/article/details/52202276):\n\n1 按键盘左上角Esc;\n\n2 输入 :wq ，再按Enter 即可。",
     "date": "2017-01-04",
-    "category": "架构设计",
+    "category": "后端开发",
     "tags": [
       "架构设计"
     ],
@@ -1881,7 +1881,7 @@
     "excerpt": "第一次使用GitHub,并上传自己的一个项目。下面简单介绍自己的使用过程。 1 打开Git Bash(git客户端，下载安装即可)，输入ssh-keygen -t rsa -C \"自己的邮箱地址@XXX.com\"  自己的公钥与私钥； 2 生成一个指定的文件，里面会生成公钥、私钥到以下文件夹下。 i...",
     "content": "第一次使用GitHub,并上传自己的一个项目。下面简单介绍自己的使用过程。\n\n### \n\n### 一 生成自己的公钥与私钥\n\n1\n打开Git Bash(git客户端，下载安装即可)，输入ssh-keygen -t rsa -C \"自己的邮箱地址@XXX.com\" \n\n自己的公钥与私钥；\n\n2\n生成一个指定的文件，里面会生成公钥、私钥到以下文件夹下。\n\nid\\_rsa是私钥，id\\_rsa.pub是公钥，打开公钥id\\_rsa.pub内内容并复制，等下要用到；\n\n![](https://img-blog.csdn.net/20161227175058626?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3浏览器进入自己的github，打开设置，进入ssh\nand GPG keys\n\n![](https://img-blog.csdn.net/20161227175006407?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n4点击NEW\nssh key，自己填个标题，下面内容复制前面打开的公钥，最后添加\n\n![](https://img-blog.csdn.net/20161227175130236?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n5 可以用ssh\n-T git@github.com测试自己是否可以连接成功了，中间有个输入需要输入yes，后面可以看到Hi XXXX..... access 表示成功。\n\n#### 二  登录GitHub官网，https://github.com，注册账号，填写邮箱信息和用户名等等。\n\n       1 创建Repository仓库：\n\n![](https://img-blog.csdn.net/20161227173248487?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n2 创建项目名称和简介：\n\n![](https://img-blog.csdn.net/20161227173320112?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3 此处记住这里有个SSH地址，待会会用到，暂时不用复制。\n\n![](https://img-blog.csdn.net/20161227173425520?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n### 三，上传本地文件到网页GitHub服务端\n\n 1 在本地建一个文件夹，内是要上传的项目，如我要上传的项目是MybatisTestDemo1的内容。\n\n![](https://img-blog.csdn.net/20161227175416627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n2 点进去，空白处点击右键，选择Git bash here,打开客户端。\n\n![](https://img-blog.csdn.net/20161227175527565?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3 分别执行指令  ：git\ninit\n\n   \n                                  git add .\n\ngit\ncommit -m \"提交文件\" （双引号内容无所谓）\n\n![](https://img-blog.csdn.net/20161227175648160?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n上面三个指令执行完后，代表本地仓库建立好了。\n\n4 关联github仓库，即要知道将本地代码上传到哪个地方去：\n\n执行指令git\nremote add origin “git@github.com:wangjiax9/beautifulDay.git”(括号内内容即为之前需要注意的SSH后的项目地址)。\n\n这里的双引号内的地址跟我下面的黑图地址不一样，因为这个是复制别人的，图中地址才是我的项目的地址。\n\n![](https://img-blog.csdn.net/20161227180310623?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n![](https://img-blog.csdn.net/20161227180333445?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n5 上传本地代码：git\npush -u origin master\n\n如上图。\n\n再去刷新Github页面，看code里就有上传的代码了。\n\n参考：【http://www.cnblogs.com/specter45/p/github.html】\n【http://blog.csdn.net/laozitianxia/article/details/50682100】\n\nhttp://jingyan.baidu.com/article/86f4a73e886b4137d7526966.html",
     "date": "2016-12-27",
-    "category": "架构设计",
+    "category": "后端开发",
     "tags": [
       "架构设计"
     ],
@@ -2089,7 +2089,7 @@
     "excerpt": "经常看到一些优秀的博客，然后就只能添加到浏览器的文件夹中，久而久之越来越多，很是头疼。看到印象笔记后，发现其可以裁剪网页内容的功能很是吸引人，于是便下载了一个安装。由于浏览器使用的Chrome，无法翻墙导致很多不兼容的问题，下面是一个很好的有效地不用翻墙的解决办法： http://jingyan.b...",
     "content": "经常看到一些优秀的博客，然后就只能添加到浏览器的文件夹中，久而久之越来越多，很是头疼。看到印象笔记后，发现其可以裁剪网页内容的功能很是吸引人，于是便下载了一个安装。由于浏览器使用的Chrome，无法翻墙导致很多不兼容的问题，下面是一个很好的有效地不用翻墙的解决办法：\n\nhttp://jingyan.baidu.com/article/0f5fb099cbe5486d8334ea2c.html",
     "date": "2016-11-08",
-    "category": "架构设计",
+    "category": "后端开发",
     "tags": [
       "架构设计"
     ],
@@ -3517,7 +3517,7 @@
     "excerpt": "最好解决办法：    删除文件 [workspace]/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi 【http://blog.csdn.net/zgf1991/article/details/37961169】",
     "content": "最好解决办法：   \n\n删除文件 [workspace]/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi\n\n【http://blog.csdn.net/zgf1991/article/details/37961169】",
     "date": "2016-08-12",
-    "category": "架构设计",
+    "category": "后端开发",
     "tags": [
       "架构设计"
     ],
@@ -3869,7 +3869,7 @@
     "excerpt": "之前一直使用Oracle的PL/SQL来创建数据库，缺点是要自己写Sql语句实现。今天下载了SQLyong，下面简单介绍其安装过程。 SQLyog 是一个易于使用的、快速而简洁的图形化管理MYSQL数据库的工具，它能够在任何地点有效地管理你的数据库，而且它本身是完全免费的！ 1 首先确定MySql数...",
     "content": "之前一直使用Oracle的PL/SQL来创建数据库，缺点是要自己写Sql语句实现。今天下载了SQLyong，下面简单介绍其安装过程。\n\nSQLyog 是一个易于使用的、快速而简洁的图形化管理MYSQL数据库的工具，它能够在任何地点有效地管理你的数据库，而且它本身是完全免费的！\n\n1 首先确定MySql数据库启动。可以在计算机-服务里查看，或者在dos命令下输入net start/stop mysql查看；\n\n此处安装启动mysql时出现了1067的错误，百度后找到解决办法：\n\n1、打开my.ini文件，找到default-storage-engine=InnoDB这一行，把它改成default-storage-engine=MyISAM。\n\n2、删除在[MySQL](http://lib.csdn.net/base/14 \"MySQL知识库\")安装目录下的Data目录中的ib\\_logfile0和ib\\_logfile1  \n 3。找到在配置MySQL服务器时指定的InfoDB目录删除掉ibdata1\n\n根据my.ini文件中：\n\n#\\*\\*\\* INNODB Specific options \\*\\*\\*  \n innodb\\_data\\_home\\_dir=\"D:/\"。  \n 4。重新启动MySQL的Service \n\n我只做了第一步即可；\n\n2 启动MySql数据库后，打开SQLyong,输入密码后即可使用。\n\n![]()\n\n![](https://img-blog.csdn.net/20160729132607339?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n  \n\n在test中操作即可，test示自己命名的，其余三个是系统使用的数据库。\n\n2016/8/4\n\n方法二：今天在写小项目练习的时候，进行了数据库的回滚操作，程序运行正常但是无法进行回滚。之后百度后发现是因为表的类型是MyISAM类型，不支持事务操作。上面第一种方法虽然能解决MySql启动时出现的1067错误，但是使得数据库不支持InnoDB表类型，因而没法进行回滚操作。下面介绍一种能够解决1067错误的方法又使数据库支持InnoDb类型的方法。\n\n1  查看错误日志，找到dataDir。\n\n我的dataDir在这个位置：C:\\ProgramData\\MySQL\\MySQL Server 5.5\\data 这个位置\n\n2 删除上面找到的3个ib开头的文件，再重启mysql即可。\n\n具体可以看看这个博客的详细介绍：【http://blog.csdn.net/do\\_bset\\_yourself/article/details/51103373】",
     "date": "2016-07-29",
-    "category": "架构设计",
+    "category": "后端开发",
     "tags": [
       "MySQL"
     ],
