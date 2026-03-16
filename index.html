@@ -1789,6 +1789,16 @@
                 const nextDisabled = currentPage >= total;
                 html += `<button onclick="goToPage(${currentPage + 1})" ${nextDisabled ? 'disabled' : ''}>下一页 →</button>`;
                 
+                // 跳转页码输入框
+                html += `<div style="display:flex;align-items:center;gap:0.3rem;margin-left:0.5rem;">
+                    <span style="font-size:0.75rem;color:var(--text-light);">跳至</span>
+                    <input type="number" id="pageJumpInput" min="1" max="${total}" value="${currentPage}"
+                        style="width:50px;padding:0.3rem;text-align:center;border:1px solid var(--border-color);border-radius:4px;font-size:0.85rem;"
+                        onkeypress="if(event.keyCode===13) jumpToPage(${total})">
+                    <span style="font-size:0.75rem;color:var(--text-light);">页</span>
+                    <button onclick="jumpToPage(${total})" style="padding:0.3rem 0.6rem;font-size:0.75rem;background:var(--primary);color:#fff;border:none;border-radius:4px;cursor:pointer;">跳转</button>
+                </div>`;
+                
                 html += '</div>';
                 html += `<div style="text-align:center;margin-top:1rem;font-size:0.85rem;color:#7c5cec;font-weight:bold;">第 ${currentPage} 页 / 共 ${total} 页 | 文章数：${filtered.length}</div>`;
                 html += '</div>';
