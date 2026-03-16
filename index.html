@@ -1700,35 +1700,42 @@
             goToPage(page);
         }
 
-        // 渲染文章列表
+        // 渲染文章列表（全新方案 - 2026-03-16）
         function renderArticleList() {
             const filtered = filterArticles();
-            const paginated = paginate(filtered);
             const total = Math.ceil(filtered.length / state.pageSize);
+            const currentPage = state.pageNum;
             
-            console.log('====== [renderArticleList] 开始 ======');
-            console.log('[renderArticleList] 当前分类:', state.currentCategory);
-            console.log('[renderArticleList] 当前页码:', state.pageNum);
-            console.log('[renderArticleList] 每页大小:', state.pageSize);
+            console.log('====== [renderArticleList] 全新方案 ======');
             console.log('[renderArticleList] 过滤后文章数:', filtered.length);
-            console.log('[renderArticleList] 分页后文章数:', paginated.length);
-            console.log('[renderArticleList] 总页数:', total, '(计算：' + filtered.length + ' / ' + state.pageSize + ')');
-            console.log('[renderArticleList] 是否显示分页:', total > 1);
-
+            console.log('[renderArticleList] 总页数:', total);
+            console.log('[renderArticleList] 当前页码:', currentPage);
+            
+            // 计算当前页的文章
+            const startIdx = (currentPage - 1) * state.pageSize;
+            const endIdx = Math.min(startIdx + state.pageSize, filtered.length);
+            const currentPageArticles = filtered.slice(startIdx, endIdx);
+            
+            console.log('[renderArticleList] 当前页文章范围:', startIdx + 1 + '-' + endIdx);
+            console.log('[renderArticleList] 当前页文章数:', currentPageArticles.length);
+            
+            // 1. 如果没有文章
             if (filtered.length === 0) {
                 return `
-                    <div style="text-align: center; padding: 100px 20px; color: var(--text-light); min-height: 400px; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <div style="font-size: 64px; margin-bottom: 16px;">📭</div>
-                        <h3 style="font-size: 18px; margin-bottom: 8px;">没有找到相关文章</h3>
-                        <p>尝试调整筛选条件或搜索关键词</p>
+                    <div class="articles-wrapper">
+                        <div style="text-align: center; padding: 100px 20px; color: var(--text-light); min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <div style="font-size: 64px; margin-bottom: 16px;">📭</div>
+                            <h3 style="font-size: 18px; margin-bottom: 8px;">没有找到相关文章</h3>
+                            <p>尝试调整筛选条件或搜索关键词</p>
+                        </div>
                     </div>
-                    <div class="pagination-wrapper"></div>
                 `;
             }
-
-            let html = `<div class="articles-wrapper">`;
-
-            paginated.forEach((article, index) => {
+            
+            // 2. 生成文章列表 HTML
+            let html = '<div class="articles-wrapper">';
+            
+            currentPageArticles.forEach(article => {
                 const views = getArticleViews(article.id, article);
                 const likes = getArticleLikes(article.id, article);
                 html += `
@@ -1747,45 +1754,53 @@
                     </article>
                 `;
             });
-
-            // 修复：直接内联分页 HTML，不依赖 renderPagination() 返回值
-            const safePageNum = state.pageNum;
-            const nextDisabled = safePageNum >= total ? 'disabled' : '';
-            const prevDisabled = safePageNum === 1 ? 'disabled' : '';
             
-            // 只有总页数 > 1 时才显示分页
+            html += '</div>';  // 闭合 articles-wrapper
+            
+            // 3. 生成分页控件（只有总页数 > 1 时才显示）
             if (total > 1) {
-                html += `<div class="pagination-wrapper" style="background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); border: 2px solid #7c5cec; border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">`;
-                html += `<div class="pagination" style="display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">`;
+                console.log('[renderArticleList] 开始生成分页控件，总页数:', total);
                 
-                // 上一页
-                html += `<button onclick="goToPage(${safePageNum - 1})" ${prevDisabled} style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: ${prevDisabled ? '#ccc' : 'var(--card-bg)'}; color: ${prevDisabled ? '#999' : 'var(--text-muted)'}; border-radius: 6px; cursor: ${prevDisabled ? 'not-allowed' : 'pointer'};">← 上一页</button>`;
+                let paginationHtml = '<div class="pagination-wrapper">';
+                paginationHtml += '<div class="pagination">';
+                
+                // 上一页按钮
+                const prevDisabled = currentPage === 1;
+                paginationHtml += `<button onclick="goToPage(${currentPage - 1})" ${prevDisabled ? 'disabled' : ''}>← 上一页</button>`;
                 
                 // 页码按钮
-                let lastShown = 0;
+                const showPages = [];
                 for (let i = 1; i <= total; i++) {
-                    const shouldShow = i === 1 || i === total || (i >= safePageNum - 1 && i <= safePageNum + 1);
-                    if (shouldShow) {
-                        if (i - lastShown > 1) {
-                            html += `<span style="color: var(--text-light);">...</span>`;
-                        }
-                        const isActive = i === safePageNum;
-                        html += `<button onclick="goToPage(${i})" style="padding: 0.5rem 1rem; border: 1px solid ${isActive ? '#7c5cec' : 'var(--border-color)'}; background: ${isActive ? '#7c5cec' : 'var(--card-bg)'}; color: ${isActive ? '#fff' : 'var(--text-muted)'}; border-radius: 6px; cursor: pointer; font-weight: ${isActive ? 'bold' : 'normal'};">${i}</button>`;
-                        lastShown = i;
+                    if (i === 1 || i === total || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                        showPages.push(i);
                     }
                 }
                 
-                // 下一页
-                html += `<button onclick="goToPage(${safePageNum + 1})" ${nextDisabled} id="nextPageBtn" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: ${nextDisabled ? '#ccc' : 'var(--card-bg)'}; color: ${nextDisabled ? '#999' : 'var(--text-muted)'}; border-radius: 6px; cursor: ${nextDisabled ? 'not-allowed' : 'pointer'};">下一页 →</button>`;
+                let lastPage = 0;
+                showPages.forEach(pageNum => {
+                    if (pageNum - lastPage > 1) {
+                        paginationHtml += '<span style="color: var(--text-light);">...</span>';
+                    }
+                    const isActive = pageNum === currentPage;
+                    paginationHtml += `<button onclick="goToPage(${pageNum})" class="${isActive ? 'active' : ''}">${pageNum}</button>`;
+                    lastPage = pageNum;
+                });
                 
-                html += `</div>`;
-                html += `<div style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #7c5cec; font-weight: bold;">✅ 分页已渲染 | 当前第 ${safePageNum} 页 / 共 ${total} 页 | 文章数：${filtered.length}</div>`;
-                html += `</div>`;
+                // 下一页按钮
+                const nextDisabled = currentPage >= total;
+                paginationHtml += `<button onclick="goToPage(${currentPage + 1})" ${nextDisabled ? 'disabled' : ''}>下一页 →</button>`;
+                
+                paginationHtml += '</div>';  // 闭合 pagination
+                paginationHtml += `<div style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #7c5cec; font-weight: bold;">第 ${currentPage} 页 / 共 ${total} 页 | 文章数：${filtered.length}</div>`;
+                paginationHtml += '</div>';  // 闭合 pagination-wrapper
+                
+                html += paginationHtml;
+                
+                console.log('[renderArticleList] ✅ 分页控件已生成');
+            } else {
+                console.log('[renderArticleList] 总页数 <= 1，不显示分页');
             }
             
-            html += `</div>`;  // 闭合 articles-wrapper
-            
-            console.log('[renderArticleList] ✅ 分页 HTML 已生成，总页数:', total, '当前页:', safePageNum, '下一页禁用:', nextDisabled !== '');
             return html;
         }
 
