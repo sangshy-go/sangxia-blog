@@ -1283,8 +1283,14 @@
                     }
                 });
 
-                // 按日期倒序排序（新的在前）
-                articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+                // 排序：置顶文章优先，然后按日期倒序
+                articles.sort((a, b) => {
+                    // 置顶文章排前面
+                    if (a.pinned && !b.pinned) return -1;
+                    if (!a.pinned && b.pinned) return 1;
+                    // 同级别按日期倒序
+                    return new Date(b.date) - new Date(a.date);
+                });
                 // 加载完成后渲染
                 document.querySelector('.categories-card .tag-cloud').innerHTML = renderTags();
                 updateStats();
@@ -1758,7 +1764,11 @@
                 const safeDate = escapeHtml(article.date);
                 
                 html += `<article class="article-card ${article.colorClass}">`;
-                html += `<h3><a href="#" onclick="viewArticle(${article.id}); return false;">${safeTitle}</a></h3>`;
+                html += `<h3><a href="#" onclick="viewArticle(${article.id}); return false;">`;
+                if (article.pinned) {
+                    html += `<span style="display:inline-block;background:#ff6b6b;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;margin-right:8px;">📌 置顶</span>`;
+                }
+                html += `${safeTitle}</a></h3>`;
                 html += `<div class="article-meta">`;
                 html += `<span>📅 ${safeDate}</span>`;
                 html += `<span class="article-tag ${article.tagClass}">${safeCategory}</span>`;
