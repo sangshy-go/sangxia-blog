@@ -1991,6 +1991,12 @@
 
         // 渲染页面
         function render() {
+            // 验证代码是否已更新
+            if (!window.renderCodeVerified) {
+                console.log('✅ 代码已更新 v20260316-1145 - 分页修复版');
+                window.renderCodeVerified = true;
+            }
+            
             const mainContent = document.getElementById('mainContent');
 
             if (state.page === 'home') {
