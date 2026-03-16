@@ -1275,7 +1275,6 @@
                     } else {
                         // 如果没有统计数据，生成初始值
                         const initial = getInitialStats(article.title, article.category);
-                        console.log(`[文章 ${article.id}] ${article.title.substring(0, 20)}... views=${initial.baseViews}, likes=${initial.baseLikes}`);
                         return {
                             ...article,
                             views: initial.baseViews,
@@ -1283,8 +1282,6 @@
                         };
                     }
                 });
-                
-                console.log(`[调试] 加载了 ${articles.length} 篇文章，第一篇 views=${articles[0].views}, likes=${articles[0].likes}`);
 
                 // 按日期倒序排序（新的在前）
                 articles.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -1625,21 +1622,10 @@
             const total = Math.ceil(filtered.length / state.pageSize);
             const currentPage = state.pageNum;
 
-            // 调试日志
-            console.log('[renderPagination] 当前分类:', state.currentCategory);
-            console.log('[renderPagination] 过滤后文章数:', filtered.length);
-            console.log('[renderPagination] 总页数:', total, '(计算：' + filtered.length + ' / ' + state.pageSize + ')');
-            console.log('[renderPagination] 当前页码:', currentPage);
-            console.log('[renderPagination] 是否显示分页:', total > 1);
-
             // 如果只有 1 页或 0 页，不显示分页
             if (total <= 1) {
-                console.log('[renderPagination] 总页数 <= 1，返回空字符串');
                 return '';
             }
-            
-            // 强制显示分页（调试用）
-            console.log('[renderPagination] 开始生成分页 HTML');
 
             // 确保当前页码不超过总页数 - 使用局部变量
             let safePageNum = currentPage;
@@ -1670,12 +1656,9 @@
                 }
             }
 
-            // 下一页 - 修复：使用局部变量计算
+            // 下一页
             const nextDisabled = safePageNum >= total ? 'disabled' : '';
-            const nextPageNum = safePageNum + 1;
-            console.log('[renderPagination] 下一页按钮：safePageNum=' + safePageNum + ', total=' + total + ', nextDisabled=' + nextDisabled + ', nextPageNum=' + nextPageNum);
-            html += `<button onclick="goToPage(${nextPageNum})" ${nextDisabled} id="nextPageBtn">下一页 →</button>`;
-            html += `<span id="nextBtnDebug" style="font-size: 0.7rem; color: #999; margin-left: 0.5rem;">(页码=${safePageNum}/${total}, 禁用=${nextDisabled !== ''})</span>`;
+            html += `<button onclick="goToPage(${safePageNum + 1})" ${nextDisabled}>下一页 →</button>`;
 
             // 跳转页码输入框
             html += `<div style="display: flex; align-items: center; gap: 0.3rem; margin-left: 0.5rem;">
