@@ -1156,7 +1156,7 @@
                 serverStats = await response.json();
                 return serverStats;
             } catch (error) {
-                console.error('获取统计数据失败:', error);
+                // API 不可用时静默失败，使用本地统计
                 return {};
             }
         }
@@ -1173,7 +1173,7 @@
                 const result = await response.json();
                 return result;
             } catch (error) {
-                console.error('初始化统计数据失败:', error);
+                // API 不可用时静默失败
                 return null;
             }
         }
