@@ -1275,7 +1275,7 @@
                     } else {
                         // 如果没有统计数据，生成初始值
                         const initial = getInitialStats(article.title, article.category);
-                        console.log(`[文章 ${article.id}] ${article.title[:20]}... views=${initial.views}, likes=${initial.likes}`);
+                        console.log(`[文章 ${article.id}] ${article.title.substring(0, 20)}... views=${initial.views}, likes=${initial.likes}`);
                         return {
                             ...article,
                             views: initial.views,
