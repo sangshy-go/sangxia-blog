@@ -1266,13 +1266,21 @@
                 // 使用服务器统计数据映射文章
                 articles = data.map((article) => {
                     // 从服务器统计数据中获取
-                    // 如果 serverStats 中没有该文章的数据，使用默认值 0（不应该发生）
-                    const stats = serverStats[article.id] || { views: 0, likes: 0 };
-                    return {
-                        ...article,
-                        views: stats.views,
-                        likes: stats.likes
-                    };
+                    if (serverStats[article.id]) {
+                        return {
+                            ...article,
+                            views: serverStats[article.id].views,
+                            likes: serverStats[article.id].likes
+                        };
+                    } else {
+                        // 如果没有统计数据，生成初始值
+                        const initial = getInitialStats(article.title, article.category);
+                        return {
+                            ...article,
+                            views: initial.views,
+                            likes: initial.likes
+                        };
+                    }
                 });
 
                 // 按日期倒序排序（新的在前）
