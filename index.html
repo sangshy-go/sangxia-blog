@@ -1983,7 +1983,7 @@
             const views = getArticleViews(article.id, article);
             const likes = getArticleLikes(article.id, article);
             
-            // 转义用户数据
+            // 转义用户数据（标题、分类、日期），但内容不转义（因为包含代码）
             const safeTitle = escapeHtml(article.title);
             const safeCategory = escapeHtml(article.category);
             const safeDate = escapeHtml(article.date);
