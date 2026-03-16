@@ -1792,8 +1792,11 @@
             
             console.log('[renderArticleList] ✅ HTML 生成完成，长度:', html.length);
             
-            // 测试：在控制台输出 HTML 最后 500 字符，确认分页存在
-            console.log('[renderArticleList] HTML 最后 500 字符:', html.slice(-500));
+            // 验证：检查生成的 HTML 是否包含分页
+            if (total > 1 && !html.includes('pagination-wrapper')) {
+                console.error('❌ [renderArticleList] BUG: 应该生成分页但没有！');
+                console.error('HTML 最后 1000 字符:', html.slice(-1000));
+            }
             
             return html;
         }
@@ -1990,6 +1993,9 @@
                 const articleListHtml = renderArticleList();
                 const filtered = filterArticles();
                 const total = Math.ceil(filtered.length / state.pageSize);
+                const currentPage = state.pageNum;
+                
+                console.log('[render] 开始渲染，当前页:', currentPage, '总页数:', total);
                 
                 // 诊断浮窗
                 const debugFloat = `
@@ -2025,6 +2031,20 @@
                     </div>
                     ${articleListHtml}
                 `;
+                
+                // 验证：render 完成后检查分页是否存在
+                setTimeout(() => {
+                    const paginationWrapper = document.querySelector('.pagination-wrapper');
+                    const articlesWrapper = document.querySelector('.articles-wrapper');
+                    console.log('[render] 验证：articles-wrapper 存在:', !!articlesWrapper);
+                    console.log('[render] 验证：pagination-wrapper 存在:', !!paginationWrapper);
+                    
+                    if (total > 1 && !paginationWrapper) {
+                        console.error('❌ [render] BUG: 应该显示分页但 DOM 中没有！');
+                        console.error('[render] mainContent.innerHTML 长度:', mainContent.innerHTML.length);
+                        console.error('[render] 检查是否包含 pagination:', mainContent.innerHTML.includes('pagination'));
+                    }
+                }, 50);
             } else if (state.page === 'article' && state.currentArticle) {
                 mainContent.innerHTML = renderArticleDetail(state.currentArticle);
             } else if (state.page === 'archive') {
