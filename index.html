@@ -1275,11 +1275,11 @@
                     } else {
                         // 如果没有统计数据，生成初始值
                         const initial = getInitialStats(article.title, article.category);
-                        console.log(`[文章 ${article.id}] ${article.title.substring(0, 20)}... views=${initial.views}, likes=${initial.likes}`);
+                        console.log(`[文章 ${article.id}] ${article.title.substring(0, 20)}... views=${initial.baseViews}, likes=${initial.baseLikes}`);
                         return {
                             ...article,
-                            views: initial.views,
-                            likes: initial.likes
+                            views: initial.baseViews,
+                            likes: initial.baseLikes
                         };
                     }
                 });
