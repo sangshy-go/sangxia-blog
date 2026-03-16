@@ -1346,8 +1346,7 @@
             pageSize: 15
         };
         
-        // 暴露到全局，供补丁脚本使用
-        window.state = state;
+
 
         // 更新统计数据
         function updateStats() {
@@ -1759,7 +1758,32 @@
             
             html += '</div>';  // 闭合 articles-wrapper
             
-            // 3. 分页由补丁脚本处理，这里不再生成
+            // 3. 生成分页控件（原生方案）
+            if (total > 1) {
+                html += '<div class="pagination-wrapper">';
+                html += '<div class="pagination">';
+                
+                // 上一页
+                html += `<button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← 上一页</button>`;
+                
+                // 页码
+                for (let i = 1; i <= total; i++) {
+                    if (i === 1 || i === total || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                        if (i > 1 && i < currentPage - 1) {
+                            html += '<span style="color:var(--text-light)">...</span>';
+                        }
+                        html += `<button onclick="goToPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
+                    }
+                }
+                
+                // 下一页
+                html += `<button onclick="goToPage(${currentPage + 1})" ${currentPage >= total ? 'disabled' : ''}>下一页 →</button>`;
+                
+                html += '</div>';
+                html += `<div style="text-align:center;margin-top:1rem;font-size:0.85rem;color:#7c5cec;font-weight:bold;">第 ${currentPage} 页 / 共 ${total} 页 | 文章数：${filtered.length}</div>`;
+                html += '</div>';
+            }
+            
             console.log('[renderArticleList] ✅ HTML 生成完成，长度:', html.length);
             return html;
         }
@@ -2160,7 +2184,5 @@
             loadArticles();
         });
     </script>
-    <!-- 分页修复补丁 -->
-    <script src="scripts/pagination-fix-patch.js"></script>
 </body>
 </html>
