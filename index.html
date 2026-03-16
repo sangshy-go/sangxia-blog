@@ -1791,12 +1791,15 @@
                 html += '</div>';
             }
             
-            console.log('[renderArticleList] ✅ HTML 生成完成，长度:', html.length);
+            console.log('[renderArticleList] ✅ HTML 生成完成 v20260316-1140, 长度:', html.length);
+            console.log('[renderArticleList] 🔥 强制刷新标记：如果你看到这个日志，说明代码已更新！');
             
             // 验证：检查生成的 HTML 是否包含分页
             if (total > 1 && !html.includes('pagination-wrapper')) {
                 console.error('❌ [renderArticleList] BUG: 应该生成分页但没有！');
                 console.error('HTML 最后 1000 字符:', html.slice(-1000));
+            } else if (total > 1) {
+                console.log('✅ [renderArticleList] 分页已生成，请滚动到页面底部查看！');
             }
             
             return html;
