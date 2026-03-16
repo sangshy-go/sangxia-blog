@@ -686,8 +686,11 @@
             margin-top: 2rem;
             padding-top: 1.5rem;
             border-top: 1px solid var(--border-color);
-            display: block !important;
+            display: flex !important;
+            justify-content: center;
             width: 100%;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
         .pagination {
@@ -1585,50 +1588,60 @@
         // 渲染分页
         function renderPagination() {
             const filtered = filterArticles();
-            const total = totalPages();
+            const total = Math.ceil(filtered.length / state.pageSize);
+            const currentPage = state.pageNum;
 
             // 调试日志
             console.log('[renderPagination] 当前分类:', state.currentCategory);
             console.log('[renderPagination] 过滤后文章数:', filtered.length);
-            console.log('[renderPagination] 总页数:', total);
-            console.log('[renderPagination] 当前页码:', state.pageNum);
+            console.log('[renderPagination] 总页数:', total, '(计算：' + filtered.length + ' / ' + state.pageSize + ')');
+            console.log('[renderPagination] 当前页码:', currentPage);
+            console.log('[renderPagination] 是否显示分页:', total > 1);
 
             // 如果只有 1 页或 0 页，不显示分页
             if (total <= 1) {
+                console.log('[renderPagination] 总页数 <= 1，返回空字符串');
                 return '';
             }
+            
+            // 强制显示分页（调试用）
+            console.log('[renderPagination] 开始生成分页 HTML');
 
-            // 确保当前页码不超过总页数
-            if (state.pageNum > total) {
-                state.pageNum = total;
-            } else if (state.pageNum < 1) {
-                state.pageNum = 1;
+            // 确保当前页码不超过总页数 - 使用局部变量
+            let safePageNum = currentPage;
+            if (safePageNum > total) {
+                safePageNum = total;
+            } else if (safePageNum < 1) {
+                safePageNum = 1;
             }
 
             let html = '<div class="pagination">';
 
             // 上一页
-            const prevDisabled = state.pageNum === 1 ? 'disabled' : '';
-            html += `<button onclick="goToPage(${state.pageNum - 1})" ${prevDisabled}>← 上一页</button>`;
+            const prevDisabled = safePageNum === 1 ? 'disabled' : '';
+            html += `<button onclick="goToPage(${safePageNum - 1})" ${prevDisabled}>← 上一页</button>`;
 
             // 页码按钮
             let lastShown = 0;
 
             for (let i = 1; i <= total; i++) {
-                const shouldShow = i === 1 || i === total || (i >= state.pageNum - 1 && i <= state.pageNum + 1);
+                const shouldShow = i === 1 || i === total || (i >= safePageNum - 1 && i <= safePageNum + 1);
 
                 if (shouldShow) {
                     if (i - lastShown > 1) {
                         html += `<span style="color: var(--text-light);">...</span>`;
                     }
-                    html += `<button onclick="goToPage(${i})" class="${i === state.pageNum ? 'active' : ''}">${i}</button>`;
+                    html += `<button onclick="goToPage(${i})" class="${i === safePageNum ? 'active' : ''}">${i}</button>`;
                     lastShown = i;
                 }
             }
 
-            // 下一页
-            const nextDisabled = state.pageNum === total ? 'disabled' : '';
-            html += `<button onclick="goToPage(${state.pageNum + 1})" ${nextDisabled}>下一页 →</button>`;
+            // 下一页 - 修复：使用局部变量计算
+            const nextDisabled = safePageNum >= total ? 'disabled' : '';
+            const nextPageNum = safePageNum + 1;
+            console.log('[renderPagination] 下一页按钮：safePageNum=' + safePageNum + ', total=' + total + ', nextDisabled=' + nextDisabled + ', nextPageNum=' + nextPageNum);
+            html += `<button onclick="goToPage(${nextPageNum})" ${nextDisabled} id="nextPageBtn">下一页 →</button>`;
+            html += `<span id="nextBtnDebug" style="font-size: 0.7rem; color: #999; margin-left: 0.5rem;">(页码=${safePageNum}/${total}, 禁用=${nextDisabled !== ''})</span>`;
 
             // 跳转页码输入框
             html += `<div style="display: flex; align-items: center; gap: 0.3rem; margin-left: 0.5rem;">
@@ -1691,6 +1704,16 @@
         function renderArticleList() {
             const filtered = filterArticles();
             const paginated = paginate(filtered);
+            const total = Math.ceil(filtered.length / state.pageSize);
+            
+            console.log('====== [renderArticleList] 开始 ======');
+            console.log('[renderArticleList] 当前分类:', state.currentCategory);
+            console.log('[renderArticleList] 当前页码:', state.pageNum);
+            console.log('[renderArticleList] 每页大小:', state.pageSize);
+            console.log('[renderArticleList] 过滤后文章数:', filtered.length);
+            console.log('[renderArticleList] 分页后文章数:', paginated.length);
+            console.log('[renderArticleList] 总页数:', total, '(计算：' + filtered.length + ' / ' + state.pageSize + ')');
+            console.log('[renderArticleList] 是否显示分页:', total > 1);
 
             if (filtered.length === 0) {
                 return `
@@ -1725,9 +1748,44 @@
                 `;
             });
 
-            html += `<div class="pagination-wrapper">`;
-            html += renderPagination();
-            html += `</div></div>`;
+            // 修复：直接内联分页 HTML，不依赖 renderPagination() 返回值
+            const safePageNum = state.pageNum;
+            const nextDisabled = safePageNum >= total ? 'disabled' : '';
+            const prevDisabled = safePageNum === 1 ? 'disabled' : '';
+            
+            // 只有总页数 > 1 时才显示分页
+            if (total > 1) {
+                html += `<div class="pagination-wrapper" style="background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); border: 2px solid #7c5cec; border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">`;
+                html += `<div class="pagination" style="display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">`;
+                
+                // 上一页
+                html += `<button onclick="goToPage(${safePageNum - 1})" ${prevDisabled} style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: ${prevDisabled ? '#ccc' : 'var(--card-bg)'}; color: ${prevDisabled ? '#999' : 'var(--text-muted)'}; border-radius: 6px; cursor: ${prevDisabled ? 'not-allowed' : 'pointer'};">← 上一页</button>`;
+                
+                // 页码按钮
+                let lastShown = 0;
+                for (let i = 1; i <= total; i++) {
+                    const shouldShow = i === 1 || i === total || (i >= safePageNum - 1 && i <= safePageNum + 1);
+                    if (shouldShow) {
+                        if (i - lastShown > 1) {
+                            html += `<span style="color: var(--text-light);">...</span>`;
+                        }
+                        const isActive = i === safePageNum;
+                        html += `<button onclick="goToPage(${i})" style="padding: 0.5rem 1rem; border: 1px solid ${isActive ? '#7c5cec' : 'var(--border-color)'}; background: ${isActive ? '#7c5cec' : 'var(--card-bg)'}; color: ${isActive ? '#fff' : 'var(--text-muted)'}; border-radius: 6px; cursor: pointer; font-weight: ${isActive ? 'bold' : 'normal'};">${i}</button>`;
+                        lastShown = i;
+                    }
+                }
+                
+                // 下一页
+                html += `<button onclick="goToPage(${safePageNum + 1})" ${nextDisabled} id="nextPageBtn" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: ${nextDisabled ? '#ccc' : 'var(--card-bg)'}; color: ${nextDisabled ? '#999' : 'var(--text-muted)'}; border-radius: 6px; cursor: ${nextDisabled ? 'not-allowed' : 'pointer'};">下一页 →</button>`;
+                
+                html += `</div>`;
+                html += `<div style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #7c5cec; font-weight: bold;">✅ 分页已渲染 | 当前第 ${safePageNum} 页 / 共 ${total} 页 | 文章数：${filtered.length}</div>`;
+                html += `</div>`;
+            }
+            
+            html += `</div>`;  // 闭合 articles-wrapper
+            
+            console.log('[renderArticleList] ✅ 分页 HTML 已生成，总页数:', total, '当前页:', safePageNum, '下一页禁用:', nextDisabled !== '');
             return html;
         }
 
