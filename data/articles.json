@@ -8,7 +8,7 @@
     "date": "2021-04-15",
     "category": "后端开发",
     "tags": [
-      "[Docker]"
+      "Docker"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -24,7 +24,7 @@
     "date": "2021-03-18",
     "category": "后端开发",
     "tags": [
-      "[Redis对象类型]"
+      "Redis对象类型"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -40,7 +40,7 @@
     "date": "2021-03-18",
     "category": "后端开发",
     "tags": [
-      "[Redis数据结构]"
+      "Redis数据结构"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -56,7 +56,7 @@
     "date": "2021-03-18",
     "category": "后端开发",
     "tags": [
-      "[Redis线程模型]"
+      "Redis线程模型"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -72,8 +72,8 @@
     "date": "2021-01-30",
     "category": "后端开发",
     "tags": [
-      "[分库分表",
-      "Sharding-JDBC]"
+      "分库分表",
+      "Sharding-JDBC"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -89,7 +89,8 @@
     "date": "2020-12-19",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Redis",
+      "分布式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -105,8 +106,8 @@
     "date": "2020-12-03",
     "category": "后端开发",
     "tags": [
-      "[MySQL",
-      "索引扩展]"
+      "MySQL",
+      "索引扩展"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -122,8 +123,8 @@
     "date": "2020-08-27",
     "category": "架构设计",
     "tags": [
-      "[Raft算法",
-      "图解Raft协议]"
+      "Raft算法",
+      "图解Raft协议"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -139,8 +140,8 @@
     "date": "2020-06-30",
     "category": "后端开发",
     "tags": [
-      "[限流框架",
-      "java]"
+      "限流框架",
+      "java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -156,11 +157,11 @@
     "date": "2020-06-30",
     "category": "架构设计",
     "tags": [
-      "[限流算法",
+      "限流算法",
       "滑动窗口限流",
       "固定时间窗口限流算法",
       "漏桶算法",
-      "令牌桶算法]"
+      "令牌桶算法"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -176,11 +177,11 @@
     "date": "2020-06-17",
     "category": "架构设计",
     "tags": [
-      "[分布式理论",
+      "分布式理论",
       "Paxos",
       "Raft算法",
       "二阶段",
-      "三阶段]"
+      "三阶段"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -196,7 +197,7 @@
     "date": "2020-05-31",
     "category": "架构设计",
     "tags": [
-      "[分布式锁]"
+      "分布式锁"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -212,9 +213,9 @@
     "date": "2020-05-31",
     "category": "架构设计",
     "tags": [
-      "[分布式",
+      "分布式",
       "CAP",
-      "BASE理论]"
+      "BASE理论"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -230,7 +231,7 @@
     "date": "2020-04-20",
     "category": "后端开发",
     "tags": [
-      "[Kafka面试]"
+      "Kafka面试"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -246,9 +247,9 @@
     "date": "2020-04-20",
     "category": "后端开发",
     "tags": [
-      "[kafka",
+      "kafka",
       "Kafka源码",
-      "KafkaProducer源码]"
+      "KafkaProducer源码"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -264,9 +265,9 @@
     "date": "2020-04-20",
     "category": "后端开发",
     "tags": [
-      "[kafka",
+      "kafka",
       "Kafka源码",
-      "KafkaProducer源码]"
+      "KafkaProducer源码"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -282,7 +283,7 @@
     "date": "2020-01-26",
     "category": "架构设计",
     "tags": [
-      "[SOLID设计模式]"
+      "SOLID设计模式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -298,10 +299,10 @@
     "date": "2019-12-29",
     "category": "后端开发",
     "tags": [
-      "[SpringBoot",
+      "SpringBoot",
       "Kafka",
       "kafka生产者代码实现",
-      "Kafka消费者代码实现]"
+      "Kafka消费者代码实现"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -317,7 +318,8 @@
     "date": "2019-12-29",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Docker",
+      "Kafka"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -333,8 +335,8 @@
     "date": "2019-12-23",
     "category": "后端开发",
     "tags": [
-      "[Kafka",
-      "docker]"
+      "Kafka",
+      "docker"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -350,7 +352,7 @@
     "date": "2019-12-10",
     "category": "架构设计",
     "tags": [
-      "[接口鉴权]"
+      "接口鉴权"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -364,10 +366,10 @@
     "excerpt": "Git是最牛逼的开源分布式版本控制系统，日常开发中常用来管理代码提交、恢复、追踪，是团队开发最常用的一个代码管理工具。 在我们修改了代码并且提交之前，常会使用`git commit -m 'change'`命令来描述我们代码改动的内容，但是很多都不规范，随处可见的 `git commit -m 'u...",
     "content": "Git是最牛逼的开源分布式版本控制系统，日常开发中常用来管理代码提交、恢复、追踪，是团队开发最常用的一个代码管理工具。\n\n在我们修改了代码并且提交之前，常会使用`git commit -m 'change'`命令来描述我们代码改动的内容，但是很多都不规范，随处可见的 `git commit -m 'update'`，以致于不能清晰地知道每次提交代码的变更内容，所以需要一种规范来管理代码提交的内容。\n\n#### 一、Git Commit message规范\n\n常用的Git Commit message规范采用的是[Angular 规范](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)。\n\n本文参考阮老师的文章介绍：\n\nhttp://www.ruanyifeng.com/blog/2016/01/commit\\_message\\_change\\_log.html.\n\nAngular规范中定义的格式有3个内容：\n\n- Header\n- Body\n- Footer\n\n```\n<type>(<scope>): <subject>\n// 空一行\n<body>\n// 空一行\n<footer>\n```\n\n##### 1、 Header\n\nHeader部分有3个字段： **type(必需), scope(可选), subject(必需)**\n\n> type(必需) ： Type of change：commit的类别；\n>\n> scope(可选)：Scope of this change：此次commit的影响模块；\n>\n> subject(必需)：Short description：简短的描述此次代码变更的主要内容\n\n（1）type\n\ntype用于说明commit的类别，常用的标识如下：\n\n- **feat：新功能（feature）**\n- **fix：修补bug**\n- docs：文档（documentation）\n- style： 格式（不影响代码运行的变动,空格,格式化,等等）\n- refactor：重构（即不是新增功能，也不是修改bug的代码变动\n- perf: 性能 (提高代码性能的改变)\n- test：增加测试或者修改测试\n- build: 影响构建系统或外部依赖项的更改(maven,gradle,npm 等等)\n- ci: 对CI配置文件和脚本的更改\n- chore：对非 src 和 test 目录的修改\n- revert: Revert a commit\n\n最常用的就是feat合fix两种type；\n\n（2）scope\n\n`scope`用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。\n\n（3）subject\n\n`subject`是 commit 目的的简短描述，不超过50个字符，主要介绍此次代码变更的主要内容。\n\n举个例子：  \n eg: feat(订单模块)：订单详情接口增加订单号字段\n\n其中， feat对应type字段；订单模块对应scope(若果scope有内容，括号就存在)；“订单详情接口增加订单号字段”对应subject，简要说明此次代码变更的主要内容。\n\n##### 2、Body\n\nBody 部分是对本次 commit 的详细描述，可以分成多行。\n\n如：\n\n（1）增加订单号字段；\n\n（2）增加了订单退款接口；\n\n日常项目开发中，如果Header中**subject**已经描述清楚此次代码变更的内容后，Body部分就可以为空。\n\n##### 3、Footer\n\n（1）不兼容变动\n\n（2）关闭 Issue\n\n日常项目中开发，Footer不常用，可为空。\n\n##### 4、Revert\n\n若需要撤销上一次的commit，header部分为：`revert: 上一次commit的header内容`；\n\nbody部分为：`This reverts commit xxx`，xxx是上一次commit对应的SHA 标识符。\n\n##### 二、IDEA插件Git Commit Template使用\n\n在iTerm中使用命令行的方式提交代码，我们可以使用Commitizen来撰写合格的 Commit message，具体使用见：http://www.ruanyifeng.com/blog/2016/01/commit\\_message\\_change\\_log.html。\n\n本文主要介绍如何使用IDEA中的插件Git Commit Template来撰写Commit message。\n\n首先安装和下载插件Git Commit Template：[下载地址](https://plugins.jetbrains.com/plugin/9861-git-commit-template)\n\n安装后重启IDEA，更改代码，点击IDEA中的VCS版本控制按钮：\n\n![](./images/987229886427e3f9.png)\n\n点击Commit按钮：\n\n![](./images/0e1c9fe82d887d4e.png)\n\n选择Type，填写相应内容，最后点击提交即可：\n\n![](./images/5e2bfbd7dc773f6f.png)\n\n---\n\n参考内容\n\nhttp://www.ruanyifeng.com/blog/2016/01/commit\\_message\\_change\\_log.html",
     "date": "2019-12-06",
-    "category": "工具技巧",
+    "category": "架构设计",
     "tags": [
-      "[git commit message",
-      "git]"
+      "git commit message",
+      "git"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -383,9 +385,9 @@
     "date": "2019-11-30",
     "category": "后端开发",
     "tags": [
-      "[MetricFetcher   : Failed to fetch m",
+      "MetricFetcher   : Failed to fetch m",
       "Sentinel",
-      "Sentinel控制台]"
+      "Sentinel控制台"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -401,10 +403,10 @@
     "date": "2019-11-02",
     "category": "架构设计",
     "tags": [
-      "[责任链",
+      "责任链",
       "拦截器",
       "AOP应用",
-      "统计接口性能]"
+      "统计接口性能"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -420,9 +422,9 @@
     "date": "2019-10-30",
     "category": "后端开发",
     "tags": [
-      "[SmartApplicationListener",
+      "SmartApplicationListener",
       "Spring事件",
-      "异步]"
+      "异步"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -438,8 +440,8 @@
     "date": "2019-10-13",
     "category": "后端开发",
     "tags": [
-      "[SPI",
-      "ServiceLoader]"
+      "SPI",
+      "ServiceLoader"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -455,8 +457,8 @@
     "date": "2019-09-01",
     "category": "后端开发",
     "tags": [
-      "[Netty",
-      "Netty 私有协议]"
+      "Netty",
+      "Netty 私有协议"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -470,10 +472,10 @@
     "excerpt": "HTTP协议作为客户端-服务端之间的通信方式，得到了很多的应用。但是HTTP协议有很多的弊端： - 半双工：HTTP协议为半双工协议，这意味着客户端、服务端之间同一时刻只能有一端发送数据； - 消息结构复杂：HTTP协议包含消息头、消息体等内容，消息结构比较复杂和繁琐； - 长连接机制耗费服务器资源...",
     "content": "#### 0、前言\n\nHTTP协议作为客户端-服务端之间的通信方式，得到了很多的应用。但是HTTP协议有很多的弊端：\n\n- 半双工：HTTP协议为半双工协议，这意味着客户端、服务端之间同一时刻只能有一端发送数据；\n- 消息结构复杂：HTTP协议包含消息头、消息体等内容，消息结构比较复杂和繁琐；\n- 长连接机制耗费服务器资源：为了实现实时通信，很多网站都采用长连接的方式，由客户端每隔固定时间（如1s）发送HTTP请求到服务端看服务端是否有响应。而服务端有时候可能没有响应，发送的HTTP请求就显得鸡肋，且会占用很多带宽或服务器资源。\n\n为了解决HTTP协议效率低下的问题，HTML5定义了WebSocket协议来节省服务器资源和实时通信。\n\n#### 一、WebSocket协议简介\n\n##### 1、WebSocket协议简介\n\nWebSocket协议是基于TCP的双向全双工网络通信技术,是一种较新的技术，伴随HTML5规范而生，大多浏览器都支持。  \nWebSocket协议和HTTP协议一样，都是OSI模型中应用层协议。  \n![](./images/a3984ba6b49c2a74.png)  \n（注：图片来源：imooc.com/article/290121）\n\nWebSocket首先借助HTTP协议进行握手，握手成功后就变成全双工的TCP通道进行通信。浏览器和服务器建立TCP连接后，就建立一条快速通道，可以通过快速通道互相传送数据。  \n![](./images/1bfd33a7bf06b30e.png)  \n（注：图片来源：imooc.com/article/290121）\n\nWebSocket协议的特点：\n\n- 基于TCP连接，采用全双工模式通信；\n- 通过\"ping/pong\"帧保持链路激活；\n- 服务器可以主动传递消息给客户端，不需要客户端轮询；\n- 无头部信息、Cookie和身份验证；\n- 对代理、防火墙和路由器透明；\n- 无安全开销；\n\n##### 2、WebSocket连接过程\n\n为了建立WebSocket连接，首先由客户端发送一个带有附加头信息：\"Upgrade:WebSocket\"的HTTP请求，表明不是普通的HTTP请求，是申请协议升级的HTTP请求；  \n![](./images/5a492512fa0a9243.png)\n\n服务端接收到请求进行解析生成应答信息返回给客户端，这样就建立了WebSocket连接。双方就可以通过这个连接自由传递消息，直到某一方主动关闭连接。  \n![](./images/c49556cb54790105.png)  \nWebSocket的关闭需要通过一个安全的方法关闭底层的TCP连接。正常情况下应答由服务器主动去关闭；异常情况下客户端也可以主动发起关闭。\n\n#### 二、Netty WebSocket协议实战\n\n下面基于Netty实现一个Websocket协议的简易聊天室。\n\n##### 1、服务端\n\n（1）首先创建Netty Server。Netty Server添加了消息编解码、Http消息整合、WebSocket处理等Handler.  \n代码如下：\n\n```\npackage com.wgs.netty.demo5_netty4websocket;\n\nimport io.netty.bootstrap.ServerBootstrap;\nimport io.netty.channel.*;\nimport io.netty.channel.nio.NioEventLoopGroup;\nimport io.netty.channel.socket.SocketChannel;\nimport io.netty.channel.socket.nio.NioServerSocketChannel;\nimport io.netty.handler.codec.http.HttpObjectAggregator;\nimport io.netty.handler.codec.http.HttpServerCodec;\nimport io.netty.handler.stream.ChunkedWriteHandler;\n\n/**\n * Created by wanggenshen\n * Date: on 2019/8/15 00:15.\n * Description: 基于Netty的WebSocket协议服务端\n */\npublic class NettyWebSocketServer {\n\n    public static void connect(int port) throws InterruptedException {\n        EventLoopGroup bossGroup = new NioEventLoopGroup();\n        EventLoopGroup workGroup = new NioEventLoopGroup();\n        try {\n            ServerBootstrap bootstrap = new ServerBootstrap();\n            bootstrap.group(bossGroup, workGroup)\n                    .channel(NioServerSocketChannel.class)\n                    .option(ChannelOption.SO_BACKLOG, 1024)\n                    .childHandler(new ChannelInitializer<SocketChannel>() {\n                        @Override\n                        protected void initChannel(SocketChannel ch) throws Exception {\n                            ch.pipeline()\n                                    .addLast(\"codec\", new HttpServerCodec())\n                                    .addLast(\"aggregator\", new HttpObjectAggregator(1024 * 1024))\n                                    .addLast(\"chunkHandler\", new ChunkedWriteHandler())\n                                    .addLast(\"nettyWebSocketHandler\", new NettyWebSocketHandler());\n\n                        }\n                    });\n\n            ChannelFuture channelFuture = bootstrap.bind(port).sync();\n            channelFuture.channel().closeFuture().sync();\n        } finally {\n            workGroup.shutdownGracefully();\n            bossGroup.shutdownGracefully();\n        }\n    }\n\n\n    public static void main(String[] args) throws InterruptedException {\n        System.out.println(\"Netty的WebSocket协议服务端启动\");\n        NettyWebSocketServer.connect(8080);\n    }\n\n}\n```\n\n(2) WebSocket处理器  \nNettyWebSocketHandler主要负责建立浏览器和服务器通道、以及处理浏览器发送的请求。\n\n```\npackage com.wgs.netty.demo5_netty4websocket;\n\nimport io.netty.buffer.ByteBuf;\nimport io.netty.buffer.Unpooled;\nimport io.netty.channel.ChannelFuture;\nimport io.netty.channel.ChannelFutureListener;\nimport io.netty.channel.ChannelHandlerContext;\nimport io.netty.channel.SimpleChannelInboundHandler;\nimport io.netty.handler.codec.http.*;\nimport io.netty.handler.codec.http.websocketx.*;\nimport io.netty.util.CharsetUtil;\n\nimport java.util.Date;\n\nimport static io.netty.handler.codec.http.HttpUtil.isKeepAlive;\nimport static io.netty.handler.codec.http.HttpUtil.setContentLength;\n\n/**\n * Created by wanggenshen\n * Date: on 2019/8/15 00:16.\n * Description: XXX\n */\npublic class NettyWebSocketHandler extends SimpleChannelInboundHandler {\n\n\n    private WebSocketServerHandshaker webSocketServerHandshaker;\n\n    @Override\n    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {\n\n        // 第一次以传统HTTP方式接入, 带有Upgrade: websocket信息\n        if (msg instanceof FullHttpRequest) {\n            handleHttpRequest(ctx, (FullHttpRequest)msg);\n        }\n        // WebSocket接入\n        else if (msg instanceof WebSocketFrame) {\n            handleWebSocketFrame(ctx, (WebSocketFrame)msg);\n        }\n\n    }\n\n    private void handleWebSocketFrame(ChannelHandlerContext ctx, WebSocketFrame webSocketFrame) {\n        // 判断是否是关闭链路的指令\n        if (webSocketFrame instanceof CloseWebSocketFrame) {\n            webSocketServerHandshaker.close(ctx.channel(), (CloseWebSocketFrame) webSocketFrame.retain());\n            return;\n        }\n\n        // 判断是否是Ping消息\n        if (webSocketFrame instanceof PingWebSocketFrame) {\n            ctx.channel().write(new PongWebSocketFrame(webSocketFrame.content().retain()));\n            return;\n        }\n\n        // 只支持文本消息\n        if (!(webSocketFrame instanceof TextWebSocketFrame)) {\n            throw new UnsupportedClassVersionError(String.format(\"%s frame type is not supported\",\n                    webSocketFrame.getClass().getName()));\n        }\n\n        // 返回应答消息\n        String request = ((TextWebSocketFrame)webSocketFrame).text();\n        String response = \"\\r\\n【Server】: \";\n        if (\"你好\".equals(request)) {\n            response = response + \"你好, 我是Netty Server\";\n        } else if (request.contains(\"几点\")) {\n            response = response + \", 现在时间是\" + new Date().toString();\n        }\n        response = response + \"\\r\\n\";\n        ctx.channel().write(new TextWebSocketFrame(response));\n    }\n\n    private void handleHttpRequest(ChannelHandlerContext ctx, FullHttpRequest fullHttpRequest) {\n\n        // HTTP解码失败, 返回HTTP异常\n        if (!fullHttpRequest.getDecoderResult().isSuccess()\n                || !(\"websocket\").equals(fullHttpRequest.headers().get(\"Upgrade\"))) {\n            sendHttpResponse(ctx, fullHttpRequest, new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.BAD_REQUEST));\n            return;\n        }\n\n        // 构建握手工厂, 创建握手处理类, 建立浏览器与服务器的通道, 进行消息处理\n        WebSocketServerHandshakerFactory webSocketServerFactory =\n                new WebSocketServerHandshakerFactory(\"ws://localhost:8080/websockt\", null, false);\n        webSocketServerHandshaker = webSocketServerFactory.newHandshaker(fullHttpRequest);\n        if (webSocketServerHandshaker == null) {\n            // 异常\n            WebSocketServerHandshakerFactory.sendUnsupportedVersionResponse(ctx.channel());\n        } else {\n            //  处理WebSocket消息\n            webSocketServerHandshaker.handshake(ctx.channel(), fullHttpRequest);\n        }\n    }\n\n\n    private static void sendHttpResponse(ChannelHandlerContext ctx, FullHttpRequest request, FullHttpResponse response) {\n\n        // 返回响应给客户端\n        if (response.getStatus().code() != 200) {\n            ByteBuf byteBuf = Unpooled.copiedBuffer(response.getStatus().toString(), CharsetUtil.UTF_8);\n            response.content().writeBytes(byteBuf);\n            byteBuf.release();\n            setContentLength(response, response.content().readableBytes());\n        }\n\n        // 非Keep-Alive, 关闭连接\n        ChannelFuture future = ctx.channel().writeAndFlush(response);\n        if (isKeepAlive(response) || response.getStatus().code() != 200) {\n            future.addListener(ChannelFutureListener.CLOSE);\n        }\n\n\n    }\n\n    @Override\n    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {\n        ctx.flush();\n    }\n\n\n    @Override\n    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {\n        cause.printStackTrace();\n        ctx.close();\n    }\n}\n```\n\n(3) 客户端代码  \n客户端发送请求到服务器。\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n\t<title> Netty WebSocket时间客户端</title>\n</head>\n<body>\n\n\t<script type=\"text/javascript\">\n\t\t\n\t\tvar socket;\n\t\tif (!window.WebSocket) {\n\t\t\twindow.WebSocket = window.MozWebSocket;\n\t\t}\n\n\t\tif (window.WebSocket) {\n\t\t\t// 通信\n\t\t\tsocket = new WebSocket(\"ws://localhost:8080/websocket\");\n\n\t\t\tsocket.onmessage = function(event) {\n\t\t\t\tvar responseText = document.getElementById(\"responseText\");\n\t\t\t\tresponseText.value = responseText.value + event.data;\n\t\t\t};\n\n\t\t\t// 建立连接\n\t\t\tsocket.onopen = function(event) {\n\t\t\t\tdocument.getElementById(\"text1\").innerHTML = \"WebSocket服务器正常， 浏览器支持Websocket\";\n\t\t\t};\n\n\t\t\t// 关闭连接\n\t\t\tsocket.onclose = function(event) {\n\t\t\t\tdocument.getElementById(\"text1\").innerHTML = \"WebSocket关闭\";\n\t\t\t};\n\n\t\t} else {\n\t\t\talert(\"抱歉，浏览器不支持WebSocket协议\");\n\t\t}\n\n\t\tfunction send(message) {\n\t\t\tif (!window.WebSocket) {\n\t\t\t\treturn;\n\t\t\t}\n\t\t\tif (socket.readyState == WebSocket.OPEN) {\n\t\t\t\tsocket.send(message);\n\t\t\t} else {\n\t\t\t\talert(\"WebSocket连接没有建立成功\");\n\t\t\t}\n\t\t}\n\n\t</script>\n\t<form onsubmit=\"return false;\">\n\t\t<input type=\"text\" name=\"message\" value=\"Netty聊天室\" \n\t\t\t\tstyle=\"width: 300px;height: 40px; color: blue; background-color: yellow;\"/><br><br>\n\t\t\n\t\t<hr color=\"blue\"/>\n\n\t\t<h3>服务端返回的应答消息</h3>\n\n\t\t<span id=\"text1\" style=\"color: red\">aa</span><br>\n\n\t\t<text id=\"userId\">Tom</text><br>\n\n\t\t<textarea id=\"responseText\" name=\"responseText\" style=\"width: 300px;height: 250px\"></textarea>\n\t\t\n\t\t<br>\n\t\t<input type=\"button\" value=\"发送消息\" style = \"background-color: blue;\" \n\t\t\t\tοnclick=\"send(this.form.responseText.value)\"/>\n\t</form>\n\n</body>\n</html>\n```\n\n(4)测试  \n测试如下：  \n![](./images/5267c821737ab5b3.png)\n\n---\n\n参考  \n《Netty权威指南》  \nWebSocket协议 8 问: imooc.com/article/290121",
     "date": "2019-08-31",
-    "category": "前端开发",
+    "category": "后端开发",
     "tags": [
-      "[Netty",
-      "Netty Websocket]"
+      "Netty",
+      "Netty Websocket"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -489,9 +491,9 @@
     "date": "2019-08-30",
     "category": "后端开发",
     "tags": [
-      "[Netty",
+      "Netty",
       "Http",
-      "Netty Http]"
+      "Netty Http"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -507,9 +509,9 @@
     "date": "2019-07-27",
     "category": "后端开发",
     "tags": [
-      "[Netty",
+      "Netty",
       "粘包",
-      "拆包]"
+      "拆包"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -525,11 +527,11 @@
     "date": "2019-07-27",
     "category": "后端开发",
     "tags": [
-      "[Netty",
+      "Netty",
       "解码器",
       "DelimiterBasedFrameDecoder",
       "FixedLengthFrameDecoder",
-      "LengthFieldBasedFrameDecoder]"
+      "LengthFieldBasedFrameDecoder"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -545,9 +547,9 @@
     "date": "2019-07-11",
     "category": "后端开发",
     "tags": [
-      "[Netty",
+      "Netty",
       "Netty入门",
-      "Netty实战]"
+      "Netty实战"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -563,7 +565,7 @@
     "date": "2019-07-03",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -579,7 +581,7 @@
     "date": "2019-06-27",
     "category": "后端开发",
     "tags": [
-      "[Nacos]"
+      "Nacos"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -595,8 +597,8 @@
     "date": "2019-03-07",
     "category": "架构设计",
     "tags": [
-      "[降级",
-      "Hystrix]"
+      "降级",
+      "Hystrix"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -612,8 +614,8 @@
     "date": "2019-02-09",
     "category": "后端开发",
     "tags": [
-      "[springboot",
-      "mybatis]"
+      "springboot",
+      "mybatis"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -629,8 +631,8 @@
     "date": "2019-01-06",
     "category": "随笔杂谈",
     "tags": [
-      "[接口重试",
-      "guava-retry]"
+      "接口重试",
+      "guava-retry"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -646,7 +648,7 @@
     "date": "2019-01-05",
     "category": "后端开发",
     "tags": [
-      "[java excel]"
+      "java excel"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -662,8 +664,8 @@
     "date": "2018-12-22",
     "category": "随笔杂谈",
     "tags": [
-      "[多线程",
-      "线程池]"
+      "多线程",
+      "线程池"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -679,7 +681,7 @@
     "date": "2018-12-22",
     "category": "随笔杂谈",
     "tags": [
-      "[线程池]"
+      "线程池"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -695,9 +697,9 @@
     "date": "2018-09-08",
     "category": "后端开发",
     "tags": [
-      "[MySQL死锁",
+      "MySQL死锁",
       "wait-for graph",
-      "索引]"
+      "索引"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -713,8 +715,8 @@
     "date": "2018-07-20",
     "category": "后端开发",
     "tags": [
-      "[Maven",
-      "jar包冲突]"
+      "Maven",
+      "jar包冲突"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -730,7 +732,7 @@
     "date": "2018-07-10",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -746,8 +748,8 @@
     "date": "2018-03-20",
     "category": "后端开发",
     "tags": [
-      "[AOP",
-      "Spring AOP]"
+      "AOP",
+      "Spring AOP"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -763,7 +765,7 @@
     "date": "2018-03-20",
     "category": "后端开发",
     "tags": [
-      "[Spring AOP]"
+      "Spring AOP"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -779,8 +781,8 @@
     "date": "2018-03-11",
     "category": "后端开发",
     "tags": [
-      "[SSM",
-      "Java]"
+      "SSM",
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -796,7 +798,7 @@
     "date": "2018-01-23",
     "category": "后端开发",
     "tags": [
-      "[Spring IoC启动]"
+      "Spring IoC启动"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -812,7 +814,7 @@
     "date": "2018-01-23",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -828,7 +830,7 @@
     "date": "2018-01-23",
     "category": "后端开发",
     "tags": [
-      "[Spring-Ioc]"
+      "Spring-Ioc"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -844,7 +846,8 @@
     "date": "2018-01-23",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "Docker"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -860,8 +863,8 @@
     "date": "2018-01-22",
     "category": "后端开发",
     "tags": [
-      "[Spring",
-      "IOC]"
+      "Spring",
+      "IOC"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -877,9 +880,9 @@
     "date": "2018-01-01",
     "category": "后端开发",
     "tags": [
-      "[spring-data-jpa",
+      "spring-data-jpa",
       "JPA",
-      "spring-data]"
+      "spring-data"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -895,7 +898,7 @@
     "date": "2017-12-30",
     "category": "后端开发",
     "tags": [
-      "[jpa]"
+      "jpa"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -909,10 +912,10 @@
     "excerpt": "Web开发是项目开发中至关重要的一部分，Web开发的核心内容主要包括内嵌Servlet容器和Spring MVC。 在上节中提到的Starter Poms中提到了`spring-boot-starter-web`，对于Web开发，这个starter pom提供了嵌入的Tomcat以及SpringMV...",
     "content": "Web开发是项目开发中至关重要的一部分，Web开发的核心内容主要包括内嵌Servlet容器和Spring MVC。\n\n#### 一、 Spring Boot的Web开发支持\n\n在上节中提到的Starter Poms中提到了`spring-boot-starter-web`，对于Web开发，这个starter pom提供了嵌入的Tomcat以及SpringMVC依赖。关于Web相关的自动配置存储在spring-boot-autoconfigure.jar 和 org.springframework.boot.autoconfigure.web下，如图所示：   \n![1](https://img-blog.csdn.net/20171227204916821?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)   \n从这些文件中可知：\n\n- ServerPropertiesAutoConfiguration 和 ServerProperties自动配置内嵌Servlet容器；\n- WebMvcAutoConfiguration 和 WebMvcProperties配置Spring MVC。\n\n#### 二、 Spring Boot Web开发常用项目结构\n\n![这里写图片描述](https://img-blog.csdn.net/20171227205055709?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)\n\n- root package ：`com.wgs`； Spring Boot的启动类Application.java 需要置于root   \n  package下，这样Application.java启动的时候，就会默认扫描root package 下的类；\n- **实体：**置于`com.wgs.model`下；\n- **逻辑层：**置于`com.wgs.service`下；\n- **控制层：**置于`com.wgs.controller`下；\n- **static：**主要存放一些静态资源，如一些js文件，图片资源等；\n- **templates：**用来存放默认的模板配置路径；\n\n#### 三、Thymeleaf模板引擎\n\n##### **1 什么是模板引擎**\n\n模板引擎（这里特指用于Web开发的模板引擎）是为了使用户界面与业务数据（内容）分离而产生的，它可以生成特定格式的文档，用于网站的模板引擎就会生成一个标准的HTML文档。\n\n举个简单的例子，在应用Spring MVC框架做开发时，Controller可以将数据保存到Model中然后返回，而模板引擎就可以对Model中数据进行渲染再进行显示，可以做到前后端分离。\n\n以前的后端开发中，使用JSP技术比较多。而Spring Boot不建议使用JSP，原因在于JSP在内嵌的Servlet容器上运行有问题：\n\n- Tomcat只支持war打包的方式，不支持可执行的jar；\n- 内嵌的Jetty不支持JSP；\n- Undertow不支持JSP；\n\nSpring Boot提供了大量的模板 引擎：\n\n- FreeMarker\n- Groovy\n- Thymeleaf（推荐）\n- Velocity\n- Mustache\n\nSpring Boot 推荐使用Thymeleaf 作为模板引擎，因为Thymeleaf 提供了完美的Spring MVC支持。\n\n##### **2 Thymeleaf 基础知识**\n\nThymeleaf是一个Java类库，是一个XML/XHTML/HTML5的模板引擎，可以作为MVC的Web应用的View层。   \nThymeleaf能够与SpringMVC集成，可代替JSP。\n\n下面看看Thymeleaf 的基础语法：   \n**（1）引入Thymeleaf**   \n首先需要通过`http://www.thymeleaf.org`命名空间，将静态页面转为动态的视图；动态视图中处理元素时都需要加上`th:`前缀：\n\n```\n<html xmlns:th=\"http://www.thymeleaf.org\">\n```\n\n如果想引入静态资源，需要通过`@{}`来引用Web静态资源。   \n如想引入项目中src/main/resources/static/bootstrap资源：\n\n```\n<link rel=\"stylesheet\" th:src=\"@{bootstrap/css/bootstrap.min.css}\" />\n```\n\n**（2）访问model中数据**   \n同JSP，通过`${}`访问model中数据。\n\n```\n 姓名：<span  th:text=\"${singleP.name}\"></span>\n```\n\nsingleP来自后端Model中数据：\n\n```\nmodel.addAttribute(\"singleP\", singleP);\n```\n\n**（3）for循环：迭代访问model中数据**   \nThymeleaf 使用`th:each=\"p:${list}\"`来迭代访问数据：\n\n```\n<li class=\"list-group-item\" th:each=\"person:${personList}\">\n     姓名：<span th:text=\"${person.name}\"></span>\n     年龄：<span th:text=\"${person.age}\"></span><br/>\n</li>\n```\n\npersonList来自后端Model中数据：\n\n```\nmodel.addAttribute(\"personList\", personList);\n```\n\n**（4）数据判断**   \n可使用`${not #lists.isEmpty(list)}`判断集合是否为空。Thymeleaf 支持> , < , >=, <=, ==, !=等作比较条件：\n\n```\nth:if=\"${not #lists.isEmpty(personList)}\"\n```\n\n**（5）在JavaScript中访问model中数据**   \n要想在JavaScript中访问model中数据，首先需要通过`th:inline=\"javascript\"`添加到script标签。   \n再通过`[[${}]]`格式获得实际的值。\n\n```\n<script th:inline=\"javascript\">\n    var single = [[${singlePerson}]];\n</script>\n```\n\n#### 四、 Spring Boot 集成 Thymeleaf 显示简单页面\n\n下面来看看在 Spring Boot中如何使用Thymeleaf 来渲染页面。   \n**（1）引入Thymeleaf 依赖：**\n\n```\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-thymeleaf</artifactId>\n</dependency>\n```\n\nspring-boot-starter-thymeleaf中包含spring-boot-starter-web，所以不需要再引入。\n\n也可以在新建项目的时候，通过Spring Initializr方式去创建：   \n![Alt text](https://img-blog.csdn.net/20171227205445547?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)   \n再下一步后选中所需要的技术Thymeleaf即可：   \n![Alt text](https://img-blog.csdn.net/20171227205530584?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)\n\n**（2）JavaBean ：**\n\n```\npackage com.wgs.model;\n\n/**\n * @author GenshenWang.nomico\n * @date 2017/12/26.\n */\npublic class Person {\n    private String name;\n    private Integer age;\n\n    public void setName(String name) {\n        this.name = name;\n    }\n\n    public void setAge(Integer age) {\n        this.age = age;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public Integer getAge() {\n        return age;\n    }\n\n    public Person(String name, Integer age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    public Person() {\n    }\n}\n```\n\n**（3）通过Controller准备数据，并将数据保存到Model中：**\n\n```\npackage com.wgs.controller;\n\nimport com.wgs.model.Person;\nimport org.springframework.stereotype.Component;\nimport org.springframework.stereotype.Controller;\nimport org.springframework.ui.Model;\nimport org.springframework.web.bind.annotation.RequestMapping;\n\nimport java.util.ArrayList;\nimport java.util.List;\n\n/**\n * @author GenshenWang.nomico\n * @date 2017/12/27.\n */\n@Controller\npublic class PersonController {\n\n    @RequestMapping(\"/getPersonData\")\n    public String getPersonData(Model model){\n        Person singlePerson = new Person(\"SB\", 22);\n        List<Person> personList = new ArrayList<>();\n        Person p1 = new Person(\"aa\", 11);\n        Person p2 = new Person(\"bb\", 22);\n        Person p3 = new Person(\"cc\", 33);\n        personList.add(p1);\n        personList.add(p2);\n        personList.add(p3);\n\n        model.addAttribute(\"singlePerson\", singlePerson);\n        model.addAttribute(\"personList\", personList);\n\n        return \"index\";\n    }\n}\n```\n\n**（4）在src/main/resources/templates建立模板页面：index.html。**\n\n```\n<!DOCTYPE html>\n<html xmlns:th=\"http://www.thymeleaf.org\" lang=\"zh-CN\">\n<head>\n    <meta content=\"text/html;charset=utf-8\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n    <meta http-equiv=\"Content-Type\" content=\"IE=edge\" />\n    <title>Thymeleaf Demo</title>\n</head>\n<body>\n<h1>Thymeleaf Demo</h1>\n<div>\n    <div >\n        <h3 class=\"panel-title\">单个访问人员数据</h3>\n    </div>\n    <div>\n        <span th:text=\"${singlePerson.name}\"></span>\n    </div>\n</div>\n\n\n<div th:if=\"${not #lists.isEmpty(personList)}\">\n    <div>\n        <div>\n            <h3 class=\"panel-title\">群体访问人员数据</h3>\n        </div>\n        <div >\n            <ul class=\"list-group\">\n                <li class=\"list-group-item\" th:each=\"person:${personList}\">\n                    <span th:text=\"${person.name}\"></span>\n                    <span th:text=\"${person.age}\"></span>\n                </li>\n            </ul>\n        </div>\n    </div>\n\n</div>\n\n</body>\n</html>\n```\n\n**（5）启动入口类：**   \n显示页面如下：   \n![Alt text](https://img-blog.csdn.net/20171227205721992?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)\n\n整体结构：   \n![Alt text](https://img-blog.csdn.net/20171227205832179?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)\n\n【注】   \n（1）要用@Controller注解，不能用@RestController，因为@RestController返回的是JSON数据，而不是页面；   \n（2）IDEA创建的HTML页面`<meta>` ,`<br>`，`<link>`等标签是没有闭合的，执行的时候会报错，需要我们手动去闭合标签。\n\n#### 五、 Spring Boot +Thymeleaf + BootStrap显示简单页面\n\n可以使用BootStrap对页面进一步进行加工：\n\n```\n<!DOCTYPE html>\n<html xmlns:th=\"http://www.thymeleaf.org\" lang=\"zh-CN\">\n<head>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->\n    <link rel=\"stylesheet\" href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\"/>\n    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->\n    <link rel=\"stylesheet\" href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css\" integrity=\"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp\" crossorigin=\"anonymous\"/>\n    <script src=\"http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js\"></script>\n    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->\n    <script src=\"https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n    <title>Thymeleaf Demo</title>\n</head>\n<body>\n\n<div class=\"panel panel-primary\">\n    <div class=\"panel-heading\">\n        <h3 class=\"panel-title\">单个访问人员数据</h3>\n    </div>\n    <div class=\"panel-body\">\n        姓名：<span  th:text=\"${singlePerson.name}\"></span>\n        年龄：<span th:text=\"${singlePerson.age}\"></span>\n    </div>\n</div>\n\n\n<div th:if=\"${not #lists.isEmpty(personList)}\">\n    <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n            <h3 class=\"panel-title\">群体访问人员数据</h3>\n        </div>\n        <div class=\"panel-body\">\n            <ul class=\"list-group\">\n                <li class=\"list-group-item\" th:each=\"person:${personList}\">\n                    姓名：<span th:text=\"${person.name}\"></span>\n                    年龄：<span th:text=\"${person.age}\"></span>\n                    <button class=\"btn\" th:onclick=\"'getName(\\''+ ${person.name}+'\\');'\">获得名字</button>\n                </li>\n            </ul>\n        </div>\n    </div>\n\n</div>\n\n<script th:inline=\"javascript\">\n    var single = [[${singlePerson}]];\n    console.log(single.name + \"/\" + single.age);\n    function getName(name) {\n        console.log(name);\n    }\n</script>\n</body>\n</html>\n```\n\n启动后页面如下：   \n![Alt text](https://img-blog.csdn.net/20171227210413124?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)\n\n单击获得名字按钮，console中可以看到显示对应的数据：   \n![Alt text](https://img-blog.csdn.net/20171227210431145?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)",
     "date": "2017-12-27",
-    "category": "前端开发",
+    "category": "后端开发",
     "tags": [
-      "[springboot",
-      "thymeleaf]"
+      "springboot",
+      "thymeleaf"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -928,7 +931,7 @@
     "date": "2017-12-25",
     "category": "后端开发",
     "tags": [
-      "[springboot]"
+      "springboot"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -944,7 +947,7 @@
     "date": "2017-12-23",
     "category": "后端开发",
     "tags": [
-      "[springboot]"
+      "springboot"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -960,9 +963,9 @@
     "date": "2017-11-28",
     "category": "后端开发",
     "tags": [
-      "[intellij idea",
+      "intellij idea",
       "Gradle",
-      "Spring源码]"
+      "Spring源码"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -978,9 +981,9 @@
     "date": "2017-11-04",
     "category": "后端开发",
     "tags": [
-      "[AMQP",
+      "AMQP",
       "RabbitMQ",
-      "spring整合mq]"
+      "spring整合mq"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -996,9 +999,9 @@
     "date": "2017-10-30",
     "category": "后端开发",
     "tags": [
-      "[activemq",
+      "activemq",
       "jms",
-      "消息队列-java]"
+      "消息队列-java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1014,8 +1017,8 @@
     "date": "2017-09-05",
     "category": "架构设计",
     "tags": [
-      "[适配器模式",
-      "设计模式]"
+      "适配器模式",
+      "设计模式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1031,9 +1034,9 @@
     "date": "2017-09-05",
     "category": "架构设计",
     "tags": [
-      "[装饰模式",
+      "装饰模式",
       "设计模式",
-      "I-O装饰模式]"
+      "I-O装饰模式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1049,9 +1052,9 @@
     "date": "2017-09-04",
     "category": "架构设计",
     "tags": [
-      "[职责链模式",
+      "职责链模式",
       "设计模式",
-      "Tomcat-职责链]"
+      "Tomcat-职责链"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1067,8 +1070,8 @@
     "date": "2017-09-04",
     "category": "架构设计",
     "tags": [
-      "[观察者模式",
-      "tomcat-lifecycle]"
+      "观察者模式",
+      "tomcat-lifecycle"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1084,7 +1087,7 @@
     "date": "2017-08-20",
     "category": "架构设计",
     "tags": [
-      "[工厂模式]"
+      "工厂模式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1100,8 +1103,8 @@
     "date": "2017-08-19",
     "category": "架构设计",
     "tags": [
-      "[设计模式",
-      "模板方法模式]"
+      "设计模式",
+      "模板方法模式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1117,9 +1120,9 @@
     "date": "2017-08-17",
     "category": "架构设计",
     "tags": [
-      "[代理模式",
+      "代理模式",
       "设计模式",
-      "spring]"
+      "spring"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1135,9 +1138,9 @@
     "date": "2017-08-17",
     "category": "架构设计",
     "tags": [
-      "[设计模式",
+      "设计模式",
       "spring",
-      "策略模式]"
+      "策略模式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1153,7 +1156,7 @@
     "date": "2017-07-23",
     "category": "后端开发",
     "tags": [
-      "[JVM垃圾回收]"
+      "JVM垃圾回收"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1169,7 +1172,7 @@
     "date": "2017-07-22",
     "category": "后端开发",
     "tags": [
-      "[jvm]"
+      "jvm"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1185,7 +1188,7 @@
     "date": "2017-07-22",
     "category": "后端开发",
     "tags": [
-      "[JVM内存模型]"
+      "JVM内存模型"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1201,7 +1204,7 @@
     "date": "2017-07-13",
     "category": "随笔杂谈",
     "tags": [
-      "[二叉树遍历]"
+      "二叉树遍历"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1217,7 +1220,8 @@
     "date": "2017-07-12",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "分布式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1233,7 +1237,7 @@
     "date": "2017-07-09",
     "category": "架构设计",
     "tags": [
-      "[]"
+      "架构设计"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1249,7 +1253,7 @@
     "date": "2017-07-09",
     "category": "随笔杂谈",
     "tags": [
-      "[反射]"
+      "反射"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1265,8 +1269,8 @@
     "date": "2017-07-08",
     "category": "后端开发",
     "tags": [
-      "[spring",
-      "aop]"
+      "spring",
+      "aop"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1282,9 +1286,9 @@
     "date": "2017-07-05",
     "category": "后端开发",
     "tags": [
-      "[jvm",
+      "jvm",
       "类加载",
-      "破坏双亲模型]"
+      "破坏双亲模型"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1300,7 +1304,7 @@
     "date": "2017-06-30",
     "category": "后端开发",
     "tags": [
-      "[RPC]"
+      "RPC"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1316,10 +1320,10 @@
     "date": "2017-06-14",
     "category": "后端开发",
     "tags": [
-      "[Date",
+      "Date",
       "Calendar",
       "Joda-Time",
-      "DateTimeFormatter]"
+      "DateTimeFormatter"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1335,8 +1339,8 @@
     "date": "2017-06-13",
     "category": "后端开发",
     "tags": [
-      "[Redis消息队列",
-      "异步化]"
+      "Redis消息队列",
+      "异步化"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1352,7 +1356,7 @@
     "date": "2017-05-30",
     "category": "后端开发",
     "tags": [
-      "[java动态代理]"
+      "java动态代理"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1368,8 +1372,8 @@
     "date": "2017-05-30",
     "category": "后端开发",
     "tags": [
-      "[对象",
-      "java]"
+      "对象",
+      "java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1385,8 +1389,8 @@
     "date": "2017-05-09",
     "category": "后端开发",
     "tags": [
-      "[spring",
-      "javamail]"
+      "spring",
+      "javamail"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1402,8 +1406,8 @@
     "date": "2017-05-07",
     "category": "后端开发",
     "tags": [
-      "[redis",
-      "点赞]"
+      "redis",
+      "点赞"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1419,10 +1423,10 @@
     "date": "2017-05-04",
     "category": "后端开发",
     "tags": [
-      "[redis",
+      "redis",
       "session",
       "spring",
-      "缓存]"
+      "缓存"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1438,10 +1442,10 @@
     "date": "2017-05-02",
     "category": "后端开发",
     "tags": [
-      "[log4j",
+      "log4j",
       "slf4j",
       "java",
-      "日志]"
+      "日志"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1457,7 +1461,7 @@
     "date": "2017-04-28",
     "category": "架构设计",
     "tags": [
-      "[]"
+      "Kafka"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1473,7 +1477,8 @@
     "date": "2017-04-28",
     "category": "架构设计",
     "tags": [
-      "[]"
+      "Kafka",
+      "分布式"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1487,11 +1492,11 @@
     "excerpt": "JS:    正则表达式：`/^[\\u4e00-\\u9fa5]+$/`    (此处也加入了输入内容长度的判断，完成功能：输入内容只能是中文，不能为空，不能加载除中文以外的文字符号等) function checkLenAndIsChinese(input) {     var reg = /^[\\...",
     "content": "JS:   \n正则表达式：`/^[\\u4e00-\\u9fa5]+$/`   \n(此处也加入了输入内容长度的判断，完成功能：输入内容只能是中文，不能为空，不能加载除中文以外的文字符号等)\n\n```\nfunction checkLenAndIsChinese(input) {\n    var reg = /^[\\u4e00-\\u9fa5]+$/;\n    var len = input.length;\n    var flag = true;\n    if (len < 1 || len > 4 || !reg.test(input)) {\n      flag = false;\n    }\n      return flag;\n    }\n```\n\nJava:\n\n```\npublic static void main(String[] args) {\n    String reg = \"[\\\\u4e00-\\\\u9fa5]+\";//表示+表示一个或多个中文\n    String str1 = \"aa\";\n    String str2 = \"说说\";\n    String str3 = \"说说aa\";\n    String str4 = \"说,@说aa\";\n    String str5 = \"かな\";\n    String str6 = \"かな日文\";\n    System.out.println(str1.matches(reg));\n    System.out.println(str2.matches(reg));\n    System.out.println(str3.matches(reg));\n    System.out.println(str4.matches(reg));\n    System.out.println(str5.matches(reg));\n    System.out.println(str6.matches(reg));\n}\n```\n\n输出：\n\n> false   \n> true   \n> false   \n> false   \n> false   \n> false",
     "date": "2017-04-20",
-    "category": "前端开发",
+    "category": "后端开发",
     "tags": [
-      "[正则表达式",
+      "正则表达式",
       "javascript",
-      "java]"
+      "java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1507,8 +1512,8 @@
     "date": "2017-04-17",
     "category": "后端开发",
     "tags": [
-      "[dubbo",
-      "zookeeper]"
+      "dubbo",
+      "zookeeper"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1524,9 +1529,9 @@
     "date": "2017-03-27",
     "category": "后端开发",
     "tags": [
-      "[生产者消费者问题",
+      "生产者消费者问题",
       "java",
-      "线程安全]"
+      "线程安全"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1542,7 +1547,7 @@
     "date": "2017-03-14",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1558,8 +1563,8 @@
     "date": "2017-03-09",
     "category": "随笔杂谈",
     "tags": [
-      "[虚拟机",
-      "jstack]"
+      "虚拟机",
+      "jstack"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1575,10 +1580,10 @@
     "date": "2017-03-02",
     "category": "后端开发",
     "tags": [
-      "[redis",
+      "redis",
       "windows",
       "redis安装",
-      "redis命令]"
+      "redis命令"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1594,7 +1599,7 @@
     "date": "2017-02-21",
     "category": "后端开发",
     "tags": [
-      "[java-NIO]"
+      "java-NIO"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1610,10 +1615,10 @@
     "date": "2017-02-17",
     "category": "后端开发",
     "tags": [
-      "[java",
+      "java",
       "socket",
       "通信",
-      "聊天]"
+      "聊天"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1629,9 +1634,9 @@
     "date": "2017-02-16",
     "category": "后端开发",
     "tags": [
-      "[socket",
+      "socket",
       "java",
-      "TCP]"
+      "TCP"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1647,8 +1652,8 @@
     "date": "2017-02-07",
     "category": "后端开发",
     "tags": [
-      "[日志",
-      "输入输出流HttpClient]"
+      "日志",
+      "输入输出流HttpClient"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1664,9 +1669,9 @@
     "date": "2017-01-23",
     "category": "随笔杂谈",
     "tags": [
-      "[excellentexport",
+      "excellentexport",
       "报表",
-      "Firefox]"
+      "Firefox"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1680,9 +1685,9 @@
     "excerpt": "相信大家在做表格显示的时候都做过分页显示的功能，实现起来只需要简单几句SQL+java代码即可实现，但这不是本篇的重点。本篇文章想要介绍一个有意思功能强大的可以自动分页和选择对表格中列进行排序的插件--Datatables。 当然，本篇所讲的分页和排序只是Datatables的一部分小功能，还有很多...",
     "content": "### Datatables--一个有意思的自动分页和排序的插件\n\n相信大家在做表格显示的时候都做过分页显示的功能，实现起来只需要简单几句SQL+java代码即可实现，但这不是本篇的重点。本篇文章想要介绍一个有意思功能强大的可以自动分页和选择对表格中列进行排序的插件--Datatables。\n\n当然，本篇所讲的分页和排序只是Datatables的一部分小功能，还有很多其他的强大功能，可自行去官网查看API使用。\n\n详情参看官网：【http://datatables.club/】\n\n#### 1 什么是Datatables？\n\nDatatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。\n\n1. 分页，即时搜索和排序\n2. 几乎支持任何数据源：DOM， javascript， Ajax 和 服务器处理\n3. 支持不同主题 DataTables, jQuery UI, Bootstrap, Foundation\n4. 各式各样的扩展: Editor, TableTools, FixedColumns ……\n5. 丰富多样的option和强大的API\n6. 支持国际化\n\n#### 2  五分钟上手Datatables\n\n在项目中使用 DataTables的步骤也很简单。\n\n只需要引入三个文件即可，jQuery库，一个DT的核心js文件和一个DT的css文件即可。\n\n##### 1)引入三个文件\n\n```\n<!--第一步：引入Javascript / CSS （CDN）-->\n<!-- DataTables CSS -->\n<link rel=\"stylesheet\" type=\"text/css\" href=\"http://cdn.datatables.net/1.10.13/css/jquery.dataTables.css\">\n \n<!-- jQuery -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"http://code.jquery.com/jquery-1.10.2.min.js\"></script>\n \n<!-- DataTables -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"http://cdn.datatables.net/1.10.13/js/jquery.dataTables.js\"></script>\n```\n\n##### 2)在html的table中加上id或者class；\n\n如：\n\n```\n<table id=\"table_id_example\"></table>\n```\n\n##### 3)初始化Datatables:\n\n```\n<!--第三步：初始化Datatables-->\n$(document).ready( function () {\n    $('#table_id_example').DataTable();\n} );\n```\n\n#### 3   附上我的code供参考：\n\n```\n<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\" %>\n<%@ taglib prefix=\"fmt\" uri=\"http://java.sun.com/jsp/jstl/fmt\" %>\n<%--\n  Created by IntelliJ IDEA.\n  User: wanggenshen_sx\n  Date: 2017/1/22\n  Time: 14:08\n  To change this template use File | Settings | File Templates.\n--%>\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\n<html>\n<head>\n    <title>商品信息统计</title>\n      <!--第一步：引入Javascript / CSS （CDN）-->\n      <!-- DataTables CSS -->\n   <link rel=\"stylesheet\" href=\"bootstrap/css/bootstrap.min.css\">\n   <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css\">\n   <!-- jQuery -->\n    <script src=\"//cdn.bootcss.com/jquery/2.1.4/jquery.min.js\"></script>\n   <!-- DataTables -->\n   <script type=\"text/javascript\" charset=\"utf8\" src=\"http://cdn.datatables.net/1.10.13/js/jquery.dataTables.js\">\n   </script>\n\n    <script src=\"${pageContext.request.contextPath}/resources/excellentexport/excellentexport.min.js\"></script>\n</head>\n<body>\n\n<div style=\"text-align: center \">\n    <h2>[ --------商品信息统计-------------]</h2>\n</div>\n<!--Table表格显示-->\n<div class=\"row\">\n <div class=\"col-xs-12\">\n\n     <div class=\"box\">\n         <div class=\"box-header\">\n                <a class=\"btn btn-success export-csv-btn\" downlaod=\"data.csv\" href=\"#\">数据导出</a>\n         </div>\n\n         <div class=\"box-body\">\n             <div class=\"table-responsive\">\n                 <table class=\"table table-striped  order_table\" id=\"export-csv-table\">\n                     <thead>\n                     <tr>\n                         <th>日期</th>\n                         <th>商品剩余</th>\n                         <th>商品一日留存率</th>\n                         <th>商品一周留存率</th>\n                         <th>商品一月留存率</th>\n                     </tr>\n                     </thead>\n\n                     <tbody>\n                     <c:forEach var=\"info\" items=\"${statisticsInfo}\">\n                         <tr>\n                             <td><fmt:formatDate value=\"${info.date}\" pattern=\"yyyy-MM-dd\"/></td>\n                             <td>${info.remainGoods}</td>\n                             <td>${info.d1Retention}</td>\n                             <td>${info.d7Retention}</td>\n                             <td>${info.d28Retention}</td>\n                         </tr>\n                     </c:forEach>\n                     </tbody>\n                  </table>\n             </div>\n         </div>\n     </div>\n </div>\n</div>\n <script>\n     //加入分页\n     $(document).ready( function () {\n         $('.order_table').DataTable({\n             //开启搜索框\n             \"searching\": true,\n             //允许分页\n            \"paging\": true,\n             //左下角信息 showing 1 to 7 of 7entries\n             \"info\":true,\n             //支持国际化，将search转为中文\n             language: {\n                 \"search\": \"在表格中搜索:\",\n                 \"oPaginate\": {\n                     \"sPrevious\": \"上页\",\n                     \"sNext\": \"下页\",\n                 },\n             },\n             \"columnDefs\": [\n                 {\n                     //targets指定列禁止排序功能\n                     \"orderable\": false,\n                     \"targets\": [0,1,2]\n                 }\n             ]\n         });\n     } );\n\n     // 导出CSV\n     $(\".export-csv-btn\").click(function () {\n         if($(\"#export-csv-table\").size() === 1) {\n             if($(\"#export-csv-table tbody tr\").length > 0 && !$(\"#export-csv-table tbody tr td\").hasClass(\"dataTables_empty\")) {\n                 return ExcellentExport.csv(this, 'export-csv-table');\n             } else {\n                 alert(\"数据不存在\");\n                 return false;\n             }\n         } else {\n             return false;\n         }\n     });\n </script>\n</body>\n</html>\n```\n\n  \n\n#### 4 实现效果：\n\n![](https://img-blog.csdn.net/20170123110005735?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n上图有个数据导出功能，也是一个有意思的插件，将在下篇简要介绍。",
     "date": "2017-01-23",
-    "category": "前端开发",
+    "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1696,9 +1701,9 @@
     "excerpt": "ECharts，一个纯 Javascript 的图表库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖轻量级的 Canvas 类库 [ZRender](https://github.com/ecomfe/...",
     "content": "## Echarts图表中动态数据显示\n\n### 1 什么是Echarts？\n\nECharts，一个纯 Javascript 的图表库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖轻量级的 Canvas 类库 [ZRender](https://github.com/ecomfe/zrender)，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。\n\n可参看官方网址介绍：【http://echarts.baidu.com/index.html】\n\n### 2 如何五分钟上手Echarts?\n\n本篇文章不会向你介绍如何上手Echarts，事实上这部分确实很简单，只要引入其js库，然后按照官方给的例子即可实现。\n\n可参看官方实现的小实例：【http://echarts.baidu.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts】\n\n绘制一个简单图表，实现后样式如下：\n\n![](https://img-blog.csdn.net/20170122151816102?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n实现的代码可自己参看官方API去弄明白，这不是本篇文章的重点。事实上，这个例子中横坐标值，以及柱子高度值都是在代码中事先写好的：\n\n![](https://img-blog.csdn.net/20170122152044934?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n### 3 如何在Echarts图表中动态显示数据\n\n但是在实际项目中，横坐标以及柱状图柱值都是根据数据库中查询的数据的值而变化的。因此，如何在Echarts图中动态显示数据呢？\n\n**有两种思路：**\n\n1   获取数据库数据，将其传入后台，后台将数据转为JSON格式的数据 后再传给前端(Echarts中代码即为JSON格式的)，这样Echarts就可以直接使用这些JSON格式的数据显示数据库中对应的数据，从而可以达到动态显示的效果。\n\n2   直接在前端页面中获取从后台查询到的数据库的值并且保存下来，然后直接在Echarts代码中去使用这些数据。(这样实现起来比较简单，不用写后台代码，容易实现，但前提是这些数据不用计算，是直接从数据库中查询得到的),可以使用jQuery去实现。\n\n这样讲起来可能比较啰嗦，下面直接在代码中去稍微讲解下思路:\n\n### 具体实现：\n\n1  首先是在表格每一行加入class，这样就可以在jQuery中去获取表格的每行的数据并进行解析：\n\n![](https://img-blog.csdn.net/20170122153258779?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n \n\n2  新建一个数组，将表格中每行对应的数据值存储到对应数组中：\n\n![](https://img-blog.csdn.net/20170122153430750?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3 在Echarts中即可直接使用上面数组中的值：\n\n![](https://img-blog.csdn.net/20170122153528635?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n4 实现效果如下：\n\n![](https://img-blog.csdn.net/20170122153748332?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n如上图，Echarts折线图中数据是按照下面表格中数据去动态显示的。至于饼图可能比较特殊一点，本篇不在此讨论。\n\n--------------------------------------------------------------------------------------\n\n### 实现过程中遇到的一个小问题：\n\n当标签td下还有标签时如下：\n\n![](https://img-blog.csdn.net/20170122154322061?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n这时在无法直接获取，要加上parseFloat清楚换行，并且最好加上值判断，即获取的值为0时就让它显示0，三目运算实现即可。\n\n```\nehcartsRemainGoods.push(parseFloat($(this).find(\".td-remainGoods\").html())\n```\n\n```\n\t\t\t\t\t\t\t\t\t?parseFloat($(this).find(\".td-remainGoods\").html())\n```\n\n```\n\t\t\t\t\t\t\t\t\t:0);\n```\n\n  \n\n附上code:\n\n```\n<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\" %>\n<%@ taglib prefix=\"fmt\" uri=\"http://java.sun.com/jsp/jstl/fmt\" %>\n<%--\n  Created by IntelliJ IDEA.\n  User: wanggenshen_sx\n  Date: 2017/1/22\n  Time: 14:08\n  To change this template use File | Settings | File Templates.\n--%>\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\n<html>\n<head>\n    <title>商品信息统计</title>\n    <link rel=\"stylesheet\" href=\"bootstrap/css/bootstrap.min.css\">\n    <script src=\"//cdn.bootcss.com/echarts/3.3.2/echarts.min.js\"></script>\n    <script src=\"//cdn.bootcss.com/jquery/2.1.4/jquery.min.js\"></script>\n</head>\n<body>\n\n    <!--折线图显示-->\n    <div class=\"box\">\n        <div class=\"box-header\">\n           [ --------图表显示-------------]\n        </div>\n        <div class=\"box-body\">\n            <div id=\"echarts-line\" style=\"height: 400px; width :800px;\"></div>\n        </div>\n    </div>\n\n    <!--Table表格显示-->\n    <div class=\"row\">\n        <div class=\"col-xs-12\">\n\n            <div class=\"box\">\n                <div class=\"box-header\">\n                    [ --------商品信息统计-------------]\n                </div>\n                <div class=\"box-body\">\n                    <div class=\"table-responsive\">\n                        <table class=\"table table-striped table-echarts\" style=\"width: 800px\">\n                            <thread>\n                                <tr>\n                                    <th>日期</th>\n                                    <th>商品剩余</th>\n                                    <th>商品一日留存率</th>\n                                    <th>商品一周留存率</th>\n                                    <th>商品一月日留存率</th>\n                                </tr>\n                            </thread>\n                            <tbody>\n                            <c:forEach var=\"info\" items=\"${statisticsInfo}\">\n                                <tr>\n                                    <td class=\"td-date\"><fmt:formatDate value=\"${info.date}\" pattern=\"yyyy-MM-dd\"/></td>\n                                    <td class=\"td-remainGoods\">${info.remainGoods}</td>\n                                    <td class=\"td-d1Retention\">${info.d1Retention}</td>\n                                    <td class=\"td-d7Retention\">${info.d7Retention}</td>\n                                    <td class=\"td-d28Retention\">${info.d28Retention}</td>\n                                </tr>\n                            </c:forEach>\n                            </tbody>\n\n                        </table>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <script type=\"text/javascript\">\n            $(function () {\n                var echartsDate = [];\n                var ehcartsRemainGoods= [];\n                var echartsD1Retention= [];\n                var echartsD7Retention= [];\n                var echartsD28Retention= [];\n\n                $(\".table-echarts tbody tr\").each(function () {\n                    echartsDate.push($(this).find(\".td-date\").html());\n                    ehcartsRemainGoods.push($(this).find(\".td-remainGoods\").html());\n                    echartsD1Retention.push($(this).find(\".td-d1Retention\").html());\n                    echartsD7Retention.push($(this).find(\".td-d7Retention\").html());\n                    echartsD28Retention.push($(this).find(\".td-d28Retention\").html());\n                });\n                \n                var lineEchart = echarts.init(document.getElementById('echarts-line'));\n                option = {\n                    title: {\n                        text: '商品信息统计'\n                    },\n                    tooltip: {\n                        trigger: 'axis'\n                    },\n                    legend: {\n                        data:['商品剩余','商品一日留存率','商品一周留存率','商品一月留存率']\n                    },\n                    grid: {\n                        left: '3%',\n                        right: '4%',\n                        bottom: '3%',\n                        containLabel: true\n                    },\n                    toolbox: {\n                        feature: {\n                            saveAsImage: {}\n                        }\n                    },\n                    xAxis: {\n                        type: 'category',\n                        boundaryGap: false,\n                        data:echartsDate\n                    },\n                    yAxis: {\n                        type: 'value'\n                    },\n                    series: [\n                        {\n                            name:'商品剩余',\n                            type:'line',\n                            stack: '总量',\n                            data:ehcartsRemainGoods\n                        },\n                        {\n                            name:'商品一日留存率',\n                            type:'line',\n                            stack: '总量',\n                            data:echartsD1Retention\n                        },\n                        {\n                            name:'商品一周留存率',\n                            type:'line',\n                            stack: '总量',\n                            data:echartsD7Retention\n                        },\n                        {\n                            name:'商品一月留存率',\n                            type:'line',\n                            stack: '总量',\n                            data:echartsD28Retention\n                        }\n                    ]\n                };\n\n                lineEchart.setOption(option);\n\n            })\n    </script>\n</body>\n</html>\n```\n\n  \n  \n\n源码见我的github：https://github.com/nomico271/Echarts\\_V\\_1.0",
     "date": "2017-01-22",
-    "category": "前端开发",
+    "category": "后端开发",
     "tags": [
-      "[Echarts]"
+      "Echarts"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1714,7 +1719,7 @@
     "date": "2017-01-13",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1730,7 +1735,7 @@
     "date": "2017-01-12",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1746,7 +1751,7 @@
     "date": "2017-01-09",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1762,8 +1767,8 @@
     "date": "2017-01-04",
     "category": "后端开发",
     "tags": [
-      "[国际化",
-      "Spring实现国际化]"
+      "国际化",
+      "Spring实现国际化"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1777,9 +1782,9 @@
     "excerpt": "我是在Github上项目下直接创建的新分支，此处以后再补充； ![](https://img-blog.csdn.net/20170104164803059?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L...",
     "content": "### Git创建分支并上传代码到新分支上\n\n#### 一  创建分支：\n\n我是在Github上项目下直接创建的新分支，此处以后再补充；\n\n#### 二  上传代码到新分支\n\n##### 1**$git status**:查看所在分支和修改的文件：\n\n![](https://img-blog.csdn.net/20170104164803059?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n![]()\n\n如上图，我所在的分支为wnaggenshen\\_20170104,即为将要上传代码到该分支的地方；\n\n（若所在分支不在要上传代码的分支，则使用 $git checkout  分支名，切换到该分支再进行操作）。\n\n4个红色处表明已经被修改的文件，也为将要上传的文件。\n\n#### 2 $ git add -A:添加所有要上传的文件(代码)\n\n##### \n\n再$git status,此时4个文件变绿，表明将要上传到本地库；\n\n##### 3 $ git commit -m  '这里随便写什么'\n\n此时上传到本地repository；\n\n![](https://img-blog.csdn.net/20170104164113206?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n![]()\n\n##### 4 $ git push\n\n此时提交到远程分支。\n\n![](https://img-blog.csdn.net/20170104165023374?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n刷新Github，即可看到新上传的代码。\n\n------------------------------------------------------------------------------------------------------------------------------------------\n\n分支合并的时候，出现\"[Please enter a commit message to explain why this merge is necessary,especi”的解决办法](http://blog.csdn.net/ailo555/article/details/52202276):\n\n1 按键盘左上角Esc;\n\n2 输入 :wq ，再按Enter 即可。",
     "date": "2017-01-04",
-    "category": "工具技巧",
+    "category": "架构设计",
     "tags": [
-      "[]"
+      "架构设计"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1795,7 +1800,7 @@
     "date": "2017-01-02",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1809,9 +1814,10 @@
     "excerpt": "在前篇文章中【http://blog.csdn.net/noaman\\_wgs/article/details/53893948】，已经利用Intelli+MAVEN搭建成功了Spring+Mybatis+SpringMVC+Mysql的小项目，本篇文章继续完善，加入Bootstrap前端框架，使显...",
     "content": "### 利用Intellij+MAVEN搭建Bootstrap+Spring+Mybatis+MySql+SpringMVC项目详解\n\n在前篇文章中【http://blog.csdn.net/noaman\\_wgs/article/details/53893948】，已经利用Intelli+MAVEN搭建成功了Spring+Mybatis+SpringMVC+Mysql的小项目，本篇文章继续完善，加入Bootstrap前端框架，使显示页面更加美观。\n\n关于Bootstrap就不多做介绍了，我也是第一次使用，可以参看这个【http://v3.bootcss.com/css/#tables】。\n\n#### 1 导入Bootstrap包\n\nBootstrap包不需要在MAVEN的pom.xml中导入，只需下载一个Bootstrap的jar包，然后直接放入项目中即可。在IntelliJ中，我是直接粘贴到webapp下（注意，不是WEN-INF下）。\n\n![]()\n\n![](https://img-blog.csdn.net/20161228125221282?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n#### 2  jsp页面内调用Bootstrap样式\n\n在显示页面中，引入这个包，这里要注意获取Bootstrap路径的问题，即：\n\n```\n<link rel=\"stylesheet\" href=\"bootstrap/css/bootstrap.min.css\">\n```\n\n我这里比较简单，可参看这篇blog【http://blog.csdn.net/u010890358/article/details/53463543】。\n\n然后就可以直接调用Bootstrap定义的样式了，如修饰table,就可直接使用,class后内容即为样式。\n\n可参考【http://v3.bootcss.com/css/#tables】内容。\n\n```\n<table class=\"table table-striped\">\n```\n\ncode:\n\n```\n<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\" %>\n<%--\n  Created by IntelliJ IDEA.\n  User: wanggenshen_sx\n  Date: 2016/12/26\n  Time: 17:25\n  To change this template use File | Settings | File Templates.\n--%>\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\n<%@ page isELIgnored=\"false\" %>\n<html>\n<head>\n    <title>Show Page22</title>\n    <link rel=\"stylesheet\" href=\"bootstrap/css/bootstrap.min.css\">\n</head>\n<body>23\n            <h2>Employee List</h2>\n                <table class=\"table table-striped\" border=\"1\" cellspacing=\"0\" cellpadding=\"10\">\n                    <tr class=\"success\">\n                        <th>ID</th>\n                        <th>LastName</th>\n                        <th>Email</th>\n                    </tr>\n\n                    <c:forEach items=\"${requestScope.employees}\" var=\"emp\">\n                        <tr class=\"danger\">\n                            <td>${emp.id}</td>\n                            <td>${emp.lastName}</td>\n                            <td>${emp.email}</td>\n                        </tr>\n                    </c:forEach>\n                </table>\n\n</body>\n</html>\n```\n\n3 成功：\n\n![]()\n\n![](https://img-blog.csdn.net/20161228125237498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n## 源码地址：【https://github.com/nomico271/SpringMVCBootstrap】",
     "date": "2016-12-28",
-    "category": "前端开发",
+    "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1827,7 +1833,8 @@
     "date": "2016-12-27",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1843,7 +1850,8 @@
     "date": "2016-12-27",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1859,7 +1867,7 @@
     "date": "2016-12-27",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1873,9 +1881,9 @@
     "excerpt": "第一次使用GitHub,并上传自己的一个项目。下面简单介绍自己的使用过程。 1 打开Git Bash(git客户端，下载安装即可)，输入ssh-keygen -t rsa -C \"自己的邮箱地址@XXX.com\"  自己的公钥与私钥； 2 生成一个指定的文件，里面会生成公钥、私钥到以下文件夹下。 i...",
     "content": "第一次使用GitHub,并上传自己的一个项目。下面简单介绍自己的使用过程。\n\n### \n\n### 一 生成自己的公钥与私钥\n\n1\n打开Git Bash(git客户端，下载安装即可)，输入ssh-keygen -t rsa -C \"自己的邮箱地址@XXX.com\" \n\n自己的公钥与私钥；\n\n2\n生成一个指定的文件，里面会生成公钥、私钥到以下文件夹下。\n\nid\\_rsa是私钥，id\\_rsa.pub是公钥，打开公钥id\\_rsa.pub内内容并复制，等下要用到；\n\n![](https://img-blog.csdn.net/20161227175058626?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3浏览器进入自己的github，打开设置，进入ssh\nand GPG keys\n\n![](https://img-blog.csdn.net/20161227175006407?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n4点击NEW\nssh key，自己填个标题，下面内容复制前面打开的公钥，最后添加\n\n![](https://img-blog.csdn.net/20161227175130236?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n5 可以用ssh\n-T git@github.com测试自己是否可以连接成功了，中间有个输入需要输入yes，后面可以看到Hi XXXX..... access 表示成功。\n\n#### 二  登录GitHub官网，https://github.com，注册账号，填写邮箱信息和用户名等等。\n\n       1 创建Repository仓库：\n\n![](https://img-blog.csdn.net/20161227173248487?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n2 创建项目名称和简介：\n\n![](https://img-blog.csdn.net/20161227173320112?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3 此处记住这里有个SSH地址，待会会用到，暂时不用复制。\n\n![](https://img-blog.csdn.net/20161227173425520?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n### 三，上传本地文件到网页GitHub服务端\n\n 1 在本地建一个文件夹，内是要上传的项目，如我要上传的项目是MybatisTestDemo1的内容。\n\n![](https://img-blog.csdn.net/20161227175416627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n2 点进去，空白处点击右键，选择Git bash here,打开客户端。\n\n![](https://img-blog.csdn.net/20161227175527565?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n3 分别执行指令  ：git\ninit\n\n   \n                                  git add .\n\ngit\ncommit -m \"提交文件\" （双引号内容无所谓）\n\n![](https://img-blog.csdn.net/20161227175648160?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n上面三个指令执行完后，代表本地仓库建立好了。\n\n4 关联github仓库，即要知道将本地代码上传到哪个地方去：\n\n执行指令git\nremote add origin “git@github.com:wangjiax9/beautifulDay.git”(括号内内容即为之前需要注意的SSH后的项目地址)。\n\n这里的双引号内的地址跟我下面的黑图地址不一样，因为这个是复制别人的，图中地址才是我的项目的地址。\n\n![](https://img-blog.csdn.net/20161227180310623?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n![](https://img-blog.csdn.net/20161227180333445?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9hbWFuX3dncw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n\n5 上传本地代码：git\npush -u origin master\n\n如上图。\n\n再去刷新Github页面，看code里就有上传的代码了。\n\n参考：【http://www.cnblogs.com/specter45/p/github.html】\n【http://blog.csdn.net/laozitianxia/article/details/50682100】\n\nhttp://jingyan.baidu.com/article/86f4a73e886b4137d7526966.html",
     "date": "2016-12-27",
-    "category": "工具技巧",
+    "category": "架构设计",
     "tags": [
-      "[]"
+      "架构设计"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1891,7 +1899,7 @@
     "date": "2016-12-13",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1907,7 +1915,7 @@
     "date": "2016-11-29",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1923,7 +1931,7 @@
     "date": "2016-11-29",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1939,7 +1947,7 @@
     "date": "2016-11-28",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1955,7 +1963,7 @@
     "date": "2016-11-21",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1971,7 +1979,7 @@
     "date": "2016-11-17",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -1987,7 +1995,7 @@
     "date": "2016-11-17",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2003,7 +2011,7 @@
     "date": "2016-11-12",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2019,7 +2027,7 @@
     "date": "2016-11-12",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2035,7 +2043,7 @@
     "date": "2016-11-12",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2051,7 +2059,7 @@
     "date": "2016-11-10",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2067,7 +2075,7 @@
     "date": "2016-11-09",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2081,9 +2089,9 @@
     "excerpt": "经常看到一些优秀的博客，然后就只能添加到浏览器的文件夹中，久而久之越来越多，很是头疼。看到印象笔记后，发现其可以裁剪网页内容的功能很是吸引人，于是便下载了一个安装。由于浏览器使用的Chrome，无法翻墙导致很多不兼容的问题，下面是一个很好的有效地不用翻墙的解决办法： http://jingyan.b...",
     "content": "经常看到一些优秀的博客，然后就只能添加到浏览器的文件夹中，久而久之越来越多，很是头疼。看到印象笔记后，发现其可以裁剪网页内容的功能很是吸引人，于是便下载了一个安装。由于浏览器使用的Chrome，无法翻墙导致很多不兼容的问题，下面是一个很好的有效地不用翻墙的解决办法：\n\nhttp://jingyan.baidu.com/article/0f5fb099cbe5486d8334ea2c.html",
     "date": "2016-11-08",
-    "category": "工具技巧",
+    "category": "架构设计",
     "tags": [
-      "[]"
+      "架构设计"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2099,7 +2107,7 @@
     "date": "2016-11-08",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2115,7 +2123,7 @@
     "date": "2016-11-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2131,7 +2139,7 @@
     "date": "2016-11-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2147,7 +2155,7 @@
     "date": "2016-11-05",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2163,7 +2171,7 @@
     "date": "2016-11-03",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2179,7 +2187,7 @@
     "date": "2016-11-03",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2195,7 +2203,7 @@
     "date": "2016-10-28",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2211,7 +2219,7 @@
     "date": "2016-10-23",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2227,7 +2235,7 @@
     "date": "2016-10-07",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2243,7 +2251,7 @@
     "date": "2016-10-07",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2259,7 +2267,7 @@
     "date": "2016-10-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2275,7 +2283,7 @@
     "date": "2016-10-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2291,7 +2299,7 @@
     "date": "2016-10-05",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2307,7 +2315,7 @@
     "date": "2016-10-05",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2323,7 +2331,7 @@
     "date": "2016-10-04",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2339,7 +2347,7 @@
     "date": "2016-10-04",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2355,7 +2363,7 @@
     "date": "2016-10-01",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2371,7 +2379,7 @@
     "date": "2016-09-30",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2387,7 +2395,7 @@
     "date": "2016-09-30",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2403,7 +2411,7 @@
     "date": "2016-09-29",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2419,7 +2427,8 @@
     "date": "2016-09-29",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "AI"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2435,7 +2444,7 @@
     "date": "2016-09-28",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2451,7 +2460,7 @@
     "date": "2016-09-27",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2467,7 +2476,7 @@
     "date": "2016-09-27",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2483,7 +2492,8 @@
     "date": "2016-09-27",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2499,7 +2509,7 @@
     "date": "2016-09-26",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2515,7 +2525,8 @@
     "date": "2016-09-26",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "算法"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2531,7 +2542,8 @@
     "date": "2016-09-26",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java",
+      "算法"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2547,7 +2559,7 @@
     "date": "2016-09-25",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2563,7 +2575,7 @@
     "date": "2016-09-25",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2579,7 +2591,7 @@
     "date": "2016-09-25",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2595,7 +2607,7 @@
     "date": "2016-09-24",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2611,7 +2623,7 @@
     "date": "2016-09-23",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2627,7 +2639,7 @@
     "date": "2016-09-23",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2643,7 +2655,7 @@
     "date": "2016-09-22",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2659,7 +2671,7 @@
     "date": "2016-09-22",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2675,7 +2687,7 @@
     "date": "2016-09-22",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2691,7 +2703,7 @@
     "date": "2016-09-22",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2707,7 +2719,7 @@
     "date": "2016-09-21",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2723,7 +2735,7 @@
     "date": "2016-09-21",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2739,7 +2751,7 @@
     "date": "2016-09-20",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2755,7 +2767,7 @@
     "date": "2016-09-20",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2771,7 +2783,7 @@
     "date": "2016-09-20",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2787,7 +2799,7 @@
     "date": "2016-09-14",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2803,7 +2815,7 @@
     "date": "2016-09-14",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2819,7 +2831,7 @@
     "date": "2016-09-14",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2835,7 +2847,7 @@
     "date": "2016-09-12",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2851,7 +2863,7 @@
     "date": "2016-09-12",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2867,7 +2879,7 @@
     "date": "2016-09-11",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2883,7 +2895,7 @@
     "date": "2016-09-11",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2899,7 +2911,7 @@
     "date": "2016-09-11",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2915,7 +2927,7 @@
     "date": "2016-09-09",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2931,7 +2943,7 @@
     "date": "2016-09-08",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2947,7 +2959,7 @@
     "date": "2016-09-08",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2963,7 +2975,7 @@
     "date": "2016-09-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2979,7 +2991,7 @@
     "date": "2016-09-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -2995,7 +3007,7 @@
     "date": "2016-09-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "算法"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3011,7 +3023,7 @@
     "date": "2016-09-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "算法"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3027,7 +3039,7 @@
     "date": "2016-09-06",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "算法"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3043,7 +3055,7 @@
     "date": "2016-09-06",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3059,7 +3071,7 @@
     "date": "2016-09-04",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3075,7 +3087,7 @@
     "date": "2016-09-03",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3091,7 +3103,7 @@
     "date": "2016-09-03",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3107,7 +3119,7 @@
     "date": "2016-09-01",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3123,7 +3135,7 @@
     "date": "2016-09-01",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3139,7 +3151,7 @@
     "date": "2016-08-31",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3155,7 +3167,7 @@
     "date": "2016-08-31",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3171,7 +3183,7 @@
     "date": "2016-08-30",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3187,7 +3199,7 @@
     "date": "2016-08-30",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3203,7 +3215,7 @@
     "date": "2016-08-27",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3219,7 +3231,7 @@
     "date": "2016-08-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3235,7 +3247,7 @@
     "date": "2016-08-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3251,7 +3263,7 @@
     "date": "2016-08-25",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3267,7 +3279,7 @@
     "date": "2016-08-24",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3283,7 +3295,7 @@
     "date": "2016-08-23",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3299,7 +3311,7 @@
     "date": "2016-08-22",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3315,7 +3327,7 @@
     "date": "2016-08-21",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3331,7 +3343,7 @@
     "date": "2016-08-21",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3347,7 +3359,7 @@
     "date": "2016-08-17",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3363,7 +3375,7 @@
     "date": "2016-08-17",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3379,7 +3391,7 @@
     "date": "2016-08-17",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3395,7 +3407,7 @@
     "date": "2016-08-16",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3411,7 +3423,7 @@
     "date": "2016-08-16",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3427,7 +3439,7 @@
     "date": "2016-08-15",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3443,7 +3455,7 @@
     "date": "2016-08-15",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3459,7 +3471,7 @@
     "date": "2016-08-15",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3475,7 +3487,7 @@
     "date": "2016-08-14",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3491,7 +3503,7 @@
     "date": "2016-08-13",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3505,9 +3517,9 @@
     "excerpt": "最好解决办法：    删除文件 [workspace]/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi 【http://blog.csdn.net/zgf1991/article/details/37961169】",
     "content": "最好解决办法：   \n\n删除文件 [workspace]/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi\n\n【http://blog.csdn.net/zgf1991/article/details/37961169】",
     "date": "2016-08-12",
-    "category": "工具技巧",
+    "category": "架构设计",
     "tags": [
-      "[]"
+      "架构设计"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3523,7 +3535,7 @@
     "date": "2016-08-10",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3539,7 +3551,7 @@
     "date": "2016-08-07",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3555,7 +3567,7 @@
     "date": "2016-08-07",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3571,7 +3583,7 @@
     "date": "2016-08-07",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3587,7 +3599,7 @@
     "date": "2016-08-07",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3603,7 +3615,7 @@
     "date": "2016-08-05",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3619,7 +3631,7 @@
     "date": "2016-08-05",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3635,7 +3647,7 @@
     "date": "2016-08-05",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3651,7 +3663,7 @@
     "date": "2016-08-04",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3667,7 +3679,7 @@
     "date": "2016-08-01",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3683,7 +3695,7 @@
     "date": "2016-08-01",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3699,7 +3711,7 @@
     "date": "2016-08-01",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3715,7 +3727,7 @@
     "date": "2016-07-31",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3731,7 +3743,7 @@
     "date": "2016-07-31",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3747,7 +3759,7 @@
     "date": "2016-07-31",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3763,7 +3775,7 @@
     "date": "2016-07-30",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3779,7 +3791,7 @@
     "date": "2016-07-30",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3795,7 +3807,7 @@
     "date": "2016-07-30",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3811,7 +3823,7 @@
     "date": "2016-07-29",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3827,7 +3839,7 @@
     "date": "2016-07-29",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3843,7 +3855,7 @@
     "date": "2016-07-29",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3857,9 +3869,9 @@
     "excerpt": "之前一直使用Oracle的PL/SQL来创建数据库，缺点是要自己写Sql语句实现。今天下载了SQLyong，下面简单介绍其安装过程。 SQLyog 是一个易于使用的、快速而简洁的图形化管理MYSQL数据库的工具，它能够在任何地点有效地管理你的数据库，而且它本身是完全免费的！ 1 首先确定MySql数...",
     "content": "之前一直使用Oracle的PL/SQL来创建数据库，缺点是要自己写Sql语句实现。今天下载了SQLyong，下面简单介绍其安装过程。\n\nSQLyog 是一个易于使用的、快速而简洁的图形化管理MYSQL数据库的工具，它能够在任何地点有效地管理你的数据库，而且它本身是完全免费的！\n\n1 首先确定MySql数据库启动。可以在计算机-服务里查看，或者在dos命令下输入net start/stop mysql查看；\n\n此处安装启动mysql时出现了1067的错误，百度后找到解决办法：\n\n1、打开my.ini文件，找到default-storage-engine=InnoDB这一行，把它改成default-storage-engine=MyISAM。\n\n2、删除在[MySQL](http://lib.csdn.net/base/14 \"MySQL知识库\")安装目录下的Data目录中的ib\\_logfile0和ib\\_logfile1  \n 3。找到在配置MySQL服务器时指定的InfoDB目录删除掉ibdata1\n\n根据my.ini文件中：\n\n#\\*\\*\\* INNODB Specific options \\*\\*\\*  \n innodb\\_data\\_home\\_dir=\"D:/\"。  \n 4。重新启动MySQL的Service \n\n我只做了第一步即可；\n\n2 启动MySql数据库后，打开SQLyong,输入密码后即可使用。\n\n![]()\n\n![](https://img-blog.csdn.net/20160729132607339?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)\n  \n\n在test中操作即可，test示自己命名的，其余三个是系统使用的数据库。\n\n2016/8/4\n\n方法二：今天在写小项目练习的时候，进行了数据库的回滚操作，程序运行正常但是无法进行回滚。之后百度后发现是因为表的类型是MyISAM类型，不支持事务操作。上面第一种方法虽然能解决MySql启动时出现的1067错误，但是使得数据库不支持InnoDB表类型，因而没法进行回滚操作。下面介绍一种能够解决1067错误的方法又使数据库支持InnoDb类型的方法。\n\n1  查看错误日志，找到dataDir。\n\n我的dataDir在这个位置：C:\\ProgramData\\MySQL\\MySQL Server 5.5\\data 这个位置\n\n2 删除上面找到的3个ib开头的文件，再重启mysql即可。\n\n具体可以看看这个博客的详细介绍：【http://blog.csdn.net/do\\_bset\\_yourself/article/details/51103373】",
     "date": "2016-07-29",
-    "category": "工具技巧",
+    "category": "架构设计",
     "tags": [
-      "[]"
+      "MySQL"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3875,7 +3887,7 @@
     "date": "2016-07-27",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3891,7 +3903,7 @@
     "date": "2016-07-27",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3907,7 +3919,7 @@
     "date": "2016-07-27",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3923,7 +3935,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3939,7 +3951,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3955,7 +3967,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3971,7 +3983,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -3987,7 +3999,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -4003,7 +4015,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -4019,7 +4031,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -4035,7 +4047,7 @@
     "date": "2016-07-26",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -4051,7 +4063,7 @@
     "date": "2016-07-26",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "后端开发"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -4067,7 +4079,7 @@
     "date": "2016-07-22",
     "category": "后端开发",
     "tags": [
-      "[]"
+      "Java"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
@@ -4083,7 +4095,7 @@
     "date": "2016-07-21",
     "category": "随笔杂谈",
     "tags": [
-      "[]"
+      "随笔杂谈"
     ],
     "tagClass": "frontend",
     "colorClass": "blue",
