@@ -1702,6 +1702,14 @@
             goToPage(page);
         }
 
+        // HTML 转义函数 - 防止特殊字符破坏 HTML 结构
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
         // 渲染文章列表（全新方案 - 2026-03-16）
         function renderArticleList() {
             const filtered = filterArticles();
@@ -1741,13 +1749,19 @@
             currentPageArticles.forEach(article => {
                 const views = getArticleViews(article.id, article);
                 const likes = getArticleLikes(article.id, article);
+                // 转义用户数据，防止特殊字符破坏 HTML 结构
+                const safeTitle = escapeHtml(article.title);
+                const safeExcerpt = escapeHtml(article.excerpt);
+                const safeCategory = escapeHtml(article.category);
+                const safeDate = escapeHtml(article.date);
+                
                 html += `<article class="article-card ${article.colorClass}">`;
-                html += `<h3><a href="#" onclick="viewArticle(${article.id}); return false;">${article.title}</a></h3>`;
+                html += `<h3><a href="#" onclick="viewArticle(${article.id}); return false;">${safeTitle}</a></h3>`;
                 html += `<div class="article-meta">`;
-                html += `<span>📅 ${article.date}</span>`;
-                html += `<span class="article-tag ${article.tagClass}">${article.category}</span>`;
+                html += `<span>📅 ${safeDate}</span>`;
+                html += `<span class="article-tag ${article.tagClass}">${safeCategory}</span>`;
                 html += `</div>`;
-                html += `<p>${article.excerpt}</p>`;
+                html += `<p>${safeExcerpt}</p>`;
                 html += `<a href="#" class="read-more" onclick="viewArticle(${article.id}); return false;">阅读全文 →</a>`;
                 html += `<div class="article-actions">`;
                 html += `<span style="font-size: 0.75rem; color: var(--text-light);">👍 ${likes} &nbsp; 👁️ ${views}</span>`;
