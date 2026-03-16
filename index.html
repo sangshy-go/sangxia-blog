@@ -79,14 +79,26 @@
             50% { opacity: 1; }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes toastIn {
+            from { 
+                opacity: 0; 
+                transform: translateX(-50%) translateY(20px) scale(0.9);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
         }
 
-        @keyframes fadeOut {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
+        @keyframes toastOut {
+            from { 
+                opacity: 1; 
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+            to { 
+                opacity: 0; 
+                transform: translateX(-50%) translateY(-20px) scale(0.9);
+            }
         }
         .navbar .menu {
             display: flex;
@@ -2027,11 +2039,6 @@
                 mainContent.innerHTML = `
                     <div class="main-header">
                         <h2>📝 文章列表</h2>
-                        <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem;">
-                            当前分类：<strong style="color: var(--primary);">${state.currentCategory}</strong> | 
-                            文章数：<strong>${filtered.length}</strong> | 
-                            总页数：<strong>${total}</strong>
-                        </div>
                         <div class="filter-btns">
                             <button class="filter-btn ${state.currentCategory === '全部' ? 'active' : ''}" onclick="selectCategory('全部')">全部</button>
                             <button class="filter-btn ${state.currentCategory === '后端开发' ? 'active' : ''}" onclick="selectCategory('后端开发')">后端开发</button>
@@ -2174,23 +2181,28 @@
             toast.textContent = message;
             toast.style.cssText = `
                 position: fixed;
-                bottom: 100px;
+                bottom: 80px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(0, 0, 0, 0.8);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 color: #fff;
-                padding: 12px 24px;
-                border-radius: 8px;
+                padding: 14px 28px;
+                border-radius: 50px;
                 font-size: 14px;
+                font-weight: 500;
                 z-index: 10000;
-                animation: fadeIn 0.3s ease;
+                box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+                animation: toastIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                display: flex;
+                align-items: center;
+                gap: 8px;
             `;
             
             document.body.appendChild(toast);
             
             // 自动消失
             setTimeout(() => {
-                toast.style.animation = 'fadeOut 0.3s ease';
+                toast.style.animation = 'toastOut 0.3s ease forwards';
                 setTimeout(() => toast.remove(), 300);
             }, duration);
         }
