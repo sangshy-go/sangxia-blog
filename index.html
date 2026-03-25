@@ -128,6 +128,18 @@
             padding: 0.5rem;
             cursor: pointer;
         }
+        /* 汉堡菜单按钮（移动端） */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: #555;
+            transition: color 0.3s;
+        }
+        .navbar .menu-toggle:hover {
+            color: var(--primary);
+        }
         .navbar .search-box {
             display: flex;
             align-items: center;
@@ -176,6 +188,55 @@
             background: var(--bg-color);
             border-radius: 12px;
             padding: 1.25rem;
+        }
+        
+        /* 移动端侧边栏抽屉样式 */
+        .sidebar-drawer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--card-bg);
+            box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: left 0.3s ease;
+        }
+        .sidebar-drawer.open {
+            left: 0;
+        }
+        .sidebar-drawer-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sidebar-drawer-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .sidebar-drawer-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            padding: 0.5rem;
+            z-index: 10;
+        }
+        .sidebar-drawer-close:hover {
+            color: var(--primary);
         }
         
         /* 左侧边栏 */
@@ -1027,6 +1088,240 @@
                 padding: 1rem;
             }
         }
+        
+        /* ===== 移动端优化增强补丁 ===== */
+        @media (max-width: 768px) {
+            * {
+                -webkit-tap-highlight-color: transparent;
+                text-size-adjust: 100%;
+            }
+            body {
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+            /* 隐藏桌面端侧边栏 */
+            .sidebar-container {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+            /* 显示移动端抽屉 */
+            .sidebar-drawer,
+            .sidebar-drawer-overlay {
+                display: block !important;
+            }
+            /* 导航栏汉堡菜单 */
+            .navbar .menu-toggle {
+                display: block !important;
+                visibility: visible !important;
+            }
+            .navbar .menu {
+                display: none !important;
+            }
+            /* 主内容区域全屏 */
+            .main-content {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .container {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* 桌面端隐藏移动端元素 */
+        @media (min-width: 769px) {
+            .sidebar-drawer,
+            .sidebar-drawer-overlay,
+            .navbar .menu-toggle {
+                display: none !important;
+            }
+        }
+        }
+        
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 0.75rem 3% !important;
+            }
+            .navbar .logo {
+                font-size: 1.2rem !important;
+                width: 100%;
+                justify-content: center;
+            }
+            .navbar .logo .subtitle {
+                display: block !important;
+                font-size: 0.75rem !important;
+                margin-left: 0 !important;
+                margin-top: 0.25rem;
+            }
+            .navbar .menu {
+                width: 100%;
+                justify-content: center;
+                gap: 0.5rem !important;
+                margin-top: 0.5rem;
+            }
+            .navbar .menu a {
+                font-size: 0.8rem !important;
+                padding: 0.4rem 0.6rem !important;
+            }
+            .navbar .search-box {
+                width: 100% !important;
+                margin: 0.5rem 0 0 0 !important;
+                order: 3;
+            }
+            .navbar .search-box input {
+                width: 100% !important;
+                font-size: 0.9rem !important;
+            }
+            .container {
+                padding: 0.5rem !important;
+            }
+            .main-content {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .main-header {
+                padding: 1rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            .main-header h2 {
+                font-size: 1.2rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+            .filter-btns {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 0.4rem !important;
+                width: 100% !important;
+            }
+            .filter-btn {
+                flex: 0 1 auto !important;
+                font-size: 0.75rem !important;
+                padding: 0.4rem 0.7rem !important;
+                min-width: auto !important;
+                white-space: nowrap !important;
+            }
+            .article-card {
+                padding: 0.9rem !important;
+                margin-bottom: 0.75rem !important;
+                border-radius: 6px !important;
+            }
+            .article-card h3 {
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+                margin-bottom: 0.5rem !important;
+                word-break: break-word !important;
+            }
+            .article-meta {
+                flex-wrap: wrap !important;
+                gap: 0.5rem !important;
+                font-size: 0.7rem !important;
+            }
+            .article-card p {
+                font-size: 0.8rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.5rem !important;
+            }
+            .article-actions {
+                flex-wrap: wrap !important;
+                gap: 0.4rem !important;
+            }
+            .share-btn {
+                font-size: 0.7rem !important;
+                padding: 0.3rem 0.6rem !important;
+            }
+            .article-detail {
+                padding: 1rem !important;
+            }
+            .article-detail h1 {
+                font-size: 1.3rem !important;
+                line-height: 1.4 !important;
+                margin-bottom: 0.75rem !important;
+            }
+            .article-detail .article-meta {
+                font-size: 0.75rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .article-detail .article-content {
+                font-size: 0.9rem !important;
+                line-height: 1.7 !important;
+            }
+            .article-detail .article-content h1,
+            .article-detail .article-content h2,
+            .article-detail .article-content h3 {
+                word-break: break-word !important;
+            }
+            .article-detail .article-content pre,
+            .article-detail .article-content code {
+                max-width: 100% !important;
+                overflow-x: auto !important;
+                white-space: pre-wrap !important;
+                word-wrap: break-word !important;
+            }
+            .article-detail .article-content img {
+                max-width: 100% !important;
+                height: auto !important;
+                display: block !important;
+                margin: 0.75rem auto !important;
+            }
+            .article-detail .article-content table {
+                display: block !important;
+                overflow-x: auto !important;
+                max-width: 100% !important;
+            }
+            .sidebar {
+                padding: 0.75rem !important;
+            }
+            .profile-card {
+                padding: 1rem !important;
+            }
+            .profile-avatar {
+                width: 60px !important;
+                height: 60px !important;
+            }
+            .profile-name {
+                font-size: 0.9rem !important;
+            }
+            .profile-bio {
+                font-size: 0.75rem !important;
+            }
+            .social-icons {
+                gap: 0.5rem !important;
+            }
+            .social-icons a {
+                padding: 0.4rem !important;
+                font-size: 0.7rem !important;
+            }
+            .pagination {
+                flex-wrap: wrap !important;
+                gap: 0.4rem !important;
+            }
+            .pagination button {
+                font-size: 0.8rem !important;
+                padding: 0.4rem 0.7rem !important;
+                min-width: auto !important;
+            }
+            .archive-item {
+                padding: 0.75rem !important;
+            }
+            .archive-title {
+                font-size: 0.85rem !important;
+            }
+            .article-card:hover {
+                transform: none !important;
+            }
+            .filter-btn:hover:not(.active) {
+                transform: none !important;
+            }
+            a, button, .filter-btn, .share-btn {
+                min-height: 44px !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .navbar .menu a {
+                min-height: auto !important;
+            }
+        }
     </style>
     <!-- 引入 marked.js 解析 Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -1078,7 +1373,79 @@
             <a href="#" class="btn-icon" title="分享页面" onclick="sharePage(event); return false;">📤</a>
             <a href="#" class="btn-icon" title="切换主题" onclick="toggleTheme()">🌙</a>
         </div>
+        <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
     </nav>
+
+    <!-- 移动端侧边栏抽屉 -->
+    <div class="sidebar-drawer-overlay" onclick="toggleSidebar()"></div>
+    <div class="sidebar-drawer">
+        <div class="sidebar-drawer-close" onclick="toggleSidebar()">✕</div>
+        <!-- 个人资料卡片 -->
+        <div class="profile-card">
+            <div class="avatar">👨‍💻</div>
+            <h2>桑夏</h2>
+            <p class="title">全栈开发者 · 技术写作者</p>
+            <div class="desc">
+                <p><strong>📌 8 年全栈开发经验</strong></p>
+                <p>× AI 技术探索者</p>
+                <hr style="border: none; border-top: 1px dashed var(--border-color); margin: 0.75rem 0;">
+                <p>▸ 前美团/蚂蚁后端开发</p>
+                <p>▸ 专注大模型与 Agent 应用</p>
+                <p>▸ 探索 AI 提效工具</p>
+            </div>
+            <div class="motto">
+                "拥抱 AI，拥抱未来" 🚀
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon wechat" onclick="copyLink('wechat'); return false;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#07C160">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+                        <circle cx="8.5" cy="10.5" r="1.5"/>
+                        <circle cx="15.5" cy="10.5" r="1.5"/>
+                    </svg>
+                    <span>微信</span>
+                </a>
+                <a href="https://blog.csdn.net/noaman_wgs" target="_blank" class="social-icon csdn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F93A3A">
+                        <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/>
+                    </svg>
+                    <span>CSDN</span>
+                </a>
+                <a href="https://github.com/sangshy-go" target="_blank" class="social-icon github">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#333">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 文章统计卡片 -->
+        <div class="profile-card stats-card">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalArticlesDrawer">0</div>
+                    <div class="stat-label">文章总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="totalViewsDrawer">0</div>
+                    <div class="stat-label">总阅读量</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="totalLikesDrawer">0</div>
+                    <div class="stat-label">总点赞数</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分类标签卡片 -->
+        <div class="categories-card">
+            <h3>📂 分类列表</h3>
+            <ul class="category-list" id="categoryListDrawer">
+                <!-- 分类列表由 JS 动态生成 -->
+            </ul>
+        </div>
+    </div>
 
     <!-- 主容器 -->
     <div class="container">
@@ -1384,12 +1751,15 @@
         // 更新统计数据
         function updateStats() {
             const totalArticles = articles.length;
-            const totalViews = articles.reduce((sum, a) => sum + (a.views || 0), 0);
-            const totalLikes = articles.reduce((sum, a) => sum + (a.likes || 0), 0);
+            const totalViews = serverStats.totalViews || articles.reduce((sum, a) => sum + (a.views || 0), 0);
+            const totalLikes = serverStats.totalLikes || articles.reduce((sum, a) => sum + (a.likes || 0), 0);
 
             document.getElementById('totalArticles').textContent = totalArticles;
             document.getElementById('totalViews').textContent = totalViews.toLocaleString();
             document.getElementById('totalLikes').textContent = totalLikes.toLocaleString();
+            
+            // 同时更新抽屉中的统计数据
+            updateDrawerStats();
         }
 
         // 获取分类统计
@@ -2091,12 +2461,37 @@
             }
         }
 
+        // 移动端侧边栏开关
+        function toggleSidebar() {
+            const drawer = document.querySelector('.sidebar-drawer');
+            const overlay = document.querySelector('.sidebar-drawer-overlay');
+            if (drawer && overlay) {
+                drawer.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+        }
+        
+        // 更新抽屉中的统计数据
+        function updateDrawerStats() {
+            document.getElementById('totalArticlesDrawer').textContent = articles.length;
+            document.getElementById('totalViewsDrawer').textContent = (serverStats.totalViews || 0).toLocaleString();
+            document.getElementById('totalLikesDrawer').textContent = (serverStats.totalLikes || 0).toLocaleString();
+            
+            // 更新抽屉中的分类列表
+            const categoryListDrawer = document.getElementById('categoryListDrawer');
+            if (categoryListDrawer) {
+                categoryListDrawer.innerHTML = renderCategories();
+            }
+        }
+
         // 返回首页
         function goHome() {
             state.page = 'home';
             state.currentArticle = null;
             state.pageNum = 1;
             render();
+            // 移动端关闭侧边栏
+            toggleSidebar();
         }
 
         // 前往归档
