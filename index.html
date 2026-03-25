@@ -2545,9 +2545,17 @@
         
         // 更新抽屉中的统计数据
         function updateDrawerStats() {
-            document.getElementById('totalArticlesDrawer').textContent = articles.length;
-            document.getElementById('totalViewsDrawer').textContent = (serverStats.totalViews || 0).toLocaleString();
-            document.getElementById('totalLikesDrawer').textContent = (serverStats.totalLikes || 0).toLocaleString();
+            const totalArticles = articles.length;
+            const totalViews = serverStats.totalViews || articles.reduce((sum, a) => sum + (a.views || 0), 0);
+            const totalLikes = serverStats.totalLikes || articles.reduce((sum, a) => sum + (a.likes || 0), 0);
+            
+            const articlesEl = document.getElementById('totalArticlesDrawer');
+            const viewsEl = document.getElementById('totalViewsDrawer');
+            const likesEl = document.getElementById('totalLikesDrawer');
+            
+            if (articlesEl) articlesEl.textContent = totalArticles;
+            if (viewsEl) viewsEl.textContent = totalViews.toLocaleString();
+            if (likesEl) likesEl.textContent = totalLikes.toLocaleString();
             
             // 更新抽屉中的分类列表
             const categoryListDrawer = document.getElementById('categoryListDrawer');
