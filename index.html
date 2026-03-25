@@ -2696,6 +2696,27 @@
                 showToast('❌ 复制失败', 2000, targetElement);
             });
         }
+        
+        // 复制链接（微信/CSDN/GitHub）
+        function copyLink(type) {
+            const links = {
+                'wechat': 'noaman_wgs',  // 微信号
+                'csdn': 'https://blog.csdn.net/noaman_wgs',
+                'github': 'https://github.com/sangshy-go'
+            };
+            
+            const text = links[type] || window.location.href;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                if (type === 'wechat') {
+                    showToast('✅ 微信号已复制：' + text, 3000);
+                } else {
+                    showToast('✅ 链接已复制', 2000);
+                }
+            }).catch(() => {
+                showToast('❌ 复制失败', 2000);
+            });
+        }
 
         // 初始化
         document.addEventListener('DOMContentLoaded', () => {
